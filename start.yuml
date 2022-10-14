@@ -1,0 +1,11 @@
+// {type:class}
+
+// {generate:true}
+
+// {direction:topDown}
+
+[+Student | +name:string; +uid:int; +email:string; +major:string]
+
+[+Class | +name:string;]
+
+[+Major | +classes:string{}]
