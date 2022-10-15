@@ -4,8 +4,28 @@
 
 // {direction:topDown}
 
-[+Student | +name:string; +uid:int; +email:string; +major:string]
+[+Student|+Name:string:r;+Uid:int:r;+Major:string:r;+Requirements:Requirement{};+ProjectedSchedule:Class{}]
 
-[+Class | +name:string;]
+[+Class|+Id:string:r;+Name:string:r;+Description:string:r;+Requisites:@TODO;+YearLevel:int:r]
 
-[+Major | +classes:string{}]
+[+Section|+Professor:string:r;+Seats:SeatManager:r;+Sessions:Session{}:r;]
+
+[+Session|+Day::r;+StartTime::r;+EndTime::r;+Location:string:r;]
+
+[+SeatManager|+SeatsOpen:int:r;+SeatsCapacity:int:r;+WaitlistOpen:int:r;+WaitlistCapacity:int:r|+SeatsAvailable(student:Student):int;]
+
+[+A:Requirement|+Id:string:r;+bool:isFulfilled:r;|+A:FulfillsRequirement():bool]
+
+[+MajorRequirement|+RequiredClasses:string{}:r|+FullfillsRequirement(class:Class):bool:o]
+
+[+GeneralRequirement|+RequiredClasses:string{}:r|+FullfillsRequirement(class:Class):bool:o]
+
+[+Student] 1-1..* [+A:Requirement]
+
+[+A:Requirement]<-.-[+MajorRequirement]
+[+A:Requirement]<-.-[+GeneralRequirement]
+
+[+Student] 1-0..* [+Class]
+[+Class]<-[+Section]
+[+Section] 1-1..* [+Session]
+[+Section] 1-1 [+SeatManager]
