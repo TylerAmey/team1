@@ -1,0 +1,10 @@
+// {type:class}
+// {generate:true}
+// {direction:topDown}
+
+
+[+SuggestedClasses| +student:Student; +classes:Class<>; +suggested:Class<>| +SuggestByReqs(); +ReviseSuggested(); +Display()]
+[+Student]
+[+Class]
+[+Student]1-[+SuggestedClasses]
+[+Class]*-[+SuggestedClasses]

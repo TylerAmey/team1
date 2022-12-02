@@ -1,0 +1,53 @@
+// {type:class}
+// {generate:true}
+// {direction:topDown}
+
+[+SearchManager|-sortMode:enum|+SortMode:enum;+Search(query:List<QueryCondition>):List<SearchResult>;-QueryResults(query:SeachQuery):List<SearchResult>;|()]
+
+[+SearchResult|+class:Class;+relevance:int;+name:string;|(class:Class,relevance:int)]
+[-SortRelevanceHelper|Compare(a:object,b:object):int]
+[-SortAlphabetDescendingHelper|Compare(a:object,b:object):int]
+[-SortAlphabetAscendingHelper|Compare(a:object,b:object):int]
+
+[+TimeBlock|+start:;+end:;|(start:,end:)]
+
+[+A:QueryCondition<T>|+query:T;|+isSatisfied(class:Class):bool:a|(query:T)]
+[+I:IQuerySimilar|getDistance(class:Class):int]
+
+[+QueryText|+query:string;|+isSatisfied(class:Class):bool:o;getDistance(class:Class):int;|(query:):base<string>(query:T)]
+[+QuerySubject|+query:string;|+isSatisfied(class:Class):bool:o;getDistance(class:Class):int;|(query:):base<string>(query:T)]
+[+QueryNumber|+query:int;|+isSatisfied(class:Class):bool:o;getDistance(class:Class):int;|(query:):base<int>(query:T)]
+[+QueryCode|+query:int;|+isSatisfied(class:Class):bool:o;getDistance(class:Class):int;|(query:):base<int>(query:T)]
+[+QueryDays|+query:enum;|+isSatisfied(class:Class):bool:o;|(query:):base<enum>(query:T)]
+[+QueryTimes|+query:TimeBlock;|+isSatisfied(class:Class):bool:o;|(query:):base<TimeBlock>(query:T)]
+[+QueryAvailability|+query:enum|+isSatisfied(class:Class):bool:o;|(query:):base<enum>(query:T)]
+[+QueryPerspective|+query:string|+isSatisfied(class:Class):bool:o;|(query:):base<string>(query:T)]
+[+QueryMajor|+query:string|+isSatisfied(class:Class):bool:o;|(query:):base<string>(query:T)]
+[+A:QueryCondition<T>] <-.- [+QueryText]
+[+A:QueryCondition<T>] <-.- [+QuerySubject]
+[+A:QueryCondition<T>] <-.- [+QueryNumber]
+[+A:QueryCondition<T>] <-.- [+QueryCode]
+[+A:QueryCondition<T>] <-.- [+QueryDays]
+[+A:QueryCondition<T>] <-.- [+QueryTimes]
+[+A:QueryCondition<T>] <-.- [+QueryAvailability]
+[+A:QueryCondition<T>] <-.- [+QueryPerspective]
+[+A:QueryCondition<T>] <-.- [+QueryMajor]
+
+[+I:IQuerySimilar] ^ [+QueryText]
+[+I:IQuerySimilar] ^ [+QuerySubject]
+[+I:IQuerySimilar] ^ [+QueryNumber]
+[+I:IQuerySimilar] ^ [+QueryCode]
+
+[+SearchManager] 1-0..* [+SearchResult]
+[+SearchManager] 1-1..* [+A:QueryCondition<T>]
+[+QueryTimes] 1-1 [+TimeBlock]
+
+[+I:IComparable] ^ [+SearchResult]
+
+[+SearchResult] +- [-SortRelevanceHelper]
+[+SearchResult] +- [-SortAlphabetDescendingHelper]
+[+SearchResult] +- [-SortAlphabetAscendingHelper]
+
+[+I:IComparer] ^ [-SortRelevanceHelper]
+[+I:IComparer] ^ [-SortAlphabetDescendingHelper]
+[+I:IComparer] ^ [-SortAlphabetAscendingHelper]
