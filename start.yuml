@@ -4,11 +4,11 @@
 
 // {direction:topDown}
 
-[+Student|+Name:string:r;+Uid:int:r;+Major:string:r;+Requirements:Requirement{};+ProjectedSchedule:Class{}]
+[+Student|+Name:string:r;+Uid:int:r;+Major:string:r;+Requirements:List<Requirement>;+ProjectedSchedule:Course{}]
 
-[+Class|+Id:string:r;+Name:string:r;+Description:string:r;+Requisites:@TODO;+YearLevel:int:r]
+[+Course|+Id:string:r;+Name:string:r;+Description:string:r;+Requisites:@TODO;+YearLevel:int:r]
 
-[+Section|+Professor:string:r;+Seats:SeatManager:r;+Sessions:Session{}:r;]
+[+Section|+Professor:string:r;+Seats:SeatManager:r;+Sessions:List<Session>:r;]
 
 [+Session|+Day::r;+StartTime::r;+EndTime::r;+Location:string:r;]
 
@@ -16,16 +16,16 @@
 
 [+A:Requirement|+Id:string:r;+bool:isFulfilled:r;|+A:FulfillsRequirement():bool]
 
-[+MajorRequirement|+RequiredClasses:string{}:r|+FullfillsRequirement(class:Class):bool:o]
+[+MajorRequirement|+RequiredCourses:List<string>:r|+FullfillsRequirement(course:Course):bool:o]
 
-[+GeneralRequirement|+RequiredClasses:string{}:r|+FullfillsRequirement(class:Class):bool:o]
+[+GeneralRequirement|+RequiredCourses:List<string>:r|+FullfillsRequirement(course:Course):bool:o]
 
 [+Student] 1-1..* [+A:Requirement]
 
 [+A:Requirement]<-.-[+MajorRequirement]
 [+A:Requirement]<-.-[+GeneralRequirement]
 
-[+Student] 1-0..* [+Class]
-[+Class]<-[+Section]
+[+Student] 1-0..* [+Course]
+[+Course]<-[+Section]
 [+Section] 1-1..* [+Session]
 [+Section] 1-1 [+SeatManager]
