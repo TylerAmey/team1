@@ -1,0 +1,16 @@
+// {type:class}
+
+// {generate:true}
+
+// {direction:topDown} 
+
+[+Student]
+[+Class]
+[+ManageClass | +student:Student; +class:Class; | +IsCopy(Class a, Class b):bool; +Enroll():Class; +Drop(Class dropped):void; +CheckPrerequisites():bool; +AddToWaitlist():Class;|+ManageClass(Class class, Student student)]
+[+Waitlisted | +class:Class +student:Student| +WaitListWilling():bool;]
+[+ShowShedule | +student:Student; | (Windows forms handling methods. Will interact with student.ProjectedSchedule)]
+
+[+Student] <- [+ManageClass]
+[+Class] <- [+ManageClass]
+[+ManageClass] <- [+ShowShedule]
+[+ManageClass] <- [+Waitlisted]
