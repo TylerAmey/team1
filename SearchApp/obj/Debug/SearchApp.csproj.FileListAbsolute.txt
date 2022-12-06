@@ -10,3 +10,4 @@ D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.e
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.pdb
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.SearchForm.resources
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.codeForm.resources
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.ResultsForm.resources

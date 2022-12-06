@@ -104,6 +104,7 @@ namespace SearchApp
 
         // daysCheckBox__CheckedChanged
         // update filter
+        // update text
 
         // perspectivesCheckBox__CheckedChanged
         // update filter
