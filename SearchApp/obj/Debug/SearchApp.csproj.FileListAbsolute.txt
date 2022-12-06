@@ -1,0 +1,12 @@
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\bin\Debug\SearchApp.exe.config
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\bin\Debug\SearchApp.exe
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\bin\Debug\SearchApp.pdb
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.csproj.AssemblyReference.cache
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.csproj.SuggestedBindingRedirects.cache
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.Properties.Resources.resources
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.csproj.GenerateResource.cache
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.csproj.CoreCompileInputs.cache
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.exe
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.pdb
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.SearchForm.resources
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.codeForm.resources

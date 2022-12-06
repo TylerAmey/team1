@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SearchLib"
   ],
-  "SelectedNode": "\\Student",
+  "SelectedNode": "\\SearchLib\\SearchLib.sln",
   "PreviewInSolutionExplorer": false
 }
