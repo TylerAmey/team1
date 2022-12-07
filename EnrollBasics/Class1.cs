@@ -49,9 +49,9 @@ namespace EnrollBasics
 
         public bool FullfillsRequirement(Course course)
         {
-            foreach(Course course2 in validCourses)
+            foreach(string course2 in validCourses)
             {
-                if(course == course2)
+                if(course.id == course2)
                 {
                     return true;
                 }
