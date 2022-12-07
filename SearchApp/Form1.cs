@@ -21,7 +21,7 @@ namespace SearchApp
             // Advanced should pop out advanced box
 
             // time, days, perspectives, and availability should pop out their respective boxes
-            
+
             // unfocusing time/days/pers/avai should cloes the box
 
             // course code should open a course code dialog
@@ -33,7 +33,7 @@ namespace SearchApp
             // keyword entry
 
             // subject entry
-            
+
             // number entry
 
             // major entry
@@ -47,9 +47,10 @@ namespace SearchApp
             // availability
 
             // reset
-            
+
             // ----------------
             // search button
+            searchButton.Click += new EventHandler(SearchButton__Click);
         }
 
         // advancedButton__Click
@@ -115,5 +116,13 @@ namespace SearchApp
         // resetButton__Click
         // update filter
         // clear everything
+
+        // searchButton__Click
+        // open ResultsForm
+        private void SearchButton__Click(object sender, EventArgs e)
+        {
+            ResultsForm results = new ResultsForm();
+            results.Show();
+        }
     }
 }
