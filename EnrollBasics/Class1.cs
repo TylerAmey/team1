@@ -62,6 +62,7 @@ namespace EnrollBasics
 
     public class Section
     {
+        public int number;
         public string professor;
         public SeatManager seats;
         public List<Session> sessions;

@@ -24,6 +24,7 @@ namespace SearchApp
         public int credits;
 
         public string professor;
+        public int sectionNumber;
 
         public CourseBoxSessions sessions; // each time the class meets, grouped by time
 
@@ -44,6 +45,7 @@ namespace SearchApp
             this.credits = course.credits;
 
             this.professor = section.professor;
+            this.sectionNumber = section.number;
 
             // add all the sessions into the special list to have their data extracted
             // special list also groups them so we can display them more succintly
@@ -145,8 +147,8 @@ namespace SearchApp
             // 
             mainSplitContainer.Panel2.Controls.Add(scheduleTableLayoutPanel);
             mainSplitContainer.Panel2.Controls.Add(sessionsListView);
-            mainSplitContainer.Size = new System.Drawing.Size(686, 255);
-            mainSplitContainer.SplitterDistance = 343;
+            // mainSplitContainer.Size = new System.Drawing.Size(p1.Width, p1.Height);
+            mainSplitContainer.SplitterDistance = p1.Width / 2;
             mainSplitContainer.TabIndex = 0;
             // 
             // titleLabel
@@ -154,31 +156,32 @@ namespace SearchApp
             titleLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             titleLabel.Location = new System.Drawing.Point(0, 0);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new System.Drawing.Size(686, 41);
+            titleLabel.Size = new System.Drawing.Size(p1.Width, 40);
             titleLabel.TabIndex = 1;
-            titleLabel.Text = "XXXX ### - ## Course Title";
+            titleLabel.Text = $"{subject} {number} - {sectionNumber} {name}"; // "XXXX ### - ## Course Title"
             titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // profLabel
             // 
             profLabel.AutoSize = true;
             profLabel.Dock = System.Windows.Forms.DockStyle.Left;
-            profLabel.Location = new System.Drawing.Point(3, 16);
+            profLabel.Location = new System.Drawing.Point(0, 16);
             profLabel.Name = "profLabel";
-            profLabel.Size = new System.Drawing.Size(82, 13);
+            // profLabel.Size = new System.Drawing.Size(82, 13);
             profLabel.TabIndex = 0;
-            profLabel.Text = "Professor Name";
+            profLabel.Text = professor; // "Professor Name"
             profLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // unitsLabel
             // 
             unitsLabel.AutoSize = true;
             unitsLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            unitsLabel.Location = new System.Drawing.Point(289, 16);
+            unitsLabel.Location = new System.Drawing.Point(p1.Width / 2, 16);
+            unitsLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             unitsLabel.Name = "unitsLabel";
-            unitsLabel.Size = new System.Drawing.Size(51, 13);
+            // unitsLabel.Size = new System.Drawing.Size(51, 13);
             unitsLabel.TabIndex = 1;
-            unitsLabel.Text = "#.# Units";
+            unitsLabel.Text = $"{credits}.0 Units"; // "#.# Units"
             unitsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // infoGroupBox
@@ -188,7 +191,7 @@ namespace SearchApp
             infoGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
             infoGroupBox.Location = new System.Drawing.Point(0, 0);
             infoGroupBox.Name = "infoGroupBox";
-            infoGroupBox.Size = new System.Drawing.Size(343, 41);
+            // infoGroupBox.Size = new System.Drawing.Size(p1.Width / 2, 41);
             infoGroupBox.TabIndex = 2;
             infoGroupBox.TabStop = false;
             // 
@@ -197,9 +200,22 @@ namespace SearchApp
             enrollButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             enrollButton.Location = new System.Drawing.Point(0, 221);
             enrollButton.Name = "enrollButton";
-            enrollButton.Size = new System.Drawing.Size(343, 34);
+            // enrollButton.Size = new System.Drawing.Size(343, 34);
             enrollButton.TabIndex = 3;
-            enrollButton.Text = "> Enroll in p1 section";
+            string thisText = "";
+            switch(status)
+            {
+                case Status.OPEN:
+                    thisText = "> Enroll in this section";
+                    break;
+                case Status.WAITLIST:
+                    thisText = "> Waitlist this section";
+                    break;
+                case Status.CLOSED:
+                    thisText = "This section is closed";
+                    break;
+            }
+            enrollButton.Text = thisText;
             enrollButton.UseVisualStyleBackColor = true;
             // 
             // sessionsListView
@@ -216,7 +232,7 @@ namespace SearchApp
             sessionsListView.Items.AddRange(listViewItems.ToArray());
             sessionsListView.Location = new System.Drawing.Point(0, 0);
             sessionsListView.Name = "sessionsListView";
-            sessionsListView.Size = new System.Drawing.Size(339, 53);
+            // sessionsListView.Size = new System.Drawing.Size(339, 53);
             sessionsListView.TabIndex = 0;
             sessionsListView.UseCompatibleStateImageBehavior = false;
             sessionsListView.View = System.Windows.Forms.View.Details;
@@ -224,19 +240,19 @@ namespace SearchApp
             // locationColumnHeader
             // 
             locationColumnHeader.Text = "Location";
-            locationColumnHeader.Width = 62;
+            locationColumnHeader.Width = -1;
             // 
             // dayColumnHeader
             // 
             dayColumnHeader.Text = "Day";
             dayColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            dayColumnHeader.Width = 65;
+            dayColumnHeader.Width = -1;
             // 
             // timeColumnHeader
             // 
             timeColumnHeader.Text = "Time";
             timeColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            timeColumnHeader.Width = 109;
+            timeColumnHeader.Width = -1;
             // 
             // scheduleTableLayoutPanel
             // 
@@ -250,7 +266,7 @@ namespace SearchApp
             scheduleTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             scheduleTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             scheduleTableLayoutPanel.Enabled = false;
-            scheduleTableLayoutPanel.Location = new System.Drawing.Point(0, 53);
+            // scheduleTableLayoutPanel.Location = new System.Drawing.Point(0, 53);
             scheduleTableLayoutPanel.Name = "scheduleTableLayoutPanel";
             scheduleTableLayoutPanel.RowCount = 6;
             scheduleTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -259,7 +275,7 @@ namespace SearchApp
             scheduleTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             scheduleTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             scheduleTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            scheduleTableLayoutPanel.Size = new System.Drawing.Size(339, 202);
+            // scheduleTableLayoutPanel.Size = new System.Drawing.Size(339, 202);
             scheduleTableLayoutPanel.TabIndex = 1;
             // 
             // headerSplitContainer
@@ -278,8 +294,8 @@ namespace SearchApp
             // headerSplitContainer.Panel2
             // 
             headerSplitContainer.Panel2.Controls.Add(mainSplitContainer);
-            headerSplitContainer.Size = new System.Drawing.Size(686, 300);
-            headerSplitContainer.SplitterDistance = 41;
+            headerSplitContainer.Size = p1.Size;
+            headerSplitContainer.SplitterDistance = 40;
             headerSplitContainer.TabIndex = 0;
             // 
             // descRichTextBox
@@ -287,22 +303,18 @@ namespace SearchApp
             descRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             descRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             descRichTextBox.Enabled = false;
-            descRichTextBox.Location = new System.Drawing.Point(0, 41);
+            // descRichTextBox.Location = new System.Drawing.Point(0, 41);
             descRichTextBox.Name = "descRichTextBox";
             descRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            descRichTextBox.Size = new System.Drawing.Size(343, 180);
+            // descRichTextBox.Size = new System.Drawing.Size(343, 180);
             descRichTextBox.TabIndex = 4;
-            descRichTextBox.Text = "Course description";
+            descRichTextBox.Text = description; // "Course description"
             descRichTextBox.Visible = false;
             // 
             // panel
             // 
-            panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel.Controls.Add(headerSplitContainer);
-            panel.Location = new System.Drawing.Point(61, 62);
-            panel.Name = "panel";
-            panel.Size = new System.Drawing.Size(688, 302);
-            panel.TabIndex = 1;
+            p1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            p1.Controls.Add(headerSplitContainer);
         }
 
 

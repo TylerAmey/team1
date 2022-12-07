@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SearchLib"
+    "\\SearchApp"
   ],
-  "SelectedNode": "\\SearchLib\\SearchLib.sln",
+  "SelectedNode": "\\SearchApp\\ResultsForm.cs",
   "PreviewInSolutionExplorer": false
 }
