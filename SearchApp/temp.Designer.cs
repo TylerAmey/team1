@@ -213,6 +213,7 @@
             listViewItem1});
             this.sessionsListView.Location = new System.Drawing.Point(0, 0);
             this.sessionsListView.Name = "sessionsListView";
+            this.sessionsListView.Scrollable = false;
             this.sessionsListView.Size = new System.Drawing.Size(172, 53);
             this.sessionsListView.TabIndex = 0;
             this.sessionsListView.UseCompatibleStateImageBehavior = false;

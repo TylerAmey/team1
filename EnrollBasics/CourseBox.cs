@@ -20,6 +20,8 @@ namespace EnrollBasics
             CLOSED
         }
 
+        private Section section;
+
         private string subject; // e.g. "IGME"
         private int number; // e.g. 201
         private string name;
@@ -41,6 +43,8 @@ namespace EnrollBasics
         // Basically generates a course display control it's kinda cute
         public CourseBox(Course course, Section section)
         {
+            this.section = section;
+            
             this.subject = course.id.Substring(0, 4);
             this.number = Int32.Parse(course.id.Substring(4));
 
@@ -93,31 +97,20 @@ namespace EnrollBasics
             TableLayoutPanel scheduleTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             SplitContainer headerSplitContainer = new System.Windows.Forms.SplitContainer();
             RichTextBox descRichTextBox = new System.Windows.Forms.RichTextBox();
-            Panel panel = new System.Windows.Forms.Panel();
 
             //
             // p1
             //
 
             ((System.ComponentModel.ISupportInitialize)(mainSplitContainer)).BeginInit();
-            mainSplitContainer.Panel1.SuspendLayout();
-            mainSplitContainer.Panel2.SuspendLayout();
-            mainSplitContainer.SuspendLayout();
-            infoGroupBox.SuspendLayout();
-
-
             ((System.ComponentModel.ISupportInitialize)(headerSplitContainer)).BeginInit();
-            headerSplitContainer.Panel1.SuspendLayout();
-            headerSplitContainer.Panel2.SuspendLayout();
-            headerSplitContainer.SuspendLayout();
-            panel.SuspendLayout();
             p1.SuspendLayout();
 
 
             List<ListViewItem> listViewItems = new List<ListViewItem>();
             foreach (CourseBoxSession session in sessions)
             {
-                listViewItems.Add(new System.Windows.Forms.ListViewItem(new String[]
+                listViewItems.Add(new System.Windows.Forms.ListViewItem(new string[]
                 {
                     session.location, session.Days, session.time
                 }));
@@ -219,9 +212,9 @@ namespace EnrollBasics
             sessionsListView.FullRowSelect = true;
             sessionsListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             sessionsListView.HideSelection = false;
+            sessionsListView.Scrollable = false;
             sessionsListView.Items.AddRange(listViewItems.ToArray());
             sessionsListView.Name = "sessionsListView";
-            sessionsListView.Size = new System.Drawing.Size(p1.Width, 60);
             sessionsListView.TabIndex = 0;
             sessionsListView.UseCompatibleStateImageBehavior = false;
             sessionsListView.Dock = System.Windows.Forms.DockStyle.Top;
@@ -230,23 +223,30 @@ namespace EnrollBasics
             // locationColumnHeader
             // 
             locationColumnHeader.Text = "Location";
-            locationColumnHeader.Width = -1;
-            // 
-            // dayColumnHeader
-            // 
-            dayColumnHeader.Text = "Day";
-            dayColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            dayColumnHeader.Width = -1;
+            locationColumnHeader.AutoResize(ColumnHeaderAutoResizeStyle.ColumnContent);
             // 
             // timeColumnHeader
             // 
             timeColumnHeader.Text = "Time";
             timeColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            timeColumnHeader.Width = -1;
+            timeColumnHeader.AutoResize(ColumnHeaderAutoResizeStyle.ColumnContent);
+            // 
+            // dayColumnHeader
+            // 
+            dayColumnHeader.Text = "Day";
+            dayColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            dayColumnHeader.AutoResize(ColumnHeaderAutoResizeStyle.ColumnContent);
+            //
+            // columns spacing
+            //
+            int remaining = p1.Width / 2 - locationColumnHeader.Width - dayColumnHeader.Width - timeColumnHeader.Width;
+            locationColumnHeader.Width += remaining / 3;
+            dayColumnHeader.Width += remaining / 3;
+            timeColumnHeader.Width += remaining / 3;
             // 
             // scheduleTableLayoutPanel
             // 
-            scheduleTableLayoutPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            scheduleTableLayoutPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.None;
             scheduleTableLayoutPanel.ColumnCount = 6;
             for (int i = 0; i < scheduleTableLayoutPanel.ColumnCount; i++)
             {
@@ -261,13 +261,14 @@ namespace EnrollBasics
                 scheduleTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F / scheduleTableLayoutPanel.RowCount));
             }
             scheduleTableLayoutPanel.TabIndex = 1;
+            scheduleTableLayoutPanel.Paint += new PaintEventHandler(ScheduleTableLayoutPanel__Paint);
+            scheduleTableLayoutPanel.CellPaint += new TableLayoutCellPaintEventHandler(ScheduleTableLayoutPanel__CellPaint);
             // 
             // headerSplitContainer
             // 
             headerSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             headerSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             headerSplitContainer.IsSplitterFixed = true;
-            // headerSplitContainer.Location = new System.Drawing.Point(0, 0);
             headerSplitContainer.Name = "headerSplitContainer";
             headerSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -297,20 +298,45 @@ namespace EnrollBasics
             p1.Controls.Add(headerSplitContainer);
 
             ((System.ComponentModel.ISupportInitialize)(mainSplitContainer)).EndInit();
-            mainSplitContainer.Panel1.ResumeLayout(false);
-            mainSplitContainer.Panel2.ResumeLayout(false);
-            mainSplitContainer.ResumeLayout(false);
-            infoGroupBox.ResumeLayout(false);
-
             ((System.ComponentModel.ISupportInitialize)(headerSplitContainer)).EndInit();
-            headerSplitContainer.Panel1.ResumeLayout(false);
-            headerSplitContainer.Panel2.ResumeLayout(false);
-            headerSplitContainer.ResumeLayout(false);
-            panel.ResumeLayout(false);
             p1.ResumeLayout(false);
         }
+        
+        private void ScheduleTableLayoutPanel__Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
 
+            int x = e.ClipRectangle.X;
+            int y = e.ClipRectangle.Y;
+            int width = e.ClipRectangle.Width;
+            int height = e.ClipRectangle.Height;
 
+            foreach(Session session in section.sessions)
+            {
+                int thisX = x + (int)session.startTime.DayOfWeek * width / 6;
+
+                int nStartTime = session.startTime.Hour * 60 + session.startTime.Minute;
+                int nEndTime = session.endTime.Hour * 60 + session.endTime.Minute;
+                int scheduleStart = 8 * 60;
+                int scheduleLength = 12 * 60;
+
+                int thisY = (nStartTime - scheduleStart) * height / scheduleLength;
+                int thisWidth = width / 6 - 1;
+                int thisHeight = (nEndTime - nStartTime) * height / scheduleLength;
+
+                g.FillRectangle(
+                    Brushes.Gray,
+                    thisX, thisY, thisWidth, thisHeight
+                    );
+            }
+        }
+
+        private void ScheduleTableLayoutPanel__CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            Graphics graphics = e.Graphics;
+            Rectangle cellBounds = e.CellBounds;
+            graphics.DrawRectangle(Pens.Black, cellBounds);
+        }
     }
 
     // Stores indidvual class sessions, grouped by time (e.g. MWF 12:00PM-12:50PM)
@@ -323,6 +349,8 @@ namespace EnrollBasics
             get { return sessions[i]; }
         }
 
+        public int Count { get { return sessions.Count; } }
+
         public CourseBoxSessions()
         {
             sessions = new List<CourseBoxSession>();
@@ -330,7 +358,12 @@ namespace EnrollBasics
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return (IEnumerator)sessions.GetEnumerator();
+            return (IEnumerator) GetEnumerator();
+        }
+
+        public CourseBoxSessionEnum GetEnumerator()
+        {
+            return new CourseBoxSessionEnum(sessions);
         }
 
         public void Add(CourseBoxSession session)
@@ -340,10 +373,58 @@ namespace EnrollBasics
                 if (thisSession == session) // if we already have this one
                 {
                     thisSession.Merge(session); // add the extra days
-                    break;
+                    return;
                 }
 
-                sessions.Add(session); // otherwise add it to the list
+            }
+
+            sessions.Add(session); // otherwise add it to the list
+        }
+    }
+
+    // allows CourseBoxSessions to use foreach syntax
+    internal class CourseBoxSessionEnum : IEnumerator
+    {
+        public List<CourseBoxSession> sessions;
+
+        int position = -1;
+
+        public CourseBoxSessionEnum(List<CourseBoxSession> sessions)
+        {
+            this.sessions = new List<CourseBoxSession>(sessions);
+        }
+
+        public bool MoveNext()
+        {
+            position++;
+            return position < sessions.Count;
+        }
+
+        public void Reset()
+        {
+            position = -1;
+        }
+
+        object IEnumerator.Current
+        {
+            get
+            {
+                return Current;
+            }
+        }
+
+        public CourseBoxSession Current
+        {
+            get
+            {
+                try
+                {
+                    return sessions[position];
+                }
+                catch (IndexOutOfRangeException)
+                {
+                    throw new IndexOutOfRangeException();
+                }
             }
         }
     }
@@ -386,15 +467,15 @@ namespace EnrollBasics
         {
             this.location = session.location;
             this.days.Add(session.startTime.DayOfWeek);
-            this.time = "" + (((session.startTime.Hour + 11) % 12) - 11);  // 12
-            this.time += ":" + (session.startTime.Minute);                  // 12:00
-            this.time += session.startTime.Hour > 11 ? "PM" : "AM";        // 12:00PM
+            this.time = "" + ((session.startTime.Hour + 11) % 12 + 1);      // 12
+            this.time += ":" + (session.startTime.Minute.ToString("D2"));   // 12:00
+            this.time += (session.startTime.Hour > 11 ? "PM" : "AM");         // 12:00PM
 
             this.time += "-";                                               // 12:00PM-
 
-            this.time += ((session.endTime.Hour + 11) % 12) - 11;          // 12:00PM-12
-            this.time += ":" + (session.endTime.Minute);                    // 12:00PM-12:50
-            this.time += session.endTime.Hour > 11 ? "PM" : "AM";          // 12:00PM-12:50PM
+            this.time += (session.endTime.Hour + 11) % 12 + 1;              // 12:00PM-12
+            this.time += ":" + (session.endTime.Minute.ToString("D2"));     // 12:00PM-12:50
+            this.time += (session.endTime.Hour > 11 ? "PM" : "AM");           // 12:00PM-12:50PM
         }
 
         // if two sessions are the same other than the day they meet on, we can merge them into one display
@@ -406,13 +487,13 @@ namespace EnrollBasics
         // can they be merged?
         public static bool operator ==(CourseBoxSession a, CourseBoxSession b)
         {
-            return (a.time == b.time && a.location == b.location);
+            return ((a.time == b.time) && (a.location == b.location));
         }
 
         // obligatory not equals
         public static bool operator !=(CourseBoxSession a, CourseBoxSession b)
         {
-            return (a.time != b.time || a.location != b.location);
+            return ((a.time != b.time) || (a.location != b.location));
         }
     }
 }
