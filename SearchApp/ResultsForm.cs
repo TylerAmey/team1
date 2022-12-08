@@ -29,14 +29,14 @@ namespace SearchApp
             section.professor = "David Schuh";
             
             Session session1 = new Session();
-            session1.location = "Online";
-            session1.startTime = new DateTime(2022, 1, 3, 12, 00, 0);
-            session1.endTime = new DateTime(2022, 1, 3, 12, 50, 0);
+            session1.location = "GOL-2000";
+            session1.startTime = new DateTime(2022, 1, 4, 17, 00, 0);
+            session1.endTime = new DateTime(2022, 1, 4, 19, 0, 0);
 
             Session session2 = new Session();
-            session2.location = "Online";
-            session2.startTime = new DateTime(2022, 1, 5, 12, 00, 0);
-            session2.endTime = new DateTime(2022, 1, 5, 12, 50, 0);
+            session2.location = "GOL-3000";
+            session2.startTime = new DateTime(2022, 1, 6, 17, 00, 0);
+            session2.endTime = new DateTime(2022, 1, 6, 20, 0, 0);
 
             Session session3 = new Session();
             session3.location = "Online";
@@ -46,7 +46,7 @@ namespace SearchApp
             section.sessions = new List<Session>();
             section.sessions.Add(session1);
             section.sessions.Add(session2);
-            section.sessions.Add(session3);
+            // section.sessions.Add(session3);
 
             SeatManager seats = new SeatManager();
             seats.seatPosition = 12;

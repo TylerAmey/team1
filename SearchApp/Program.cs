@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using EnrollBasics;
+
 namespace SearchApp
 {
     internal static class Program
@@ -17,6 +19,9 @@ namespace SearchApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new SearchForm());
+
+            Globals.Setup();
+            Globals.Spit();
         }
     }
 }
