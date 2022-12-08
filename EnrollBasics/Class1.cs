@@ -26,8 +26,9 @@ namespace EnrollBasics
         public static string major;
         public static KeyValuePair<string, Requirement> requirements;
         public static List<Course> projectedSchedule;
+        public static List<Course> savedCourses;
+        public static List<Course> enrolledCourses;
         public static int totalCredits;
-
     }
 
     public class Course
