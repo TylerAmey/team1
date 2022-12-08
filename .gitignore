@@ -6,7 +6,7 @@
 *.vsidx
 *.cache
 *.suo
-**/.vs
+**/.vs/
 
 # User-specific files
 *.rsuser
