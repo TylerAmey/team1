@@ -4,12 +4,6 @@ D:\Profiles\mrc6113\source\repos\TylerAmey\team1\EnrollBasics\obj\Debug\EnrollBa
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\EnrollBasics\obj\Debug\EnrollBasics.csproj.CoreCompileInputs.cache
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\EnrollBasics\obj\Debug\EnrollBasics.dll
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\EnrollBasics\obj\Debug\EnrollBasics.pdb
-C:\Users\tyler\team1project\team1\EnrollBasics\bin\Debug\EnrollBasics.dll
-C:\Users\tyler\team1project\team1\EnrollBasics\bin\Debug\EnrollBasics.pdb
-C:\Users\tyler\team1project\team1\EnrollBasics\bin\Debug\Newtonsoft.Json.dll
-C:\Users\tyler\team1project\team1\EnrollBasics\bin\Debug\Newtonsoft.Json.xml
-C:\Users\tyler\team1project\team1\EnrollBasics\obj\Debug\EnrollBasics.csproj.AssemblyReference.cache
-C:\Users\tyler\team1project\team1\EnrollBasics\obj\Debug\EnrollBasics.csproj.CoreCompileInputs.cache
-C:\Users\tyler\team1project\team1\EnrollBasics\obj\Debug\EnrollBasics.csproj.CopyComplete
-C:\Users\tyler\team1project\team1\EnrollBasics\obj\Debug\EnrollBasics.dll
-C:\Users\tyler\team1project\team1\EnrollBasics\obj\Debug\EnrollBasics.pdb
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\EnrollBasics\bin\Debug\Newtonsoft.Json.dll
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\EnrollBasics\bin\Debug\Newtonsoft.Json.xml
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\EnrollBasics\obj\Debug\EnrollBasics.csproj.CopyComplete
