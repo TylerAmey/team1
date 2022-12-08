@@ -26,8 +26,9 @@ namespace EnrollBasics
         public static string major;
         public static KeyValuePair<string, Requirement> requirements;
         public static List<Course> projectedSchedule;
+        public static List<Course> savedCourses;
+        public static List<Section> enrolledCourses;
         public static int totalCredits;
-
     }
 
     public class Course
@@ -62,10 +63,16 @@ namespace EnrollBasics
 
     public class Section
     {
+        public string courseID;
         public int number;
         public string professor;
         public SeatManager seats;
         public List<Session> sessions;
+
+        public Course course { get
+            {
+                return Globals.Courses.Find((course) => course.id == courseID);
+            } }
     }
 
 
