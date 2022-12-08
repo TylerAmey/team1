@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EnrollBasics;
 
 namespace CurrentClasses
 {
     public partial class CurrentClasses : Form
     {
-        public CurrentClasses()
+        public CurrentClasses() 
         {
             InitializeComponent();
 
@@ -21,10 +22,20 @@ namespace CurrentClasses
             //for each class in student.currentClasses
             //create a panel under classFlowLayoutPanel
 
-            foreach(Course course in Student.enrolledCourses)
+            foreach(Section section in Student.enrolledCourses)
             {
                 Panel coursePanel = new Panel();
-                Label className = course.
+                Label className = new Label();
+                className.Text = section.course.name;
+                Label classCode = new Label();
+                classCode.Text = section.course.id;
+                Label classDays = new Label();
+                foreach(Session session in Section.sessions)
+                {
+
+                }
+
+
             }
         }
 
