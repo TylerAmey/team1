@@ -24,7 +24,7 @@ namespace EnrollBasics
         public static string name;
         private static int uID;
         public static string major;
-        public static KeyValuePair<string, Requirement> requirements;
+        public static List<KeyValuePair<string, Requirement>> requirements;
         public static List<Course> projectedSchedule;
         public static List<Course> savedCourses;
         public static List<Section> enrolledCourses;
