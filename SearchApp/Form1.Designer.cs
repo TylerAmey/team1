@@ -53,7 +53,6 @@
             this.timeCheckBox4 = new System.Windows.Forms.CheckBox();
             this.timeCheckBox3 = new System.Windows.Forms.CheckBox();
             this.timeCheckBox2 = new System.Windows.Forms.CheckBox();
-            this.timeCheckBox1 = new System.Windows.Forms.CheckBox();
             this.timeButton = new System.Windows.Forms.Button();
             this.daysGroupBox = new System.Windows.Forms.GroupBox();
             this.saturdayCheckBox = new System.Windows.Forms.CheckBox();
@@ -67,6 +66,7 @@
             this.codeLinkLabel = new System.Windows.Forms.LinkLabel();
             this.formLabel = new System.Windows.Forms.Label();
             this.advancedButton = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.advancedGroupBox.SuspendLayout();
             this.perspectivesGroupBox.SuspendLayout();
             this.availabilityGroupBox.SuspendLayout();
@@ -137,6 +137,7 @@
             // 
             // perspectivesGroupBox
             // 
+            this.perspectivesGroupBox.Controls.Add(this.checkBox1);
             this.perspectivesGroupBox.Controls.Add(this.checkBox7);
             this.perspectivesGroupBox.Controls.Add(this.checkBox8);
             this.perspectivesGroupBox.Controls.Add(this.checkBox9);
@@ -156,9 +157,9 @@
             this.checkBox7.AutoSize = true;
             this.checkBox7.Location = new System.Drawing.Point(7, 145);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(68, 17);
+            this.checkBox7.Size = new System.Drawing.Size(92, 17);
             this.checkBox7.TabIndex = 14;
-            this.checkBox7.Text = "Saturday";
+            this.checkBox7.Text = "Sci. Principles";
             this.checkBox7.UseVisualStyleBackColor = true;
             // 
             // checkBox8
@@ -166,9 +167,9 @@
             this.checkBox8.AutoSize = true;
             this.checkBox8.Location = new System.Drawing.Point(7, 122);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(54, 17);
+            this.checkBox8.Size = new System.Drawing.Size(102, 17);
             this.checkBox8.TabIndex = 13;
-            this.checkBox8.Text = "Friday";
+            this.checkBox8.Text = "Natural Science";
             this.checkBox8.UseVisualStyleBackColor = true;
             // 
             // checkBox9
@@ -176,9 +177,9 @@
             this.checkBox9.AutoSize = true;
             this.checkBox9.Location = new System.Drawing.Point(7, 98);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(70, 17);
+            this.checkBox9.Size = new System.Drawing.Size(89, 17);
             this.checkBox9.TabIndex = 12;
-            this.checkBox9.Text = "Thursday";
+            this.checkBox9.Text = "Mathematical";
             this.checkBox9.UseVisualStyleBackColor = true;
             // 
             // checkBox10
@@ -186,9 +187,9 @@
             this.checkBox10.AutoSize = true;
             this.checkBox10.Location = new System.Drawing.Point(7, 74);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(83, 17);
+            this.checkBox10.Size = new System.Drawing.Size(56, 17);
             this.checkBox10.TabIndex = 11;
-            this.checkBox10.Text = "Wednesday";
+            this.checkBox10.Text = "Global";
             this.checkBox10.UseVisualStyleBackColor = true;
             // 
             // checkBox11
@@ -196,9 +197,9 @@
             this.checkBox11.AutoSize = true;
             this.checkBox11.Location = new System.Drawing.Point(7, 50);
             this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(67, 17);
+            this.checkBox11.Size = new System.Drawing.Size(58, 17);
             this.checkBox11.TabIndex = 10;
-            this.checkBox11.Text = "Tuesday";
+            this.checkBox11.Text = "Ethical";
             this.checkBox11.UseVisualStyleBackColor = true;
             // 
             // checkBox12
@@ -206,9 +207,9 @@
             this.checkBox12.AutoSize = true;
             this.checkBox12.Location = new System.Drawing.Point(7, 26);
             this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(64, 17);
+            this.checkBox12.Size = new System.Drawing.Size(54, 17);
             this.checkBox12.TabIndex = 9;
-            this.checkBox12.Text = "Monday";
+            this.checkBox12.Text = "Aristic";
             this.checkBox12.UseVisualStyleBackColor = true;
             // 
             // perspectiveButton
@@ -269,7 +270,6 @@
             this.timeGroupBox.Controls.Add(this.timeCheckBox4);
             this.timeGroupBox.Controls.Add(this.timeCheckBox3);
             this.timeGroupBox.Controls.Add(this.timeCheckBox2);
-            this.timeGroupBox.Controls.Add(this.timeCheckBox1);
             this.timeGroupBox.Controls.Add(this.timeButton);
             this.timeGroupBox.Location = new System.Drawing.Point(7, 46);
             this.timeGroupBox.Name = "timeGroupBox";
@@ -280,7 +280,7 @@
             // timeCheckBox7
             // 
             this.timeCheckBox7.AutoSize = true;
-            this.timeCheckBox7.Location = new System.Drawing.Point(7, 169);
+            this.timeCheckBox7.Location = new System.Drawing.Point(6, 148);
             this.timeCheckBox7.Name = "timeCheckBox7";
             this.timeCheckBox7.Size = new System.Drawing.Size(73, 17);
             this.timeCheckBox7.TabIndex = 14;
@@ -290,7 +290,7 @@
             // timeCheckBox6
             // 
             this.timeCheckBox6.AutoSize = true;
-            this.timeCheckBox6.Location = new System.Drawing.Point(7, 146);
+            this.timeCheckBox6.Location = new System.Drawing.Point(6, 125);
             this.timeCheckBox6.Name = "timeCheckBox6";
             this.timeCheckBox6.Size = new System.Drawing.Size(73, 17);
             this.timeCheckBox6.TabIndex = 13;
@@ -300,7 +300,7 @@
             // timeCheckBox5
             // 
             this.timeCheckBox5.AutoSize = true;
-            this.timeCheckBox5.Location = new System.Drawing.Point(7, 122);
+            this.timeCheckBox5.Location = new System.Drawing.Point(6, 101);
             this.timeCheckBox5.Name = "timeCheckBox5";
             this.timeCheckBox5.Size = new System.Drawing.Size(73, 17);
             this.timeCheckBox5.TabIndex = 12;
@@ -310,7 +310,7 @@
             // timeCheckBox4
             // 
             this.timeCheckBox4.AutoSize = true;
-            this.timeCheckBox4.Location = new System.Drawing.Point(7, 98);
+            this.timeCheckBox4.Location = new System.Drawing.Point(6, 77);
             this.timeCheckBox4.Name = "timeCheckBox4";
             this.timeCheckBox4.Size = new System.Drawing.Size(79, 17);
             this.timeCheckBox4.TabIndex = 11;
@@ -320,7 +320,7 @@
             // timeCheckBox3
             // 
             this.timeCheckBox3.AutoSize = true;
-            this.timeCheckBox3.Location = new System.Drawing.Point(7, 74);
+            this.timeCheckBox3.Location = new System.Drawing.Point(6, 53);
             this.timeCheckBox3.Name = "timeCheckBox3";
             this.timeCheckBox3.Size = new System.Drawing.Size(85, 17);
             this.timeCheckBox3.TabIndex = 10;
@@ -330,22 +330,12 @@
             // timeCheckBox2
             // 
             this.timeCheckBox2.AutoSize = true;
-            this.timeCheckBox2.Location = new System.Drawing.Point(7, 50);
+            this.timeCheckBox2.Location = new System.Drawing.Point(6, 29);
             this.timeCheckBox2.Name = "timeCheckBox2";
             this.timeCheckBox2.Size = new System.Drawing.Size(79, 17);
             this.timeCheckBox2.TabIndex = 9;
             this.timeCheckBox2.Text = "8AM-10AM";
             this.timeCheckBox2.UseVisualStyleBackColor = true;
-            // 
-            // timeCheckBox1
-            // 
-            this.timeCheckBox1.AutoSize = true;
-            this.timeCheckBox1.Location = new System.Drawing.Point(7, 26);
-            this.timeCheckBox1.Name = "timeCheckBox1";
-            this.timeCheckBox1.Size = new System.Drawing.Size(73, 17);
-            this.timeCheckBox1.TabIndex = 8;
-            this.timeCheckBox1.Text = "6AM-8AM";
-            this.timeCheckBox1.UseVisualStyleBackColor = true;
             // 
             // timeButton
             // 
@@ -477,6 +467,16 @@
             this.advancedButton.Text = "Advanced";
             this.advancedButton.UseVisualStyleBackColor = true;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(7, 169);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(55, 17);
+            this.checkBox1.TabIndex = 15;
+            this.checkBox1.Text = "Social";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // SearchForm
             // 
             this.AcceptButton = this.searchButton;
@@ -526,7 +526,6 @@
         private System.Windows.Forms.CheckBox timeCheckBox4;
         private System.Windows.Forms.CheckBox timeCheckBox3;
         private System.Windows.Forms.CheckBox timeCheckBox2;
-        private System.Windows.Forms.CheckBox timeCheckBox1;
         private System.Windows.Forms.GroupBox daysGroupBox;
         private System.Windows.Forms.CheckBox saturdayCheckBox;
         private System.Windows.Forms.CheckBox fridayCheckBox;
@@ -546,6 +545,7 @@
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.MaskedTextBox subjectMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox numberMaskedTextBox;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

@@ -72,7 +72,7 @@ namespace SearchApp
         // same deal
         private void TimeButton__Click(object sender, EventArgs e)
         {
-            if (timeGroupBox.Height == 23) timeGroupBox.Height = 192;
+            if (timeGroupBox.Height == 23) timeGroupBox.Height = 163;
             else timeGroupBox.Height = 23;
         }
 
@@ -88,7 +88,7 @@ namespace SearchApp
         // samest deal
         private void PerspectivesButton__Click(object sender, EventArgs e)
         {
-            if (perspectivesGroupBox.Height == 23) perspectivesGroupBox.Height = 163;
+            if (perspectivesGroupBox.Height == 23) perspectivesGroupBox.Height = 192;
             else perspectivesGroupBox.Height = 23;
         }
 
