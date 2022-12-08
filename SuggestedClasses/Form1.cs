@@ -71,7 +71,7 @@ namespace SuggestedClasses
 
         public int CalcRecValue(Section section)
         {
-            Course course = section.Course;
+            Course course = section.ParentCourse;
             int recValue = 0;
 
           
