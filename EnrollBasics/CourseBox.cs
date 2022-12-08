@@ -313,7 +313,7 @@ namespace EnrollBasics
 
             foreach(Session session in section.sessions)
             {
-                int thisX = x + (int)session.startTime.DayOfWeek * width / 6;
+                int thisX = x + ((int)session.startTime.DayOfWeek - 1) * width / 6;
 
                 int nStartTime = session.startTime.Hour * 60 + session.startTime.Minute;
                 int nEndTime = session.endTime.Hour * 60 + session.endTime.Minute;

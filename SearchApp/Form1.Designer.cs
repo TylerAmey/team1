@@ -276,7 +276,6 @@
             this.timeGroupBox.Size = new System.Drawing.Size(117, 23);
             this.timeGroupBox.TabIndex = 11;
             this.timeGroupBox.TabStop = false;
-            this.timeGroupBox.Text = "groupBox3";
             // 
             // timeCheckBox7
             // 

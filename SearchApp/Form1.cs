@@ -19,8 +19,13 @@ namespace SearchApp
             // add autocomplete strings to Major
 
             // Advanced should pop out advanced box
+            advancedButton.Click += new EventHandler(AdvancedButton__Click);
 
             // time, days, perspectives, and availability should pop out their respective boxes
+            timeButton.Click += new EventHandler(TimeButton__Click);
+            daysButton.Click += new EventHandler(DaysButton__Click);
+            perspectiveButton.Click += new EventHandler(PerspectivesButton__Click);
+            availableButton.Click += new EventHandler(AvailabilityButton__Click);
 
             // unfocusing time/days/pers/avai should cloes the box
 
@@ -57,18 +62,43 @@ namespace SearchApp
         // big group box
         // or small
         // its a toggle
+        private void AdvancedButton__Click(object sender, EventArgs e)
+        {
+            if (advancedGroupBox.Visible) advancedGroupBox.Visible = false;
+            else advancedGroupBox.Visible = true;
+        }
 
         // timeButton__Click
         // same deal
+        private void TimeButton__Click(object sender, EventArgs e)
+        {
+            if (timeGroupBox.Height == 23) timeGroupBox.Height = 192;
+            else timeGroupBox.Height = 23;
+        }
 
         // daysButton__Click
         // samer deal
+        private void DaysButton__Click(object sender, EventArgs e)
+        {
+            if (daysGroupBox.Height == 23) daysGroupBox.Height = 163;
+            else daysGroupBox.Height = 23;
+        }
 
         // perspectivesButton__Click
         // samest deal
+        private void PerspectivesButton__Click(object sender, EventArgs e)
+        {
+            if (perspectivesGroupBox.Height == 23) perspectivesGroupBox.Height = 163;
+            else perspectivesGroupBox.Height = 23;
+        }
 
         // availabilityButton__Click
         // samester deal
+        private void AvailabilityButton__Click(object sender, EventArgs e)
+        {
+            if (availabilityGroupBox.Height == 23) availabilityGroupBox.Height = 75;
+            else availabilityGroupBox.Height = 23;
+        }
 
         // timeGroupBox__Leave
         // close box
