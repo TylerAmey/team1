@@ -27,6 +27,7 @@ namespace EnrollBasics
             exampleCourse.sections = new List<Section>();
 
             Section section1 = new Section();
+            section1.courseID = "COURSE_ID";
             section1.number = 0;
             section1.professor = "SECTION1_PROFESSOR";
             section1.seats = new SeatManager();
@@ -58,6 +59,7 @@ namespace EnrollBasics
 
 
             Section section2 = new Section();
+            section2.courseID = "COURSE_ID";
             section2.number = 0;
             section2.professor = "SECTION1_PROFESSOR";
             section2.seats = new SeatManager();

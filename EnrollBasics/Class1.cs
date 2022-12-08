@@ -42,7 +42,7 @@ namespace EnrollBasics
         public int credits;
     }
 
-    public abstract class Requirement
+    public class Requirement
     {
         public string displayName;
         public bool isFullfilled;
@@ -69,7 +69,7 @@ namespace EnrollBasics
         public SeatManager seats;
         public List<Session> sessions;
 
-        public Course course { get
+        public Course ParentCourse { get
             {
                 return Globals.Courses.Find((course) => course.id == courseID);
             } }
