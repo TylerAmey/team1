@@ -10,6 +10,8 @@ namespace EnrollBasics
 {
     public static class Globals
     {
+        public static List<Course> Courses;
+
         private static Course exampleCourse = new Course();
 
         public static void Setup()
