@@ -1,0 +1,6 @@
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\EnrollBasics\bin\Debug\EnrollBasics.dll
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\EnrollBasics\bin\Debug\EnrollBasics.pdb
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\EnrollBasics\obj\Debug\EnrollBasics.csproj.AssemblyReference.cache
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\EnrollBasics\obj\Debug\EnrollBasics.csproj.CoreCompileInputs.cache
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\EnrollBasics\obj\Debug\EnrollBasics.dll
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\EnrollBasics\obj\Debug\EnrollBasics.pdb

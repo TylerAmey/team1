@@ -49,9 +49,9 @@ namespace EnrollBasics
 
         public bool FullfillsRequirement(Course course)
         {
-            foreach(Course course2 in validCourses)
+            foreach(string course2 in validCourses)
             {
-                if(course == course2)
+                if(course.id == course2)
                 {
                     return true;
                 }
@@ -62,6 +62,7 @@ namespace EnrollBasics
 
     public class Section
     {
+        public int number;
         public string professor;
         public SeatManager seats;
         public List<Session> sessions;
