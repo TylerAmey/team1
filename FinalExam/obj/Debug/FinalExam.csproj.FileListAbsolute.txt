@@ -1,0 +1,8 @@
+C:\Users\tyler\team1project\team1\FinalExam\bin\Debug\FinalExam.exe.config
+C:\Users\tyler\team1project\team1\FinalExam\bin\Debug\FinalExam.exe
+C:\Users\tyler\team1project\team1\FinalExam\bin\Debug\FinalExam.pdb
+C:\Users\tyler\team1project\team1\FinalExam\obj\Debug\FinalExam.csproj.AssemblyReference.cache
+C:\Users\tyler\team1project\team1\FinalExam\obj\Debug\FinalExam.csproj.SuggestedBindingRedirects.cache
+C:\Users\tyler\team1project\team1\FinalExam\obj\Debug\FinalExam.csproj.CoreCompileInputs.cache
+C:\Users\tyler\team1project\team1\FinalExam\obj\Debug\FinalExam.exe
+C:\Users\tyler\team1project\team1\FinalExam\obj\Debug\FinalExam.pdb
