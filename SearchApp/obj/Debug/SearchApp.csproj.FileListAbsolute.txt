@@ -15,3 +15,5 @@ D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\bin\Debug\EnrollBasic
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\bin\Debug\EnrollBasics.pdb
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.csproj.CopyComplete
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\obj\Debug\SearchApp.temp.resources
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\bin\Debug\Newtonsoft.Json.dll
+D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchApp\bin\Debug\Newtonsoft.Json.xml

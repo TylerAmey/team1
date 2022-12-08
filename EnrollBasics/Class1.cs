@@ -29,6 +29,7 @@ namespace EnrollBasics
         public static List<Course> savedCourses;
         public static List<Section> enrolledCourses;
         public static int totalCredits;
+        public static int year;
     }
 
     public class Course
@@ -69,13 +70,11 @@ namespace EnrollBasics
         public SeatManager seats;
         public List<Session> sessions;
 
-        public Course ParentCourse { get
-            {
-                return Globals.Courses.Find((course) => course.id == courseID);
-            } }
+        // public Course ParentCourse { get
+        //    {
+        //        return Globals.Courses.Find((course) => course.id == courseID);
+        //    } }
     }
-
-
 
     public class Session
     {

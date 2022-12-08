@@ -64,7 +64,7 @@ namespace EnrollBasics
             section2.professor = "SECTION1_PROFESSOR";
             section2.seats = new SeatManager();
             section2.sessions = new List<Session>();
-            
+
             section2.seats.seatPosition = 1;
             section2.seats.waitListPosition = 2;
             section2.seats.capacity = 3;
@@ -87,11 +87,17 @@ namespace EnrollBasics
             session3.endTime = new DateTime(2022, 1, 6, 1, 0, 0);
             section2.sessions.Add(session6);
 
-            exampleCourse.sections.Add(section1);
+            exampleCourse.sections.Add(section2);
 
+            exampleCourse.yearLvl = 4;
+            exampleCourse.credits = 5;
+        }
 
-
-        } 
+        public static void Spit()
+        {
+            string output = JsonConvert.SerializeObject(exampleCourse);
+            Console.WriteLine(output);
+        }
     }
 
 }
