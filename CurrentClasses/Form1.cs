@@ -15,6 +15,17 @@ namespace CurrentClasses
         public CurrentClasses()
         {
             InitializeComponent();
+
+            //Give all class panels event handlers
+
+            //for each class in student.currentClasses
+            //create a panel under classFlowLayoutPanel
+
+            foreach(Course course in Student.enrolledCourses)
+            {
+                Panel coursePanel = new Panel();
+                Label className = course.
+            }
         }
 
 
