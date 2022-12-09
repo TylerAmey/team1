@@ -20,6 +20,8 @@ namespace SuggestedClasses
         public Form1()
         {
             InitializeComponent();
+            Student.Init();
+            Globals.Init();
 
             /*Course course = new Course();
             course.id = "IGME201";
