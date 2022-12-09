@@ -19,7 +19,6 @@ namespace CurrentClasses
 
             InitializeComponent();
             Student.Init();
-            Globals.Init();
 
             //Create lists of each panel on the calendar
             List<Control> mondayPanels = new List<Control>();
