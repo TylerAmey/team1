@@ -16,8 +16,8 @@ namespace SuggestedClasses
     //This form will take a list of all courses' sections and go through them, choosing 5 to display based on characteristics of the course/section.
     public partial class Form1 : Form 
     {
-        List<Section> recommendedSections;
-        public Form1()
+        List<Section> recommendedSections = new List<Section>();
+        /*public Form1()
         {
             InitializeComponent();
             Student.Init();
@@ -64,14 +64,25 @@ namespace SuggestedClasses
             box.EnrollClick += new EventHandler(DoFunny);
             box.AddToPanel(ref panel1);*/
 
-            CourseBox box = new CourseBox(Globals.Courses[0], Globals.Courses[0].sections[0]);
+            /*CourseBox box = new CourseBox(Globals.Courses[0], Globals.Courses[0].sections[0]);
             box.EnrollClick += new EventHandler(DoFunny);
             box.AddToPanel(ref panel1);
 
-        }
+            box = new CourseBox(Globals.Courses[1], Globals.Courses[1].sections[1]);
+            box.EnrollClick += new EventHandler(DoFunny);
+            box.AddToPanel(ref panel2);
 
-        /*public Form1()
+            box = new CourseBox(Globals.Courses[2], Globals.Courses[2].sections[0]);
+            box.EnrollClick += new EventHandler(DoFunny);
+            box.AddToPanel(ref panel3);
+        }*/
+
+        public Form1()
         {
+            InitializeComponent();
+            Student.Init();
+            Globals.Init();
+
             Section temp; //temp section variable for sorting the list of recommended sections 
             int i = 0; //iterator variable
             int j = 0; //iterator varibale
@@ -79,7 +90,7 @@ namespace SuggestedClasses
             //initialize the recommended list to contain the first sections of the first 3 existing courses
             for(i = 0; i < 3; i++)
             {
-                recommendedSections[i] = Globals.Courses[i].sections[0];
+                recommendedSections.Add(Globals.Courses[i].sections[0]);
             }
 
             //sorts the initial recommended list in descending order by their recValue
@@ -96,7 +107,18 @@ namespace SuggestedClasses
                 }
             }
 
-        }*/
+            CourseBox box = new CourseBox(recommendedSections[0].ParentCourse, recommendedSections[0]);
+            box.EnrollClick += new EventHandler(DoFunny);
+            box.AddToPanel(ref panel1);
+
+            box = new CourseBox(recommendedSections[1].ParentCourse, recommendedSections[1]);
+            box.EnrollClick += new EventHandler(DoFunny);
+            box.AddToPanel(ref panel2);
+
+            box = new CourseBox(recommendedSections[2].ParentCourse, recommendedSections[2]);
+            box.EnrollClick += new EventHandler(DoFunny);
+            box.AddToPanel(ref panel3);
+        }
 
         public int CalcRecValue(Section section)
         {

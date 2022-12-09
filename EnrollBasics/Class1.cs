@@ -64,6 +64,21 @@ namespace EnrollBasics
         public List<Section> sections;
         public int yearLvl;
         public int credits;
+
+        /*public Boolean FulfillsPreReqs()
+        {
+            bool fulfilled = false;
+
+            for (int i = 0; i < requisites.Count; i++)
+            {
+                foreach (Course pastCourse in Student.completedCourses)
+                {
+                    if (pastCourse.id.Equals())
+                }
+            }
+
+            return fulfilled;
+        }*/
     }
 
     public abstract class Requirement
