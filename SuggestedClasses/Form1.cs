@@ -21,7 +21,7 @@ namespace SuggestedClasses
         {
             InitializeComponent();
 
-            Course course = new Course();
+            /*Course course = new Course();
             course.id = "IGME201";
             course.name = "Interac Des & Alg Prob Sol III";
             course.description = "This is the third course in the software development sequence for new media interactive development students. Students further their exploration of problem solving and abstraction through coverage of topics such as GUI development, events, file I/O, networking, threading, and other advanced topics related to the design and development of modern dynamic applications. Programming assignments are an integral part of the course.";
@@ -61,6 +61,7 @@ namespace SuggestedClasses
             CourseBox box = new CourseBox(course, section);
             box.EnrollClick += new EventHandler(DoFunny);
             box.AddToPanel(ref panel1);
+            */
         }
 
         public Form1(List<Course> courses) //receives the list of all courses
