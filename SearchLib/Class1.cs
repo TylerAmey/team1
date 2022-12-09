@@ -193,9 +193,9 @@ namespace SearchLib
     }
 
     // TODO
-    public class QueryTimes : QueryCondition<(DateTime, DateTime)>, IQuerySimilar
+    public class QueryTimes : QueryCondition<TimeBlocks>, IQuerySimilar
     {
-        public QueryTimes((DateTime, DateTime) query) : base(query) { }
+        public QueryTimes(TimeBlocks query) : base(query) { }
 
         public override bool IsSatisfied(Course course)
         {
@@ -219,13 +219,18 @@ namespace SearchLib
         }
     }
 
-    public class QueryPerspective : QueryCondition<string>
+    public class QueryPerspective : QueryCondition<List<string>>
     {
-        public QueryPerspective(string query) : base(query) { }
+        public QueryPerspective(List<string> query) : base(query) { }
 
         public override bool IsSatisfied(Course course)
         {
-            return Globals.RequirementCourses[Query].Contains(course.id);
+            foreach (string query in Query)
+            {
+                if (Globals.RequirementCourses[query].Contains(course.id)) return true;
+            }
+            return false;
+            
         }
     }
 
@@ -251,10 +256,16 @@ namespace SearchLib
         }
     }
     
-    public class Timeblocks
+    public class TimeBlocks
     {
         private List<TimeBlock> times;
         public List<TimeBlock> Times { get { return times; } }
+
+        public int Count { get { return times.Count; } }
+
+        public TimeBlocks() { 
+            times = new List<TimeBlock>();
+        }
 
         public void Add(TimeBlock tb)
         {
@@ -297,6 +308,8 @@ namespace SearchLib
         public static List<SearchResult> Search(List<QueryCondition> query)
         {
             List<SearchResult> results = new List<SearchResult>();
+
+            Console.WriteLine(Globals.Course.Count);
 
             foreach (Course course in Globals.Courses)
             {

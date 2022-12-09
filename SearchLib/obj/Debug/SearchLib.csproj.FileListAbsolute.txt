@@ -5,7 +5,6 @@ D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchLib\bin\Debug\SearchLib.p
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchLib\bin\Debug\EnrollBasics.dll
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchLib\bin\Debug\Newtonsoft.Json.dll
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchLib\bin\Debug\EnrollBasics.pdb
-D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchLib\bin\Debug\Newtonsoft.Json.xml
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchLib\obj\Debug\SearchLib.csproj.AssemblyReference.cache
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchLib\obj\Debug\SearchLib.csproj.CoreCompileInputs.cache
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchLib\obj\Debug\SearchLib.csproj.CopyComplete

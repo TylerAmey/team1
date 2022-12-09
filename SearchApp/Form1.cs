@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using EnrollBasics;
 using SearchLib;
 
 namespace SearchApp
@@ -18,6 +19,7 @@ namespace SearchApp
         public SearchForm()
         {
             InitializeComponent();
+            filter = new List<QueryCondition>();
 
             // add autocomplete strings to Major
 
@@ -27,8 +29,8 @@ namespace SearchApp
             // time, days, perspectives, and availability should pop out their respective boxes
             timeButton.Click += new EventHandler(TimeButton__Click);
             daysButton.Click += new EventHandler(DaysButton__Click);
-            perspectiveButton.Click += new EventHandler(PerspectivesButton__Click);
-            availableButton.Click += new EventHandler(AvailabilityButton__Click);
+            perspectivesButton.Click += new EventHandler(PerspectivesButton__Click);
+            availabilityButton.Click += new EventHandler(AvailabilityButton__Click);
 
             // unfocusing time/days/pers/avai should cloes the box
 
@@ -124,10 +126,18 @@ namespace SearchApp
         // keywordTextBox__TextChanged
         // update filter
 
-        // subjectMaskedTextBox__TextChanged
+        // subjectTextBox__TextChanged
         // update filter
+        private void SubjectTextBox__KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = false;
 
-        // numberMaskedTextBox__TextChanged
+            TextBox tb = (TextBox)sender;
+            if (char.IsDigit(e.KeyChar) || e.KeyChar == '\b') e.Handled = false;
+            if (tb.Text.Length == 4 && e.KeyChar != '\b') e.Handled = true;
+        }
+
+        // numberTextBox__TextChanged
         // update filter
 
         // majorTextBox__TextChanged
@@ -154,6 +164,7 @@ namespace SearchApp
         // open ResultsForm
         private void SearchButton__Click(object sender, EventArgs e)
         {
+            CompileFilter();
             List<SearchResult> results = SearchManager.Search(filter);
 
             ResultsForm resultsForm = new ResultsForm(results);
@@ -219,7 +230,54 @@ namespace SearchApp
         
         private void CompileTimes(GroupBox groupBox)
         {
+            TimeBlocks query = new TimeBlocks();
 
+            foreach (Control control in groupBox.Controls)
+            {
+                if (control is CheckBox)
+                {
+                    CheckBox cb = (CheckBox)control;
+                    if (cb.Checked)
+                    {
+                        switch(cb.Name)
+                        {
+                            case "timeCheckBox1":
+                                query.Add(new TimeBlock(
+                                    new DateTime(0001, 01, 01, 8, 0, 0),
+                                    new DateTime(0001, 01, 01, 10, 0, 0)));
+                                break;
+                            case "timeCheckBox2":
+                                query.Add(new TimeBlock(
+                                    new DateTime(0001, 01, 01, 10, 0, 0),
+                                    new DateTime(0001, 01, 01, 12, 0, 0)));
+                                break;
+                            case "timeCheckBox3":
+                                query.Add(new TimeBlock(
+                                    new DateTime(0001, 01, 01, 12, 0, 0),
+                                    new DateTime(0001, 01, 01, 14, 0, 0)));
+                                break;
+                            case "timeCheckBox4":
+                                query.Add(new TimeBlock(
+                                    new DateTime(0001, 01, 01, 14, 0, 0),
+                                    new DateTime(0001, 01, 01, 16, 0, 0)));
+                                break;
+                            case "timeCheckBox5":
+                                query.Add(new TimeBlock(
+                                    new DateTime(0001, 01, 01, 16, 0, 0),
+                                    new DateTime(0001, 01, 01, 18, 0, 0)));
+                                break;
+                            case "timeCheckBox6":
+                                query.Add(new TimeBlock(
+                                    new DateTime(0001, 01, 01, 18, 0, 0),
+                                    new DateTime(0001, 01, 01, 20, 0, 0)));
+                                break;
+                            default:
+                                continue;
+                        }
+                    }
+                }
+            }
+            if (query.Count > 0) filter.Add(new QueryTimes(query));
         }
 
         private void CompileDays(GroupBox groupBox)
@@ -240,7 +298,79 @@ namespace SearchApp
                     }
                 }
             }
-            filter.Add(new QueryDays(query));
+            if (query != 0) filter.Add(new QueryDays(query));
+        }
+
+        private void CompilePerspectives(GroupBox groupBox)
+        {
+            List<string> query = new List<string>();
+
+            foreach (Control control in groupBox.Controls)
+            {
+                if (control is CheckBox)
+                {
+                    CheckBox cb = (CheckBox)control;
+                    if (cb.Checked)
+                    {
+                        switch(cb.Name)
+                        {
+                            case "artisticPerspectiveGroupBox":
+                                query.Add("Artistic Perspective");
+                                break;
+                            case "ethicalPerspectiveGroupBox":
+                                query.Add("Ethical Perspective");
+                                break;
+                            case "globalPerspectiveGroupBox":
+                                query.Add("Global Perspective");
+                                break;
+                            case "mathematicalPerspectiveGroupBox":
+                                query.Add("Mathematical Perspective");
+                                break;
+                            case "naturalSciencePerspectiveGroupBox":
+                                query.Add("Natural Science Perspective");
+                                break;
+                            case "scientificPrinciplesPerspectiveGroupBox":
+                                query.Add("Scientific Principles Perspective");
+                                break;
+                            case "socialPerspectiveGroupBox":
+                                query.Add("Social Perspective");
+                                break;
+                            default:
+                                continue;
+                        }
+                    }
+                }
+            }
+            if (query.Count > 0) filter.Add(new QueryPerspective(query));
+        }
+
+        private void CompileAvailability(GroupBox groupBox)
+        {
+            Availability query = Availability.Open;
+
+            foreach (Control control in groupBox.Controls)
+            {
+                if (control is CheckBox)
+                {
+                    CheckBox cb = (CheckBox)control;
+                    if (cb.Checked)
+                    {
+                        switch (cb.Name)
+                        {
+                            case "waitlistCheckBox":
+                                query |= Availability.Waitlist;
+                                break;
+                            case "closedCheckBox":
+                                query |= Availability.Closed;
+                                break;
+                            default:
+                                continue;
+                        }
+                    }
+                }
+            }
+
+            if(query != Availability.Open) filter.Add(new QueryAvailability(query));
         }
     }
 }
