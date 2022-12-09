@@ -21,7 +21,7 @@ namespace SuggestedClasses
         {
             InitializeComponent();
             Student.Init();
-            Globals.Init();
+            //Globals.Init();
 
             /*Course course = new Course();
             course.id = "IGME201";
@@ -81,7 +81,7 @@ namespace SuggestedClasses
         {
             InitializeComponent();
             Student.Init();
-            Globals.Init();
+            //Globals.Init();
 
             Section temp; //temp section variable for sorting the list of recommended sections 
             int i = 0; //iterator variable
