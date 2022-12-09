@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using EnrollBasics;
+using SearchLib;
 
 namespace SearchApp
 {
     public partial class ResultsForm : Form
     {
-        public ResultsForm()
+        public ResultsForm(List<SearchResult> results)
         {
             InitializeComponent();
 

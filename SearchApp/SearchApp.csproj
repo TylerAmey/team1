@@ -36,6 +36,9 @@
     <Reference Include="EnrollBasics">
       <HintPath>..\EnrollBasics\bin\Debug\EnrollBasics.dll</HintPath>
     </Reference>
+    <Reference Include="SearchLib">
+      <HintPath>..\SearchLib\bin\Debug\SearchLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

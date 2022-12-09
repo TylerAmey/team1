@@ -8,10 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using SearchLib;
+
 namespace SearchApp
 {
     public partial class SearchForm : Form
     {
+        private List<QueryCondition> filter;
         public SearchForm()
         {
             InitializeComponent();
@@ -151,8 +154,10 @@ namespace SearchApp
         // open ResultsForm
         private void SearchButton__Click(object sender, EventArgs e)
         {
-            ResultsForm results = new ResultsForm();
-            results.Show();
+            List<SearchResult> results = SearchManager.Search(filter);
+
+            ResultsForm resultsForm = new ResultsForm(results);
+            resultsForm.Show();
         }
     }
 }
