@@ -14,9 +14,12 @@ namespace CurrentClasses
 {
     public partial class CurrentClasses : Form
     {
-        public CurrentClasses() 
-        {
+        public CurrentClasses()
+        { 
+
             InitializeComponent();
+            Student.Init();
+            Globals.Init();
 
             //Create lists of each panel on the calendar
             List<Control> mondayPanels = new List<Control>();
