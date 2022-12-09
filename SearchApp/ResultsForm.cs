@@ -45,7 +45,7 @@ namespace SearchApp
 
             if (index == results.Count) return false;
 
-            CourseBox box = new CourseBox(results[index].course, results[index].course.sections[0]);
+            CourseBox box = new CourseBox(results[index].course.sections[0]);
             box.AddToPanel(ref panel);
 
             flowLayoutPanel1.Controls.Add(panel);
