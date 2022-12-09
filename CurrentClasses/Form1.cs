@@ -187,19 +187,14 @@ namespace CurrentClasses
                     {
                         //Create an int to sift through the list
                         int nStart = 0;
-                        //start at 8 due to the time
-                        for(int i = 8; nStart < 14; i++)
+                        //start at 8 and go until 21 due to military time
+                        for (int i = 8; i < 21; i++)
                         {
-                            //If i hits 13, restart to 1
-                            if(i == 13)
-                            {
-                                i = 1;
-                            }
                             //Create a double so we can compare the true end time
                             double dEndTime = nEndTimeHour + (.1 * nEndTimeMinute);
                             //If i is greater than or equal to the start time and
                             //Less than or equal to end time + 1 (to account for minutes)
-                            if(i >= nStartTimeHour && i < dEndTime + 1)
+                            if (i >= nStartTimeHour && i <= dEndTime)
                             {
                                 //Add it to the panels to highlight
                                 panelToHighlight.Add(mondayPanels[nStart]);
@@ -210,81 +205,81 @@ namespace CurrentClasses
                     }
                     else if (day == "Tuesday")
                     {
+                        //Create an int to sift through the list
                         int nStart = 0;
-                        for (int i = 8; nStart < 14; i++)
+                        //start at 8 and go until 21 due to military time
+                        for (int i = 8; i < 21; i++)
                         {
-                            if (i == 13)
-                            {
-                                i = 1;
-                            }
-
+                            //Create a double so we can compare the true end time
                             double dEndTime = nEndTimeHour + (.1 * nEndTimeMinute);
-
+                            //If i is greater than or equal to the start time and
+                            //Less than or equal to end time + 1 (to account for minutes)
                             if (i >= nStartTimeHour && i <= dEndTime)
                             {
+                                //Add it to the panels to highlight
                                 panelToHighlight.Add(tuesdayPanels[nStart]);
                             }
-
+                            //increment the list indicator
                             nStart++;
                         }
                     }
                     else if (day == "Wednesday")
                     {
+                        //Create an int to sift through the list
                         int nStart = 0;
-                        for (int i = 8; nStart < 14; i++)
+                        //start at 8 and go until 21 due to military time
+                        for (int i = 8; i < 21; i++)
                         {
-                            if (i == 13)
-                            {
-                                i = 1;
-                            }
-
+                            //Create a double so we can compare the true end time
                             double dEndTime = nEndTimeHour + (.1 * nEndTimeMinute);
-
+                            //If i is greater than or equal to the start time and
+                            //Less than or equal to end time + 1 (to account for minutes)
                             if (i >= nStartTimeHour && i <= dEndTime)
                             {
+                                //Add it to the panels to highlight
                                 panelToHighlight.Add(wednesdayPanels[nStart]);
                             }
-
+                            //increment the list indicator
                             nStart++;
                         }
                     }
                     else if (day == "Thursday")
                     {
+                        //Create an int to sift through the list
                         int nStart = 0;
-                        for (int i = 8; nStart < 14; i++)
+                        //start at 8 and go until 21 due to military time
+                        for (int i = 8; i < 21; i++)
                         {
-                            if (i == 13)
-                            {
-                                i = 1;
-                            }
-
+                            //Create a double so we can compare the true end time
                             double dEndTime = nEndTimeHour + (.1 * nEndTimeMinute);
-
+                            //If i is greater than or equal to the start time and
+                            //Less than or equal to end time + 1 (to account for minutes)
                             if (i >= nStartTimeHour && i <= dEndTime)
                             {
+                                //Add it to the panels to highlight
                                 panelToHighlight.Add(thursdayPanels[nStart]);
                             }
-
+                            //increment the list indicator
                             nStart++;
                         }
                     }
                     else if (day == "Friday")
                     {
+                        //Create an int to sift through the list
                         int nStart = 0;
-                        for (int i = 8; nStart < 14; i++)
+                        //start at 8 and go until 21 due to military time
+                        for (int i = 8; i < 21; i++)
                         {
-                            if (i == 13)
-                            {
-                                i = 1;
-                            }
-
+                            //Create a double so we can compare the true end time
                             double dEndTime = nEndTimeHour + (.1 * nEndTimeMinute);
-
+                            //If i is greater than or equal to the start time and
+                            //Less than or equal to end time + 1 (to account for minutes)
                             if (i >= nStartTimeHour && i <= dEndTime)
                             {
+                                //Add it to the panels to highlight
                                 panelToHighlight.Add(fridayPanels[nStart]);
                             }
-
+                            //increment the list indicator
                             nStart++;
                         }
                     }
