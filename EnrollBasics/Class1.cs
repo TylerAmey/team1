@@ -22,18 +22,20 @@ namespace EnrollBasics
     public static class Student
     {
         public static string name;
-        private static int uID;
         public static string major;
-        public static KeyValuePair<string, Requirement> requirements;
         public static List<Course> projectedSchedule;
         public static List<Course> savedCourses;
+        public static List<Course> completedCourses;
         public static List<Section> enrolledCourses;
+        public static Dictionary<string, Requirement> requirements;
         public static int totalCredits;
+        public static int year;
     }
 
     public class Course
     {
         public string id;
+        public int crn;
         public string name;
         public string description;
         public List<string> requisites;
@@ -46,11 +48,18 @@ namespace EnrollBasics
     {
         public string displayName;
         public bool isFullfilled;
-        public List<string> validCourses;
+        public List<string> ValidCourses { get
+            {
+                return Globals.RequirementCourses[displayName];
+            } }
+
+        public Requirement(string displayName) {
+            this.displayName = displayName;
+        }
 
         public bool FullfillsRequirement(Course course)
         {
-            foreach(string course2 in validCourses)
+            foreach(string course2 in ValidCourses)
             {
                 if(course.id == course2)
                 {
@@ -58,6 +67,38 @@ namespace EnrollBasics
                 }
             }
             return false;
+        }
+    }
+
+    public class MajorRequirement : Requirement
+    {
+        public MajorRequirement(string id, List<Course> completed) : base(id)
+        {
+            isFullfilled = true;
+            foreach (string course in ValidCourses)
+            {
+                if (completed.Find(c => c.id == course) == null)
+                {
+                    isFullfilled = false;
+                    break;
+                }
+            }
+        }
+    }
+
+    public class GeneralRequirement : Requirement
+    {
+        public GeneralRequirement(string id, List<Course> completed) : base(id)
+        {
+            isFullfilled = false;
+            foreach (string course in ValidCourses)
+            {
+                if (completed.Find(c => c.id == course) != null)
+                {
+                    isFullfilled = true;
+                    break;
+                }
+            }
         }
     }
 
@@ -69,13 +110,11 @@ namespace EnrollBasics
         public SeatManager seats;
         public List<Session> sessions;
 
-        public Course course { get
+        public Course ParentCourse { get
             {
                 return Globals.Courses.Find((course) => course.id == courseID);
             } }
     }
-
-
 
     public class Session
     {
