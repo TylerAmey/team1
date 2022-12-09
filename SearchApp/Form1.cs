@@ -43,8 +43,11 @@ namespace SearchApp
             // keyword entry
 
             // subject entry
+            subjectTextBox.CharacterCasing = CharacterCasing.Upper;
+            subjectTextBox.KeyPress += new KeyPressEventHandler(SubjectTextBox__KeyPress);
 
             // number entry
+            numberTextBox.KeyPress += new KeyPressEventHandler(NumberTextBox__KeyPress);
 
             // major entry
 
@@ -133,12 +136,20 @@ namespace SearchApp
             e.Handled = false;
 
             TextBox tb = (TextBox)sender;
-            if (char.IsDigit(e.KeyChar) || e.KeyChar == '\b') e.Handled = false;
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == '\b') e.Handled = false;
             if (tb.Text.Length == 4 && e.KeyChar != '\b') e.Handled = true;
         }
 
         // numberTextBox__TextChanged
         // update filter
+        private void NumberTextBox__KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+
+            TextBox tb = (TextBox)sender;
+            if (char.IsDigit(e.KeyChar) || e.KeyChar == '\b') e.Handled = false;
+            if (tb.Text.Length == 3 && e.KeyChar != '\b') e.Handled = true;
+        }
 
         // majorTextBox__TextChanged
         // update filter
@@ -173,6 +184,10 @@ namespace SearchApp
 
         private void CompileFilter()
         {
+            filter = new List<QueryCondition>();
+
+            if (keywordTextBox.Text.Length > 0) filter.Add(new QueryKeyword(keywordTextBox.Text));
+
             foreach (Control control in advancedGroupBox.Controls)
             {
                 if (control is GroupBox)
@@ -203,13 +218,13 @@ namespace SearchApp
                     TextBox tb = (TextBox)control;
                     switch (tb.Name)
                     {
-                        case "subjectMaskedTextBox":
+                        case "subjectTextBox":
                             if (tb.Text.Length > 0)
                             {
                                 filter.Add(new QuerySubject(tb.Text));
                             }
                             break;
-                        case "numberMaskedTextBox":
+                        case "numberTextBox":
                             if (tb.Text.Length > 0)
                             {
                                 filter.Add(new QueryNumber(Int32.Parse(tb.Text)));

@@ -83,9 +83,7 @@ namespace SuggestedClasses
             Student.Init();
             //Globals.Init();
 
-            Section temp; //temp section variable for sorting the list of recommended sections 
             int i = 0; //iterator variable
-            int j = 0; //iterator varibale
 
             //initialize the recommended list to contain the first sections of the first 3 existing courses
             for(i = 0; i < 3; i++)
@@ -93,16 +91,18 @@ namespace SuggestedClasses
                 recommendedSections.Add(Globals.Courses[i].sections[0]);
             }
 
-            //sorts the initial recommended list in descending order by their recValue
-            for(i = 0; i < 3; i++)
+            //Sorts the initial recommended list in descending order by their recValue
+            SortList();
+
+            //Goes through the rest of existing classes. If recValue is greater than the recValue of the last course in recommendedSections, replace it & sort list
+            foreach(Course course in Globals.Courses)
             {
-                for (j = i + 1; j < 3; j++)
+                foreach(Section section in course.sections)
                 {
-                    if (CalcRecValue(recommendedSections[i]) < CalcRecValue(recommendedSections[j]))
+                    if (CalcRecValue(section) > CalcRecValue(recommendedSections[2]))
                     {
-                        temp = recommendedSections[i];
-                        recommendedSections[i] = recommendedSections[j];
-                        recommendedSections[j] = temp;
+                        recommendedSections[2] = section;
+                        SortList();
                     }
                 }
             }
@@ -118,6 +118,27 @@ namespace SuggestedClasses
             box = new CourseBox(recommendedSections[2].ParentCourse, recommendedSections[2]);
             box.EnrollClick += new EventHandler(DoFunny);
             box.AddToPanel(ref panel3);
+        }
+
+        public void SortList()
+        {
+            Section temp; //temp section variable for sorting the list of recommended sections 
+            int i = 0; //iterator variable
+            int j = 0; //iterator varibale
+
+            //sorts the recommended list in descending order by their recValue
+            for (i = 0; i < 3; i++)
+            {
+                for (j = i + 1; j < 3; j++)
+                {
+                    if (CalcRecValue(recommendedSections[i]) < CalcRecValue(recommendedSections[j]))
+                    {
+                        temp = recommendedSections[i];
+                        recommendedSections[i] = recommendedSections[j];
+                        recommendedSections[j] = temp;
+                    }
+                }
+            }
         }
 
         public int CalcRecValue(Section section)
@@ -151,6 +172,8 @@ namespace SuggestedClasses
             {
                 recValue++;
             }
+
+            //It is preferred that the sessions of the section fit into the current schedule
 
             return recValue;
         }

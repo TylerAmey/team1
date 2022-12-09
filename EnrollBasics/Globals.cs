@@ -30,6 +30,30 @@ namespace EnrollBasics
             {
                 
             });
+            ret.Add("Artistic Perspective", new List<string>()
+            {
+
+            });
+            ret.Add("Ethical Perspective", new List<string>()
+            {
+
+            });
+            ret.Add("Global Perspective", new List<string>()
+            {
+
+            });
+            ret.Add("Mathematical Perspective", new List<string>()
+            {
+
+            });
+            ret.Add("Natural Science Perspective", new List<string>()
+            {
+
+            });
+            ret.Add("Scientific Principles Perspective", new List<string>()
+            {
+
+            });
             ret.Add("Social Perspective", new List<string>()
             {
 
