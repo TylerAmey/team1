@@ -10,4 +10,3 @@ D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchLib\obj\Debug\SearchLib.c
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchLib\obj\Debug\SearchLib.csproj.CopyComplete
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchLib\obj\Debug\SearchLib.dll
 D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchLib\obj\Debug\SearchLib.pdb
-D:\Profiles\mrc6113\source\repos\TylerAmey\team1\SearchLib\bin\Debug\Newtonsoft.Json.xml

@@ -32,15 +32,15 @@ namespace EnrollBasics
             });
             ret.Add("Artistic Perspective", new List<string>()
             {
-
+                "ARTH 135"
             });
             ret.Add("Ethical Perspective", new List<string>()
             {
-
+                "PHIL 101"
             });
             ret.Add("Global Perspective", new List<string>()
             {
-
+                "ARTH 135"
             });
             ret.Add("Mathematical Perspective", new List<string>()
             {
@@ -56,7 +56,7 @@ namespace EnrollBasics
             });
             ret.Add("Social Perspective", new List<string>()
             {
-
+                "PHIL 101"
             });
 
             return ret;

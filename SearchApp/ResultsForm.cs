@@ -34,7 +34,7 @@ namespace SearchApp
             this.results = results;
             this.results.Sort((a, b) => a.relevance.CompareTo(b.relevance));
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 6; i++)
             {
                 if (!AddPanel()) break;
             }

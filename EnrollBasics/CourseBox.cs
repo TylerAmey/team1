@@ -7,11 +7,99 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 
 namespace EnrollBasics
 {
     public class CourseBox
     {
+        public enum CourseType
+        {
+            ENROLLED,
+            PROJECTED,
+            VIEWING,
+            ACTIVE
+        }
+
+        private Dictionary<CourseType, Brush> fills;
+        private Dictionary<CourseType, Pen> strokes;
+        public void setFill(CourseType key, SolidBrush fill)
+        {
+            fills[key] = fill;
+            if (key == CourseType.PROJECTED)
+                fills[key] = new HatchBrush(HatchStyle.ForwardDiagonal, fill.Color);
+        }
+        public void setFill(CourseType key, int fill)
+        {
+            Color cFill = Color.FromArgb(
+                1,
+                fill >> 16 & 0xFF,
+                fill >> 8 & 0xFF,
+                fill & 0xFF);
+            setFill(key, new SolidBrush(cFill));
+        }
+        public void setFill(string key, SolidBrush fill)
+        {
+            CourseType ctKey;
+            if (CourseType.TryParse(key, out ctKey)) setFill(ctKey, fill);
+        }
+        public void setFill(string key, int fill)
+        {
+            CourseType ctKey;
+            if (CourseType.TryParse(key, out ctKey)) setFill(ctKey, fill);
+        }
+        public void setStroke(CourseType key, Pen stroke)
+        {
+            strokes[key] = stroke;
+        }
+        public void setStroke(CourseType key, int stroke)
+        {
+            Color cStroke = Color.FromArgb(
+                1,
+                stroke >> 16 & 0xFF,
+                stroke >> 8 & 0xFF,
+                stroke & 0xFF);
+            setStroke(key, new Pen(cStroke));
+        }
+        public void setStroke(string key, Pen stroke)
+        {
+            CourseType ctKey;
+            if (CourseType.TryParse(key, out ctKey)) setStroke(ctKey, stroke);
+        }
+        public void setStroke(string key, int stroke)
+        {
+            CourseType ctKey;
+            if (CourseType.TryParse(key, out ctKey)) setStroke(ctKey, stroke);
+        }
+        public void setStyle(CourseType key, SolidBrush fill, Pen stroke)
+        {
+            setFill(key, fill);
+            setStroke(key, stroke);
+        }
+        public void setStyle(CourseType key, int fill, int stroke)
+        {
+            setFill(key, fill);
+            setStroke(key, stroke);
+        }
+        public void setStyle(string key, SolidBrush fill, Pen stroke)
+        {
+            CourseType ctKey;
+            if (CourseType.TryParse(key, out ctKey))
+            {
+                setFill(key, fill);
+                setStroke(key, stroke);
+            }
+        }
+        public void setStyle(string key, int fill, int stroke)
+        {
+            CourseType ctKey;
+            if (CourseType.TryParse(key, out ctKey))
+            {
+                setFill(key, fill);
+                setStroke(key, stroke);
+            }
+        }
+
         public enum Status
         {
             ENROLLED,
@@ -40,10 +128,26 @@ namespace EnrollBasics
         public EventHandler DisenrollClick;
         public EventHandler EnrollClick;
         public EventHandler WaitListClick;
+        public EventHandler SaveClick;
 
         // Basically generates a course display control it's kinda cute
         public CourseBox(Section section)
         {
+            this.fills = new Dictionary<CourseType, Brush>() {
+                { CourseType.ENROLLED, Brushes.Gray },
+                { CourseType.PROJECTED, Brushes.Gray },
+                { CourseType.VIEWING, Brushes.Orange },
+                { CourseType.ACTIVE, Brushes.OrangeRed }
+            };
+
+            this.strokes = new Dictionary<CourseType, Pen>()
+            {
+                { CourseType.ENROLLED, Pens.Black },
+                { CourseType.PROJECTED, Pens.Black },
+                { CourseType.VIEWING, Pens.Black },
+                { CourseType.ACTIVE, Pens.Black }
+            };
+
             this.section = section;
             Course course = section.ParentCourse;
 
@@ -82,6 +186,17 @@ namespace EnrollBasics
             {
                 this.status = Status.CLOSED;
             }
+        }
+        
+        // copy styles and delegates from existing CourseBox
+        public CourseBox(Section section, CourseBox box) : this(section)
+        {
+            this.fills = box.fills;
+            this.strokes = box.strokes;
+            this.DisenrollClick = box.DisenrollClick;
+            this.EnrollClick = box.EnrollClick;
+            this.WaitListClick = box.WaitListClick;
+            this.SaveClick = box.SaveClick;
         }
 
         public void AddToPanel(ref Panel p1)
@@ -312,13 +427,31 @@ namespace EnrollBasics
             int y = e.ClipRectangle.Y;
             int width = e.ClipRectangle.Width;
             int height = e.ClipRectangle.Height;
-
-            foreach(Session session in section.sessions)
+            
+            foreach (Section thisSession in Student.enrolledCourses)
             {
-                int thisX = x + ((int)session.startTime.DayOfWeek - 1) * width / 6;
+                DrawSchedule(thisSession, CourseType.ENROLLED);
+            }
+            foreach (Section thisSession in Student.projectedSchedule)
+            {
+                DrawSchedule(thisSession, CourseType.PROJECTED);
+            }
+            DrawSchedule(section, CourseType.VIEWING);
 
-                int nStartTime = session.startTime.Hour * 60 + session.startTime.Minute;
-                int nEndTime = session.endTime.Hour * 60 + session.endTime.Minute;
+            void DrawSchedule(Section thisSection, CourseType key)
+            {
+                foreach (Session session in thisSection.sessions)
+                {
+                    DrawSession(session, key);
+                }
+            }
+
+            void DrawSession(Session thisSession, CourseType key)
+            {
+                int thisX = x + ((int)thisSession.startTime.DayOfWeek - 1) * width / 6;
+
+                int nStartTime = thisSession.startTime.Hour * 60 + thisSession.startTime.Minute;
+                int nEndTime = thisSession.endTime.Hour * 60 + thisSession.endTime.Minute;
                 int scheduleStart = 8 * 60;
                 int scheduleLength = 12 * 60;
 
@@ -327,7 +460,11 @@ namespace EnrollBasics
                 int thisHeight = (nEndTime - nStartTime) * height / scheduleLength;
 
                 g.FillRectangle(
-                    Brushes.Gray,
+                    fills[key],
+                    thisX, thisY, thisWidth, thisHeight
+                    );
+                g.DrawRectangle(
+                    strokes[key],
                     thisX, thisY, thisWidth, thisHeight
                     );
             }

@@ -23,9 +23,9 @@ namespace EnrollBasics
     {
         public static string name;
         public static string major;
-        public static List<Course> projectedSchedule;
-        public static List<Course> savedCourses;
         public static List<Course> completedCourses;
+        public static List<Section> projectedSchedule;
+        public static List<Section> savedCourses;
         public static List<Section> enrolledCourses;
         public static Dictionary<string, Requirement> requirements;
         public static int totalCredits;
@@ -35,8 +35,8 @@ namespace EnrollBasics
         {
             name = "David Schuh";
             major = "New Media Interactive Development";
-            projectedSchedule = new List<Course>();
-            savedCourses = new List<Course>();
+            projectedSchedule = new List<Section>();
+            savedCourses = new List<Section>();
             enrolledCourses = new List<Section>()
             {
                 Globals.Courses[3].sections[0]

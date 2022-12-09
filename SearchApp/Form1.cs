@@ -16,6 +16,7 @@ namespace SearchApp
     public partial class SearchForm : Form
     {
         private List<QueryCondition> filter;
+
         public SearchForm()
         {
             InitializeComponent();
