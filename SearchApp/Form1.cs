@@ -179,7 +179,6 @@ namespace SearchApp
             List<SearchResult> results = SearchManager.Search(filter);
 
             ResultsForm resultsForm = new ResultsForm(results);
-            resultsForm.Show();
         }
 
         private void CompileFilter()

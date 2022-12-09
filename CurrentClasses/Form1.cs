@@ -28,7 +28,7 @@ namespace CurrentClasses
             List<Control> fridayPanels = new List<Control>();
 
             //Add each panel to their individual lists
-            foreach (Control control in Controls)
+            foreach (Control control in splitContainer1.Panel2.Controls)
             {
                 if((string)control.Tag == "monday")
                 {
@@ -60,7 +60,6 @@ namespace CurrentClasses
                 SplitContainer splitter = new SplitContainer();
                 splitter.Orientation = Orientation.Horizontal;
                 splitter.Dock = DockStyle.Fill;
-                coursePanel.Controls.Add(splitter);
                 splitter.Panel1.BackColor = Color.DarkOrange;
 
                 //Create all labels for the course
@@ -396,7 +395,8 @@ namespace CurrentClasses
                 splitter.Panel2.Controls.Add(daysLabel);
                 splitter.Panel2.Controls.Add(timesLabel);
                 splitter.Panel2.Controls.Add(locationsLabel);
-
+                coursePanel.Controls.Add(splitter);
+                classesFlowLayoutPanel.Controls.Add(coursePanel); 
             }
         }     
     }

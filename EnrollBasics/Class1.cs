@@ -39,7 +39,7 @@ namespace EnrollBasics
             savedCourses = new List<Course>();
             enrolledCourses = new List<Section>()
             {
-
+                Globals.Courses[3].sections[0]
             };
             completedCourses = new List<Course>()
             {
@@ -79,6 +79,11 @@ namespace EnrollBasics
 
             return fulfilled;
         }*/
+
+        /* public bool prereqsFulfilled(List<Course> completed)
+        {
+            return !requisites.Any(req => !completed.Any(course => course.id == req));
+        } */
     }
 
     public abstract class Requirement
