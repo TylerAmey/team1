@@ -37,7 +37,10 @@ namespace EnrollBasics
             major = "New Media Interactive Development";
             projectedSchedule = new List<Course>();
             savedCourses = new List<Course>();
-            enrolledCourses = new List<Section>();
+            enrolledCourses = new List<Section>()
+            {
+
+            };
             completedCourses = new List<Course>()
             {
 
