@@ -28,22 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.testPanel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // testPanel2
+            // flowLayoutPanel1
             // 
-            this.testPanel2.Location = new System.Drawing.Point(12, 50);
-            this.testPanel2.Name = "testPanel2";
-            this.testPanel2.Size = new System.Drawing.Size(700, 302);
-            this.testPanel2.TabIndex = 3;
+            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1176, 668);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // ResultsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.testPanel2);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ResultsForm";
             this.Text = "Search Results";
             this.ResumeLayout(false);
@@ -51,6 +54,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel testPanel2;
+
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
