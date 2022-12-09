@@ -264,7 +264,15 @@ namespace SearchLib
 
         private void Collapse()
         {
-
+            for (int i = 1; i < times.Count; i++)
+            {
+                if ( times[i].start <= times[i - 1].end )
+                {
+                    times[i - 1].end = times[i].end;
+                    times.RemoveAt(i);
+                    Collapse();
+                }
+            }
         }
 
     }
