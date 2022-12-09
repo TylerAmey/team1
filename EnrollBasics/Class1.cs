@@ -39,7 +39,9 @@ namespace EnrollBasics
             savedCourses = new List<Section>();
             enrolledCourses = new List<Section>()
             {
-                Globals.Courses[3].sections[0]
+                Globals.Courses[3].sections[0],
+                Globals.Courses[4].sections[0],
+                Globals.Courses[5].sections[0]
             };
             completedCourses = new List<Course>()
             {
