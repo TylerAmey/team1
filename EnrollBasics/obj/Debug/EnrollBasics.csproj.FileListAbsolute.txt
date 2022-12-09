@@ -16,3 +16,12 @@ C:\Users\Owner\Desktop\team1\EnrollBasics\obj\Debug\EnrollBasics.csproj.CoreComp
 C:\Users\Owner\Desktop\team1\EnrollBasics\obj\Debug\EnrollBasics.csproj.CopyComplete
 C:\Users\Owner\Desktop\team1\EnrollBasics\obj\Debug\EnrollBasics.dll
 C:\Users\Owner\Desktop\team1\EnrollBasics\obj\Debug\EnrollBasics.pdb
+C:\Users\tyler\team1project\team1\EnrollBasics\bin\Debug\EnrollBasics.dll
+C:\Users\tyler\team1project\team1\EnrollBasics\bin\Debug\EnrollBasics.pdb
+C:\Users\tyler\team1project\team1\EnrollBasics\bin\Debug\Newtonsoft.Json.dll
+C:\Users\tyler\team1project\team1\EnrollBasics\bin\Debug\Newtonsoft.Json.xml
+C:\Users\tyler\team1project\team1\EnrollBasics\obj\Debug\EnrollBasics.csproj.AssemblyReference.cache
+C:\Users\tyler\team1project\team1\EnrollBasics\obj\Debug\EnrollBasics.csproj.CoreCompileInputs.cache
+C:\Users\tyler\team1project\team1\EnrollBasics\obj\Debug\EnrollBasics.csproj.CopyComplete
+C:\Users\tyler\team1project\team1\EnrollBasics\obj\Debug\EnrollBasics.dll
+C:\Users\tyler\team1project\team1\EnrollBasics\obj\Debug\EnrollBasics.pdb

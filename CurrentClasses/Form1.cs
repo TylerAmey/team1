@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -62,9 +63,9 @@ namespace CurrentClasses
 
                 //Create all labels for the course
                 Label className = new Label();
-                className.Text = section.course.name;
+                className.Text = section.ParentCourse.name;
                 Label classCode = new Label();
-                classCode.Text = section.course.id;
+                classCode.Text = section.ParentCourse.id;
                 Label daysLabel = new Label();
                 Label timesLabel = new Label();
                 Label locationsLabel = new Label();
@@ -400,7 +401,8 @@ namespace CurrentClasses
                 splitter.Panel2.Controls.Add(locationsLabel);
 
             }
-
         }
+        
     }
+   
 }

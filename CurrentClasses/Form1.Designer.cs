@@ -30,106 +30,93 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.classesFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.mondayLabel = new System.Windows.Forms.Label();
-            this.tuesdayLabel = new System.Windows.Forms.Label();
-            this.thursdayLabel = new System.Windows.Forms.Label();
-            this.wednesdayLabel = new System.Windows.Forms.Label();
-            this.fridayLabel = new System.Windows.Forms.Label();
-            this.monday8AMPanel = new System.Windows.Forms.Panel();
-            this.tuesday8AMPanel = new System.Windows.Forms.Panel();
-            this.thursday8AMPanel = new System.Windows.Forms.Panel();
-            this.wednesday8AMPanel = new System.Windows.Forms.Panel();
-            this.friday8AMPanel = new System.Windows.Forms.Panel();
-            this.friday9Panel = new System.Windows.Forms.Panel();
-            this.thursday9Panel = new System.Windows.Forms.Panel();
-            this.wednesday9Panel = new System.Windows.Forms.Panel();
-            this.tuesday9Panel = new System.Windows.Forms.Panel();
-            this.monday9Panel = new System.Windows.Forms.Panel();
-            this.friday11Panel = new System.Windows.Forms.Panel();
-            this.friday10Panel = new System.Windows.Forms.Panel();
-            this.thursday11Panel = new System.Windows.Forms.Panel();
-            this.wednesday11Panel = new System.Windows.Forms.Panel();
-            this.thursday10Panel = new System.Windows.Forms.Panel();
-            this.tuesday11Panel = new System.Windows.Forms.Panel();
-            this.wednesday10Panel = new System.Windows.Forms.Panel();
-            this.monday11Panel = new System.Windows.Forms.Panel();
-            this.tuesday10Panel = new System.Windows.Forms.Panel();
-            this.monday10Panel = new System.Windows.Forms.Panel();
-            this.friday3Panel = new System.Windows.Forms.Panel();
-            this.friday1Panel = new System.Windows.Forms.Panel();
-            this.friday2Panel = new System.Windows.Forms.Panel();
-            this.friday12Panel = new System.Windows.Forms.Panel();
-            this.thursday3Panel = new System.Windows.Forms.Panel();
-            this.thursday1Panel = new System.Windows.Forms.Panel();
-            this.wednesday3Panel = new System.Windows.Forms.Panel();
-            this.wednesday1Panel = new System.Windows.Forms.Panel();
-            this.thursday2Panel = new System.Windows.Forms.Panel();
-            this.thursday12Panel = new System.Windows.Forms.Panel();
-            this.tuesday3Panel = new System.Windows.Forms.Panel();
-            this.wednesday2Panel = new System.Windows.Forms.Panel();
-            this.tuesday1Panel = new System.Windows.Forms.Panel();
-            this.monday3Panel = new System.Windows.Forms.Panel();
-            this.wednesday12Panel = new System.Windows.Forms.Panel();
-            this.tuesday2Panel = new System.Windows.Forms.Panel();
-            this.monday1Panel = new System.Windows.Forms.Panel();
-            this.monday2Panel = new System.Windows.Forms.Panel();
-            this.tuesday12Panel = new System.Windows.Forms.Panel();
-            this.monday12Panel = new System.Windows.Forms.Panel();
-            this.friday6Panel = new System.Windows.Forms.Panel();
-            this.friday4Panel = new System.Windows.Forms.Panel();
-            this.friday5Panel = new System.Windows.Forms.Panel();
-            this.thursday6Panel = new System.Windows.Forms.Panel();
-            this.thursday4Panel = new System.Windows.Forms.Panel();
-            this.wednesday6Panel = new System.Windows.Forms.Panel();
-            this.wednesday4Panel = new System.Windows.Forms.Panel();
-            this.thursday5Panel = new System.Windows.Forms.Panel();
-            this.tuesday6Panel = new System.Windows.Forms.Panel();
-            this.wednesday5Panel = new System.Windows.Forms.Panel();
-            this.tuesday4Panel = new System.Windows.Forms.Panel();
-            this.monday6Panel = new System.Windows.Forms.Panel();
-            this.tuesday5Panel = new System.Windows.Forms.Panel();
-            this.monday4Panel = new System.Windows.Forms.Panel();
-            this.monday5Panel = new System.Windows.Forms.Panel();
-            this.friday7Panel = new System.Windows.Forms.Panel();
-            this.thursday7Panel = new System.Windows.Forms.Panel();
-            this.wednesday7Panel = new System.Windows.Forms.Panel();
-            this.tuesday7Panel = new System.Windows.Forms.Panel();
-            this.monday7Panel = new System.Windows.Forms.Panel();
-            this.eightAMLabel = new System.Windows.Forms.Label();
-            this.friday8PMPanel = new System.Windows.Forms.Panel();
-            this.thursday8PMPanel = new System.Windows.Forms.Panel();
-            this.wednesday8PMPanel = new System.Windows.Forms.Panel();
-            this.tuesday8PMPanel = new System.Windows.Forms.Panel();
-            this.monday8PMPanel = new System.Windows.Forms.Panel();
-            this.nineLabel = new System.Windows.Forms.Label();
-            this.tenLabel = new System.Windows.Forms.Label();
-            this.elevenLabel = new System.Windows.Forms.Label();
-            this.twelveLabel = new System.Windows.Forms.Label();
+            this.eightPMLabel = new System.Windows.Forms.Label();
+            this.sevenLabel = new System.Windows.Forms.Label();
+            this.sixLabel = new System.Windows.Forms.Label();
             this.fiveLabel = new System.Windows.Forms.Label();
             this.fourLabel = new System.Windows.Forms.Label();
             this.threeLabel = new System.Windows.Forms.Label();
             this.twoLabel = new System.Windows.Forms.Label();
             this.oneLabel = new System.Windows.Forms.Label();
-            this.eightPMLabel = new System.Windows.Forms.Label();
-            this.sevenLabel = new System.Windows.Forms.Label();
-            this.sixLabel = new System.Windows.Forms.Label();
-            this.classPanel = new System.Windows.Forms.Panel();
-            this.className = new System.Windows.Forms.Label();
-            this.codeLabel = new System.Windows.Forms.Label();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.daysLabel = new System.Windows.Forms.Label();
-            this.timeLabel = new System.Windows.Forms.Label();
-            this.placeLabel = new System.Windows.Forms.Label();
+            this.twelveLabel = new System.Windows.Forms.Label();
+            this.elevenLabel = new System.Windows.Forms.Label();
+            this.tenLabel = new System.Windows.Forms.Label();
+            this.nineLabel = new System.Windows.Forms.Label();
+            this.eightAMLabel = new System.Windows.Forms.Label();
+            this.friday8PMPanel = new System.Windows.Forms.Panel();
+            this.friday7Panel = new System.Windows.Forms.Panel();
+            this.thursday8PMPanel = new System.Windows.Forms.Panel();
+            this.friday6Panel = new System.Windows.Forms.Panel();
+            this.wednesday8PMPanel = new System.Windows.Forms.Panel();
+            this.thursday7Panel = new System.Windows.Forms.Panel();
+            this.tuesday8PMPanel = new System.Windows.Forms.Panel();
+            this.monday8PMPanel = new System.Windows.Forms.Panel();
+            this.wednesday7Panel = new System.Windows.Forms.Panel();
+            this.friday3Panel = new System.Windows.Forms.Panel();
+            this.tuesday7Panel = new System.Windows.Forms.Panel();
+            this.friday4Panel = new System.Windows.Forms.Panel();
+            this.monday7Panel = new System.Windows.Forms.Panel();
+            this.friday11Panel = new System.Windows.Forms.Panel();
+            this.friday5Panel = new System.Windows.Forms.Panel();
+            this.friday1Panel = new System.Windows.Forms.Panel();
+            this.thursday6Panel = new System.Windows.Forms.Panel();
+            this.friday9Panel = new System.Windows.Forms.Panel();
+            this.thursday4Panel = new System.Windows.Forms.Panel();
+            this.friday2Panel = new System.Windows.Forms.Panel();
+            this.wednesday6Panel = new System.Windows.Forms.Panel();
+            this.friday10Panel = new System.Windows.Forms.Panel();
+            this.wednesday4Panel = new System.Windows.Forms.Panel();
+            this.friday12Panel = new System.Windows.Forms.Panel();
+            this.thursday5Panel = new System.Windows.Forms.Panel();
+            this.friday8AMPanel = new System.Windows.Forms.Panel();
+            this.tuesday6Panel = new System.Windows.Forms.Panel();
+            this.thursday3Panel = new System.Windows.Forms.Panel();
+            this.wednesday5Panel = new System.Windows.Forms.Panel();
+            this.thursday11Panel = new System.Windows.Forms.Panel();
+            this.tuesday4Panel = new System.Windows.Forms.Panel();
+            this.thursday1Panel = new System.Windows.Forms.Panel();
+            this.monday6Panel = new System.Windows.Forms.Panel();
+            this.thursday9Panel = new System.Windows.Forms.Panel();
+            this.tuesday5Panel = new System.Windows.Forms.Panel();
+            this.wednesday3Panel = new System.Windows.Forms.Panel();
+            this.monday4Panel = new System.Windows.Forms.Panel();
+            this.monday5Panel = new System.Windows.Forms.Panel();
+            this.wednesday11Panel = new System.Windows.Forms.Panel();
+            this.wednesday1Panel = new System.Windows.Forms.Panel();
+            this.wednesday9Panel = new System.Windows.Forms.Panel();
+            this.thursday2Panel = new System.Windows.Forms.Panel();
+            this.thursday10Panel = new System.Windows.Forms.Panel();
+            this.thursday12Panel = new System.Windows.Forms.Panel();
+            this.thursday8AMPanel = new System.Windows.Forms.Panel();
+            this.tuesday3Panel = new System.Windows.Forms.Panel();
+            this.tuesday11Panel = new System.Windows.Forms.Panel();
+            this.wednesday2Panel = new System.Windows.Forms.Panel();
+            this.wednesday10Panel = new System.Windows.Forms.Panel();
+            this.tuesday1Panel = new System.Windows.Forms.Panel();
+            this.tuesday9Panel = new System.Windows.Forms.Panel();
+            this.monday3Panel = new System.Windows.Forms.Panel();
+            this.monday11Panel = new System.Windows.Forms.Panel();
+            this.wednesday12Panel = new System.Windows.Forms.Panel();
+            this.wednesday8AMPanel = new System.Windows.Forms.Panel();
+            this.tuesday2Panel = new System.Windows.Forms.Panel();
+            this.tuesday10Panel = new System.Windows.Forms.Panel();
+            this.monday1Panel = new System.Windows.Forms.Panel();
+            this.monday9Panel = new System.Windows.Forms.Panel();
+            this.monday2Panel = new System.Windows.Forms.Panel();
+            this.monday10Panel = new System.Windows.Forms.Panel();
+            this.tuesday12Panel = new System.Windows.Forms.Panel();
+            this.monday12Panel = new System.Windows.Forms.Panel();
+            this.tuesday8AMPanel = new System.Windows.Forms.Panel();
+            this.monday8AMPanel = new System.Windows.Forms.Panel();
+            this.fridayLabel = new System.Windows.Forms.Label();
+            this.thursdayLabel = new System.Windows.Forms.Label();
+            this.wednesdayLabel = new System.Windows.Forms.Label();
+            this.tuesdayLabel = new System.Windows.Forms.Label();
+            this.mondayLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.classesFlowLayoutPanel.SuspendLayout();
-            this.classPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -233,7 +220,6 @@
             // classesFlowLayoutPanel
             // 
             this.classesFlowLayoutPanel.AutoScroll = true;
-            this.classesFlowLayoutPanel.Controls.Add(this.classPanel);
             this.classesFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.classesFlowLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.classesFlowLayoutPanel.Name = "classesFlowLayoutPanel";
@@ -241,616 +227,32 @@
             this.classesFlowLayoutPanel.Size = new System.Drawing.Size(274, 449);
             this.classesFlowLayoutPanel.TabIndex = 0;
             // 
-            // mondayLabel
-            // 
-            this.mondayLabel.AutoSize = true;
-            this.mondayLabel.Location = new System.Drawing.Point(110, 2);
-            this.mondayLabel.Name = "mondayLabel";
-            this.mondayLabel.Size = new System.Drawing.Size(45, 13);
-            this.mondayLabel.TabIndex = 0;
-            this.mondayLabel.Text = "Monday";
-            // 
-            // tuesdayLabel
-            // 
-            this.tuesdayLabel.AutoSize = true;
-            this.tuesdayLabel.Location = new System.Drawing.Point(185, 2);
-            this.tuesdayLabel.Name = "tuesdayLabel";
-            this.tuesdayLabel.Size = new System.Drawing.Size(48, 13);
-            this.tuesdayLabel.TabIndex = 1;
-            this.tuesdayLabel.Text = "Tuesday";
-            // 
-            // thursdayLabel
-            // 
-            this.thursdayLabel.AutoSize = true;
-            this.thursdayLabel.Location = new System.Drawing.Point(335, 2);
-            this.thursdayLabel.Name = "thursdayLabel";
-            this.thursdayLabel.Size = new System.Drawing.Size(51, 13);
-            this.thursdayLabel.TabIndex = 3;
-            this.thursdayLabel.Text = "Thursday";
-            // 
-            // wednesdayLabel
-            // 
-            this.wednesdayLabel.AutoSize = true;
-            this.wednesdayLabel.Location = new System.Drawing.Point(250, 2);
-            this.wednesdayLabel.Name = "wednesdayLabel";
-            this.wednesdayLabel.Size = new System.Drawing.Size(64, 13);
-            this.wednesdayLabel.TabIndex = 2;
-            this.wednesdayLabel.Text = "Wednesday";
-            // 
-            // fridayLabel
-            // 
-            this.fridayLabel.AutoSize = true;
-            this.fridayLabel.Location = new System.Drawing.Point(421, 2);
-            this.fridayLabel.Name = "fridayLabel";
-            this.fridayLabel.Size = new System.Drawing.Size(35, 13);
-            this.fridayLabel.TabIndex = 4;
-            this.fridayLabel.Text = "Friday";
-            // 
-            // monday8AMPanel
-            // 
-            this.monday8AMPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.monday8AMPanel.Location = new System.Drawing.Point(94, 18);
-            this.monday8AMPanel.Name = "monday8AMPanel";
-            this.monday8AMPanel.Size = new System.Drawing.Size(79, 27);
-            this.monday8AMPanel.TabIndex = 5;
-            this.monday8AMPanel.Tag = "monday";
-            // 
-            // tuesday8AMPanel
-            // 
-            this.tuesday8AMPanel.Location = new System.Drawing.Point(171, 18);
-            this.tuesday8AMPanel.Name = "tuesday8AMPanel";
-            this.tuesday8AMPanel.Size = new System.Drawing.Size(79, 27);
-            this.tuesday8AMPanel.TabIndex = 6;
-            this.tuesday8AMPanel.Tag = "tuesday";
-            // 
-            // thursday8AMPanel
-            // 
-            this.thursday8AMPanel.Location = new System.Drawing.Point(321, 18);
-            this.thursday8AMPanel.Name = "thursday8AMPanel";
-            this.thursday8AMPanel.Size = new System.Drawing.Size(79, 27);
-            this.thursday8AMPanel.TabIndex = 8;
-            this.thursday8AMPanel.Tag = "thursday ";
-            // 
-            // wednesday8AMPanel
-            // 
-            this.wednesday8AMPanel.Location = new System.Drawing.Point(244, 18);
-            this.wednesday8AMPanel.Name = "wednesday8AMPanel";
-            this.wednesday8AMPanel.Size = new System.Drawing.Size(79, 27);
-            this.wednesday8AMPanel.TabIndex = 7;
-            this.wednesday8AMPanel.Tag = "wednesday";
-            // 
-            // friday8AMPanel
-            // 
-            this.friday8AMPanel.Location = new System.Drawing.Point(397, 18);
-            this.friday8AMPanel.Name = "friday8AMPanel";
-            this.friday8AMPanel.Size = new System.Drawing.Size(79, 27);
-            this.friday8AMPanel.TabIndex = 9;
-            this.friday8AMPanel.Tag = "friday";
-            // 
-            // friday9Panel
-            // 
-            this.friday9Panel.Location = new System.Drawing.Point(397, 51);
-            this.friday9Panel.Name = "friday9Panel";
-            this.friday9Panel.Size = new System.Drawing.Size(79, 27);
-            this.friday9Panel.TabIndex = 14;
-            this.friday9Panel.Tag = "friday";
-            // 
-            // thursday9Panel
-            // 
-            this.thursday9Panel.Location = new System.Drawing.Point(321, 51);
-            this.thursday9Panel.Name = "thursday9Panel";
-            this.thursday9Panel.Size = new System.Drawing.Size(79, 27);
-            this.thursday9Panel.TabIndex = 13;
-            this.thursday9Panel.Tag = "thursday ";
-            // 
-            // wednesday9Panel
-            // 
-            this.wednesday9Panel.Location = new System.Drawing.Point(244, 51);
-            this.wednesday9Panel.Name = "wednesday9Panel";
-            this.wednesday9Panel.Size = new System.Drawing.Size(79, 27);
-            this.wednesday9Panel.TabIndex = 12;
-            this.wednesday9Panel.Tag = "wednesday";
-            // 
-            // tuesday9Panel
-            // 
-            this.tuesday9Panel.Location = new System.Drawing.Point(171, 51);
-            this.tuesday9Panel.Name = "tuesday9Panel";
-            this.tuesday9Panel.Size = new System.Drawing.Size(79, 27);
-            this.tuesday9Panel.TabIndex = 11;
-            this.tuesday9Panel.Tag = "tuesday";
-            // 
-            // monday9Panel
-            // 
-            this.monday9Panel.Location = new System.Drawing.Point(94, 51);
-            this.monday9Panel.Name = "monday9Panel";
-            this.monday9Panel.Size = new System.Drawing.Size(79, 27);
-            this.monday9Panel.TabIndex = 10;
-            this.monday9Panel.Tag = "monday";
-            // 
-            // friday11Panel
-            // 
-            this.friday11Panel.Location = new System.Drawing.Point(397, 117);
-            this.friday11Panel.Name = "friday11Panel";
-            this.friday11Panel.Size = new System.Drawing.Size(79, 27);
-            this.friday11Panel.TabIndex = 24;
-            this.friday11Panel.Tag = "friday";
-            // 
-            // friday10Panel
-            // 
-            this.friday10Panel.Location = new System.Drawing.Point(397, 84);
-            this.friday10Panel.Name = "friday10Panel";
-            this.friday10Panel.Size = new System.Drawing.Size(79, 27);
-            this.friday10Panel.TabIndex = 19;
-            this.friday10Panel.Tag = "friday";
-            // 
-            // thursday11Panel
-            // 
-            this.thursday11Panel.Location = new System.Drawing.Point(321, 117);
-            this.thursday11Panel.Name = "thursday11Panel";
-            this.thursday11Panel.Size = new System.Drawing.Size(79, 27);
-            this.thursday11Panel.TabIndex = 23;
-            this.thursday11Panel.Tag = "thursday ";
-            // 
-            // wednesday11Panel
-            // 
-            this.wednesday11Panel.Location = new System.Drawing.Point(244, 117);
-            this.wednesday11Panel.Name = "wednesday11Panel";
-            this.wednesday11Panel.Size = new System.Drawing.Size(79, 27);
-            this.wednesday11Panel.TabIndex = 22;
-            this.wednesday11Panel.Tag = "wednesday";
-            // 
-            // thursday10Panel
-            // 
-            this.thursday10Panel.Location = new System.Drawing.Point(321, 84);
-            this.thursday10Panel.Name = "thursday10Panel";
-            this.thursday10Panel.Size = new System.Drawing.Size(79, 27);
-            this.thursday10Panel.TabIndex = 18;
-            this.thursday10Panel.Tag = "thursday ";
-            // 
-            // tuesday11Panel
-            // 
-            this.tuesday11Panel.Location = new System.Drawing.Point(171, 117);
-            this.tuesday11Panel.Name = "tuesday11Panel";
-            this.tuesday11Panel.Size = new System.Drawing.Size(79, 27);
-            this.tuesday11Panel.TabIndex = 21;
-            this.tuesday11Panel.Tag = "tuesday";
-            // 
-            // wednesday10Panel
-            // 
-            this.wednesday10Panel.Location = new System.Drawing.Point(244, 84);
-            this.wednesday10Panel.Name = "wednesday10Panel";
-            this.wednesday10Panel.Size = new System.Drawing.Size(79, 27);
-            this.wednesday10Panel.TabIndex = 17;
-            this.wednesday10Panel.Tag = "wednesday";
-            // 
-            // monday11Panel
-            // 
-            this.monday11Panel.Location = new System.Drawing.Point(94, 117);
-            this.monday11Panel.Name = "monday11Panel";
-            this.monday11Panel.Size = new System.Drawing.Size(79, 27);
-            this.monday11Panel.TabIndex = 20;
-            this.monday11Panel.Tag = "monday";
-            // 
-            // tuesday10Panel
-            // 
-            this.tuesday10Panel.Location = new System.Drawing.Point(171, 84);
-            this.tuesday10Panel.Name = "tuesday10Panel";
-            this.tuesday10Panel.Size = new System.Drawing.Size(79, 27);
-            this.tuesday10Panel.TabIndex = 16;
-            this.tuesday10Panel.Tag = "tuesday";
-            // 
-            // monday10Panel
-            // 
-            this.monday10Panel.Location = new System.Drawing.Point(94, 84);
-            this.monday10Panel.Name = "monday10Panel";
-            this.monday10Panel.Size = new System.Drawing.Size(79, 27);
-            this.monday10Panel.TabIndex = 15;
-            this.monday10Panel.Tag = "monday";
-            // 
-            // friday3Panel
-            // 
-            this.friday3Panel.Location = new System.Drawing.Point(397, 249);
-            this.friday3Panel.Name = "friday3Panel";
-            this.friday3Panel.Size = new System.Drawing.Size(79, 27);
-            this.friday3Panel.TabIndex = 44;
-            this.friday3Panel.Tag = "friday";
-            // 
-            // friday1Panel
-            // 
-            this.friday1Panel.Location = new System.Drawing.Point(397, 183);
-            this.friday1Panel.Name = "friday1Panel";
-            this.friday1Panel.Size = new System.Drawing.Size(79, 27);
-            this.friday1Panel.TabIndex = 34;
-            this.friday1Panel.Tag = "friday";
-            // 
-            // friday2Panel
-            // 
-            this.friday2Panel.Location = new System.Drawing.Point(397, 216);
-            this.friday2Panel.Name = "friday2Panel";
-            this.friday2Panel.Size = new System.Drawing.Size(79, 27);
-            this.friday2Panel.TabIndex = 39;
-            this.friday2Panel.Tag = "friday";
-            // 
-            // friday12Panel
-            // 
-            this.friday12Panel.Location = new System.Drawing.Point(397, 150);
-            this.friday12Panel.Name = "friday12Panel";
-            this.friday12Panel.Size = new System.Drawing.Size(79, 27);
-            this.friday12Panel.TabIndex = 29;
-            this.friday12Panel.Tag = "friday";
-            // 
-            // thursday3Panel
-            // 
-            this.thursday3Panel.Location = new System.Drawing.Point(321, 249);
-            this.thursday3Panel.Name = "thursday3Panel";
-            this.thursday3Panel.Size = new System.Drawing.Size(79, 27);
-            this.thursday3Panel.TabIndex = 43;
-            this.thursday3Panel.Tag = "thursday ";
-            // 
-            // thursday1Panel
-            // 
-            this.thursday1Panel.Location = new System.Drawing.Point(321, 183);
-            this.thursday1Panel.Name = "thursday1Panel";
-            this.thursday1Panel.Size = new System.Drawing.Size(79, 27);
-            this.thursday1Panel.TabIndex = 33;
-            this.thursday1Panel.Tag = "thursday ";
-            // 
-            // wednesday3Panel
-            // 
-            this.wednesday3Panel.Location = new System.Drawing.Point(244, 249);
-            this.wednesday3Panel.Name = "wednesday3Panel";
-            this.wednesday3Panel.Size = new System.Drawing.Size(79, 27);
-            this.wednesday3Panel.TabIndex = 42;
-            this.wednesday3Panel.Tag = "wednesday";
-            // 
-            // wednesday1Panel
-            // 
-            this.wednesday1Panel.Location = new System.Drawing.Point(244, 183);
-            this.wednesday1Panel.Name = "wednesday1Panel";
-            this.wednesday1Panel.Size = new System.Drawing.Size(79, 27);
-            this.wednesday1Panel.TabIndex = 32;
-            this.wednesday1Panel.Tag = "wednesday";
-            // 
-            // thursday2Panel
-            // 
-            this.thursday2Panel.Location = new System.Drawing.Point(321, 216);
-            this.thursday2Panel.Name = "thursday2Panel";
-            this.thursday2Panel.Size = new System.Drawing.Size(79, 27);
-            this.thursday2Panel.TabIndex = 38;
-            this.thursday2Panel.Tag = "thursday ";
-            // 
-            // thursday12Panel
-            // 
-            this.thursday12Panel.Location = new System.Drawing.Point(321, 150);
-            this.thursday12Panel.Name = "thursday12Panel";
-            this.thursday12Panel.Size = new System.Drawing.Size(79, 27);
-            this.thursday12Panel.TabIndex = 28;
-            this.thursday12Panel.Tag = "thursday ";
-            // 
-            // tuesday3Panel
-            // 
-            this.tuesday3Panel.Location = new System.Drawing.Point(171, 249);
-            this.tuesday3Panel.Name = "tuesday3Panel";
-            this.tuesday3Panel.Size = new System.Drawing.Size(79, 27);
-            this.tuesday3Panel.TabIndex = 41;
-            this.tuesday3Panel.Tag = "tuesday";
-            // 
-            // wednesday2Panel
-            // 
-            this.wednesday2Panel.Location = new System.Drawing.Point(244, 216);
-            this.wednesday2Panel.Name = "wednesday2Panel";
-            this.wednesday2Panel.Size = new System.Drawing.Size(79, 27);
-            this.wednesday2Panel.TabIndex = 37;
-            this.wednesday2Panel.Tag = "wednesday";
-            // 
-            // tuesday1Panel
-            // 
-            this.tuesday1Panel.Location = new System.Drawing.Point(171, 183);
-            this.tuesday1Panel.Name = "tuesday1Panel";
-            this.tuesday1Panel.Size = new System.Drawing.Size(79, 27);
-            this.tuesday1Panel.TabIndex = 31;
-            this.tuesday1Panel.Tag = "tuesday";
-            // 
-            // monday3Panel
-            // 
-            this.monday3Panel.Location = new System.Drawing.Point(94, 249);
-            this.monday3Panel.Name = "monday3Panel";
-            this.monday3Panel.Size = new System.Drawing.Size(79, 27);
-            this.monday3Panel.TabIndex = 40;
-            this.monday3Panel.Tag = "monday";
-            // 
-            // wednesday12Panel
-            // 
-            this.wednesday12Panel.Location = new System.Drawing.Point(244, 150);
-            this.wednesday12Panel.Name = "wednesday12Panel";
-            this.wednesday12Panel.Size = new System.Drawing.Size(79, 27);
-            this.wednesday12Panel.TabIndex = 27;
-            this.wednesday12Panel.Tag = "wednesday";
-            // 
-            // tuesday2Panel
-            // 
-            this.tuesday2Panel.Location = new System.Drawing.Point(171, 216);
-            this.tuesday2Panel.Name = "tuesday2Panel";
-            this.tuesday2Panel.Size = new System.Drawing.Size(79, 27);
-            this.tuesday2Panel.TabIndex = 36;
-            this.tuesday2Panel.Tag = "tuesday";
-            // 
-            // monday1Panel
-            // 
-            this.monday1Panel.Location = new System.Drawing.Point(94, 183);
-            this.monday1Panel.Name = "monday1Panel";
-            this.monday1Panel.Size = new System.Drawing.Size(79, 27);
-            this.monday1Panel.TabIndex = 30;
-            this.monday1Panel.Tag = "monday";
-            // 
-            // monday2Panel
-            // 
-            this.monday2Panel.Location = new System.Drawing.Point(94, 216);
-            this.monday2Panel.Name = "monday2Panel";
-            this.monday2Panel.Size = new System.Drawing.Size(79, 27);
-            this.monday2Panel.TabIndex = 35;
-            this.monday2Panel.Tag = "monday";
-            // 
-            // tuesday12Panel
-            // 
-            this.tuesday12Panel.Location = new System.Drawing.Point(171, 150);
-            this.tuesday12Panel.Name = "tuesday12Panel";
-            this.tuesday12Panel.Size = new System.Drawing.Size(79, 27);
-            this.tuesday12Panel.TabIndex = 26;
-            this.tuesday12Panel.Tag = "tuesday";
-            // 
-            // monday12Panel
-            // 
-            this.monday12Panel.Location = new System.Drawing.Point(94, 150);
-            this.monday12Panel.Name = "monday12Panel";
-            this.monday12Panel.Size = new System.Drawing.Size(79, 27);
-            this.monday12Panel.TabIndex = 25;
-            this.monday12Panel.Tag = "monday";
-            // 
-            // friday6Panel
-            // 
-            this.friday6Panel.Location = new System.Drawing.Point(397, 348);
-            this.friday6Panel.Name = "friday6Panel";
-            this.friday6Panel.Size = new System.Drawing.Size(79, 27);
-            this.friday6Panel.TabIndex = 59;
-            this.friday6Panel.Tag = "friday";
-            // 
-            // friday4Panel
-            // 
-            this.friday4Panel.Location = new System.Drawing.Point(397, 282);
-            this.friday4Panel.Name = "friday4Panel";
-            this.friday4Panel.Size = new System.Drawing.Size(79, 27);
-            this.friday4Panel.TabIndex = 49;
-            this.friday4Panel.Tag = "friday";
-            // 
-            // friday5Panel
-            // 
-            this.friday5Panel.Location = new System.Drawing.Point(397, 315);
-            this.friday5Panel.Name = "friday5Panel";
-            this.friday5Panel.Size = new System.Drawing.Size(79, 27);
-            this.friday5Panel.TabIndex = 54;
-            this.friday5Panel.Tag = "friday";
-            // 
-            // thursday6Panel
-            // 
-            this.thursday6Panel.Location = new System.Drawing.Point(321, 348);
-            this.thursday6Panel.Name = "thursday6Panel";
-            this.thursday6Panel.Size = new System.Drawing.Size(79, 27);
-            this.thursday6Panel.TabIndex = 58;
-            this.thursday6Panel.Tag = "thursday ";
-            // 
-            // thursday4Panel
-            // 
-            this.thursday4Panel.Location = new System.Drawing.Point(321, 282);
-            this.thursday4Panel.Name = "thursday4Panel";
-            this.thursday4Panel.Size = new System.Drawing.Size(79, 27);
-            this.thursday4Panel.TabIndex = 48;
-            this.thursday4Panel.Tag = "thursday ";
-            // 
-            // wednesday6Panel
-            // 
-            this.wednesday6Panel.Location = new System.Drawing.Point(244, 348);
-            this.wednesday6Panel.Name = "wednesday6Panel";
-            this.wednesday6Panel.Size = new System.Drawing.Size(79, 27);
-            this.wednesday6Panel.TabIndex = 57;
-            this.wednesday6Panel.Tag = "wednesday";
-            // 
-            // wednesday4Panel
-            // 
-            this.wednesday4Panel.Location = new System.Drawing.Point(244, 282);
-            this.wednesday4Panel.Name = "wednesday4Panel";
-            this.wednesday4Panel.Size = new System.Drawing.Size(79, 27);
-            this.wednesday4Panel.TabIndex = 47;
-            this.wednesday4Panel.Tag = "wednesday";
-            // 
-            // thursday5Panel
-            // 
-            this.thursday5Panel.Location = new System.Drawing.Point(321, 315);
-            this.thursday5Panel.Name = "thursday5Panel";
-            this.thursday5Panel.Size = new System.Drawing.Size(79, 27);
-            this.thursday5Panel.TabIndex = 53;
-            this.thursday5Panel.Tag = "thursday ";
-            // 
-            // tuesday6Panel
-            // 
-            this.tuesday6Panel.Location = new System.Drawing.Point(171, 348);
-            this.tuesday6Panel.Name = "tuesday6Panel";
-            this.tuesday6Panel.Size = new System.Drawing.Size(79, 27);
-            this.tuesday6Panel.TabIndex = 56;
-            this.tuesday6Panel.Tag = "tuesday";
-            // 
-            // wednesday5Panel
-            // 
-            this.wednesday5Panel.Location = new System.Drawing.Point(244, 315);
-            this.wednesday5Panel.Name = "wednesday5Panel";
-            this.wednesday5Panel.Size = new System.Drawing.Size(79, 27);
-            this.wednesday5Panel.TabIndex = 52;
-            this.wednesday5Panel.Tag = "wednesday";
-            // 
-            // tuesday4Panel
-            // 
-            this.tuesday4Panel.Location = new System.Drawing.Point(171, 282);
-            this.tuesday4Panel.Name = "tuesday4Panel";
-            this.tuesday4Panel.Size = new System.Drawing.Size(79, 27);
-            this.tuesday4Panel.TabIndex = 46;
-            this.tuesday4Panel.Tag = "tuesday";
-            // 
-            // monday6Panel
-            // 
-            this.monday6Panel.Location = new System.Drawing.Point(94, 348);
-            this.monday6Panel.Name = "monday6Panel";
-            this.monday6Panel.Size = new System.Drawing.Size(79, 27);
-            this.monday6Panel.TabIndex = 55;
-            this.monday6Panel.Tag = "monday";
-            // 
-            // tuesday5Panel
-            // 
-            this.tuesday5Panel.Location = new System.Drawing.Point(171, 315);
-            this.tuesday5Panel.Name = "tuesday5Panel";
-            this.tuesday5Panel.Size = new System.Drawing.Size(79, 27);
-            this.tuesday5Panel.TabIndex = 51;
-            this.tuesday5Panel.Tag = "tuesday";
-            // 
-            // monday4Panel
-            // 
-            this.monday4Panel.Location = new System.Drawing.Point(94, 282);
-            this.monday4Panel.Name = "monday4Panel";
-            this.monday4Panel.Size = new System.Drawing.Size(79, 27);
-            this.monday4Panel.TabIndex = 45;
-            this.monday4Panel.Tag = "monday";
-            // 
-            // monday5Panel
-            // 
-            this.monday5Panel.Location = new System.Drawing.Point(94, 315);
-            this.monday5Panel.Name = "monday5Panel";
-            this.monday5Panel.Size = new System.Drawing.Size(79, 27);
-            this.monday5Panel.TabIndex = 50;
-            this.monday5Panel.Tag = "monday";
-            // 
-            // friday7Panel
-            // 
-            this.friday7Panel.Location = new System.Drawing.Point(397, 381);
-            this.friday7Panel.Name = "friday7Panel";
-            this.friday7Panel.Size = new System.Drawing.Size(79, 27);
-            this.friday7Panel.TabIndex = 64;
-            this.friday7Panel.Tag = "friday";
-            // 
-            // thursday7Panel
-            // 
-            this.thursday7Panel.Location = new System.Drawing.Point(321, 381);
-            this.thursday7Panel.Name = "thursday7Panel";
-            this.thursday7Panel.Size = new System.Drawing.Size(79, 27);
-            this.thursday7Panel.TabIndex = 63;
-            this.thursday7Panel.Tag = "thursday ";
-            // 
-            // wednesday7Panel
-            // 
-            this.wednesday7Panel.Location = new System.Drawing.Point(244, 381);
-            this.wednesday7Panel.Name = "wednesday7Panel";
-            this.wednesday7Panel.Size = new System.Drawing.Size(79, 27);
-            this.wednesday7Panel.TabIndex = 62;
-            this.wednesday7Panel.Tag = "wednesday";
-            // 
-            // tuesday7Panel
-            // 
-            this.tuesday7Panel.Location = new System.Drawing.Point(171, 381);
-            this.tuesday7Panel.Name = "tuesday7Panel";
-            this.tuesday7Panel.Size = new System.Drawing.Size(79, 27);
-            this.tuesday7Panel.TabIndex = 61;
-            this.tuesday7Panel.Tag = "tuesday";
-            // 
-            // monday7Panel
-            // 
-            this.monday7Panel.Location = new System.Drawing.Point(94, 381);
-            this.monday7Panel.Name = "monday7Panel";
-            this.monday7Panel.Size = new System.Drawing.Size(79, 27);
-            this.monday7Panel.TabIndex = 60;
-            this.monday7Panel.Tag = "monday";
-            // 
-            // eightAMLabel
-            // 
-            this.eightAMLabel.AutoSize = true;
-            this.eightAMLabel.Location = new System.Drawing.Point(30, 18);
-            this.eightAMLabel.Name = "eightAMLabel";
-            this.eightAMLabel.Size = new System.Drawing.Size(47, 13);
-            this.eightAMLabel.TabIndex = 65;
-            this.eightAMLabel.Text = "8:00 AM";
-            // 
-            // friday8PMPanel
-            // 
-            this.friday8PMPanel.Location = new System.Drawing.Point(397, 414);
-            this.friday8PMPanel.Name = "friday8PMPanel";
-            this.friday8PMPanel.Size = new System.Drawing.Size(79, 27);
-            this.friday8PMPanel.TabIndex = 69;
-            this.friday8PMPanel.Tag = "friday";
-            // 
-            // thursday8PMPanel
-            // 
-            this.thursday8PMPanel.Location = new System.Drawing.Point(321, 414);
-            this.thursday8PMPanel.Name = "thursday8PMPanel";
-            this.thursday8PMPanel.Size = new System.Drawing.Size(79, 27);
-            this.thursday8PMPanel.TabIndex = 68;
-            this.thursday8PMPanel.Tag = "thursday ";
-            // 
-            // wednesday8PMPanel
-            // 
-            this.wednesday8PMPanel.Location = new System.Drawing.Point(244, 414);
-            this.wednesday8PMPanel.Name = "wednesday8PMPanel";
-            this.wednesday8PMPanel.Size = new System.Drawing.Size(79, 27);
-            this.wednesday8PMPanel.TabIndex = 67;
-            this.wednesday8PMPanel.Tag = "wednesday";
-            // 
-            // tuesday8PMPanel
-            // 
-            this.tuesday8PMPanel.Location = new System.Drawing.Point(171, 414);
-            this.tuesday8PMPanel.Name = "tuesday8PMPanel";
-            this.tuesday8PMPanel.Size = new System.Drawing.Size(79, 27);
-            this.tuesday8PMPanel.TabIndex = 66;
-            this.tuesday8PMPanel.Tag = "tuesday";
-            // 
-            // monday8PMPanel
-            // 
-            this.monday8PMPanel.Location = new System.Drawing.Point(94, 414);
-            this.monday8PMPanel.Name = "monday8PMPanel";
-            this.monday8PMPanel.Size = new System.Drawing.Size(79, 27);
-            this.monday8PMPanel.TabIndex = 65;
-            this.monday8PMPanel.Tag = "monday";
-            // 
-            // nineLabel
-            // 
-            this.nineLabel.AutoSize = true;
-            this.nineLabel.Location = new System.Drawing.Point(29, 51);
-            this.nineLabel.Name = "nineLabel";
-            this.nineLabel.Size = new System.Drawing.Size(47, 13);
-            this.nineLabel.TabIndex = 70;
-            this.nineLabel.Text = "9:00 AM";
-            // 
-            // tenLabel
-            // 
-            this.tenLabel.AutoSize = true;
-            this.tenLabel.Location = new System.Drawing.Point(29, 84);
-            this.tenLabel.Name = "tenLabel";
-            this.tenLabel.Size = new System.Drawing.Size(53, 13);
-            this.tenLabel.TabIndex = 71;
-            this.tenLabel.Text = "10:00 AM";
-            // 
-            // elevenLabel
-            // 
-            this.elevenLabel.AutoSize = true;
-            this.elevenLabel.Location = new System.Drawing.Point(29, 117);
-            this.elevenLabel.Name = "elevenLabel";
-            this.elevenLabel.Size = new System.Drawing.Size(53, 13);
-            this.elevenLabel.TabIndex = 72;
-            this.elevenLabel.Text = "11:00 AM";
-            // 
-            // twelveLabel
-            // 
-            this.twelveLabel.AutoSize = true;
-            this.twelveLabel.Location = new System.Drawing.Point(29, 150);
-            this.twelveLabel.Name = "twelveLabel";
-            this.twelveLabel.Size = new System.Drawing.Size(53, 13);
-            this.twelveLabel.TabIndex = 73;
-            this.twelveLabel.Text = "12:00 PM";
+            // eightPMLabel
+            // 
+            this.eightPMLabel.AutoSize = true;
+            this.eightPMLabel.Location = new System.Drawing.Point(30, 414);
+            this.eightPMLabel.Name = "eightPMLabel";
+            this.eightPMLabel.Size = new System.Drawing.Size(47, 13);
+            this.eightPMLabel.TabIndex = 81;
+            this.eightPMLabel.Text = "8:00 PM";
+            // 
+            // sevenLabel
+            // 
+            this.sevenLabel.AutoSize = true;
+            this.sevenLabel.Location = new System.Drawing.Point(30, 381);
+            this.sevenLabel.Name = "sevenLabel";
+            this.sevenLabel.Size = new System.Drawing.Size(47, 13);
+            this.sevenLabel.TabIndex = 80;
+            this.sevenLabel.Text = "7:00 PM";
+            // 
+            // sixLabel
+            // 
+            this.sixLabel.AutoSize = true;
+            this.sixLabel.Location = new System.Drawing.Point(30, 348);
+            this.sixLabel.Name = "sixLabel";
+            this.sixLabel.Size = new System.Drawing.Size(47, 13);
+            this.sixLabel.TabIndex = 79;
+            this.sixLabel.Text = "6:00 PM";
             // 
             // fiveLabel
             // 
@@ -897,107 +299,616 @@
             this.oneLabel.TabIndex = 74;
             this.oneLabel.Text = "1:00 PM";
             // 
-            // eightPMLabel
+            // twelveLabel
             // 
-            this.eightPMLabel.AutoSize = true;
-            this.eightPMLabel.Location = new System.Drawing.Point(30, 414);
-            this.eightPMLabel.Name = "eightPMLabel";
-            this.eightPMLabel.Size = new System.Drawing.Size(47, 13);
-            this.eightPMLabel.TabIndex = 81;
-            this.eightPMLabel.Text = "8:00 PM";
+            this.twelveLabel.AutoSize = true;
+            this.twelveLabel.Location = new System.Drawing.Point(29, 150);
+            this.twelveLabel.Name = "twelveLabel";
+            this.twelveLabel.Size = new System.Drawing.Size(53, 13);
+            this.twelveLabel.TabIndex = 73;
+            this.twelveLabel.Text = "12:00 PM";
             // 
-            // sevenLabel
+            // elevenLabel
             // 
-            this.sevenLabel.AutoSize = true;
-            this.sevenLabel.Location = new System.Drawing.Point(30, 381);
-            this.sevenLabel.Name = "sevenLabel";
-            this.sevenLabel.Size = new System.Drawing.Size(47, 13);
-            this.sevenLabel.TabIndex = 80;
-            this.sevenLabel.Text = "7:00 PM";
+            this.elevenLabel.AutoSize = true;
+            this.elevenLabel.Location = new System.Drawing.Point(29, 117);
+            this.elevenLabel.Name = "elevenLabel";
+            this.elevenLabel.Size = new System.Drawing.Size(53, 13);
+            this.elevenLabel.TabIndex = 72;
+            this.elevenLabel.Text = "11:00 AM";
             // 
-            // sixLabel
+            // tenLabel
             // 
-            this.sixLabel.AutoSize = true;
-            this.sixLabel.Location = new System.Drawing.Point(30, 348);
-            this.sixLabel.Name = "sixLabel";
-            this.sixLabel.Size = new System.Drawing.Size(47, 13);
-            this.sixLabel.TabIndex = 79;
-            this.sixLabel.Text = "6:00 PM";
+            this.tenLabel.AutoSize = true;
+            this.tenLabel.Location = new System.Drawing.Point(29, 84);
+            this.tenLabel.Name = "tenLabel";
+            this.tenLabel.Size = new System.Drawing.Size(53, 13);
+            this.tenLabel.TabIndex = 71;
+            this.tenLabel.Text = "10:00 AM";
             // 
-            // classPanel
+            // nineLabel
             // 
-            this.classPanel.Controls.Add(this.splitContainer2);
-            this.classPanel.Location = new System.Drawing.Point(13, 13);
-            this.classPanel.Name = "classPanel";
-            this.classPanel.Size = new System.Drawing.Size(121, 131);
-            this.classPanel.TabIndex = 0;
+            this.nineLabel.AutoSize = true;
+            this.nineLabel.Location = new System.Drawing.Point(29, 51);
+            this.nineLabel.Name = "nineLabel";
+            this.nineLabel.Size = new System.Drawing.Size(47, 13);
+            this.nineLabel.TabIndex = 70;
+            this.nineLabel.Text = "9:00 AM";
             // 
-            // className
+            // eightAMLabel
             // 
-            this.className.AutoSize = true;
-            this.className.Location = new System.Drawing.Point(28, 5);
-            this.className.Name = "className";
-            this.className.Size = new System.Drawing.Size(63, 13);
-            this.className.TabIndex = 0;
-            this.className.Text = "Class Name";
+            this.eightAMLabel.AutoSize = true;
+            this.eightAMLabel.Location = new System.Drawing.Point(30, 18);
+            this.eightAMLabel.Name = "eightAMLabel";
+            this.eightAMLabel.Size = new System.Drawing.Size(47, 13);
+            this.eightAMLabel.TabIndex = 65;
+            this.eightAMLabel.Text = "8:00 AM";
             // 
-            // codeLabel
+            // friday8PMPanel
             // 
-            this.codeLabel.AutoSize = true;
-            this.codeLabel.Location = new System.Drawing.Point(28, 33);
-            this.codeLabel.Name = "codeLabel";
-            this.codeLabel.Size = new System.Drawing.Size(60, 13);
-            this.codeLabel.TabIndex = 2;
-            this.codeLabel.Text = "Class Code";
+            this.friday8PMPanel.Location = new System.Drawing.Point(397, 414);
+            this.friday8PMPanel.Name = "friday8PMPanel";
+            this.friday8PMPanel.Size = new System.Drawing.Size(79, 27);
+            this.friday8PMPanel.TabIndex = 69;
+            this.friday8PMPanel.Tag = "friday";
             // 
-            // splitContainer2
+            // friday7Panel
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.friday7Panel.Location = new System.Drawing.Point(397, 381);
+            this.friday7Panel.Name = "friday7Panel";
+            this.friday7Panel.Size = new System.Drawing.Size(79, 27);
+            this.friday7Panel.TabIndex = 64;
+            this.friday7Panel.Tag = "friday";
             // 
-            // splitContainer2.Panel1
+            // thursday8PMPanel
             // 
-            this.splitContainer2.Panel1.BackColor = System.Drawing.Color.DarkOrange;
-            this.splitContainer2.Panel1.Controls.Add(this.codeLabel);
-            this.splitContainer2.Panel1.Controls.Add(this.className);
+            this.thursday8PMPanel.Location = new System.Drawing.Point(321, 414);
+            this.thursday8PMPanel.Name = "thursday8PMPanel";
+            this.thursday8PMPanel.Size = new System.Drawing.Size(79, 27);
+            this.thursday8PMPanel.TabIndex = 68;
+            this.thursday8PMPanel.Tag = "thursday ";
             // 
-            // splitContainer2.Panel2
+            // friday6Panel
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.placeLabel);
-            this.splitContainer2.Panel2.Controls.Add(this.timeLabel);
-            this.splitContainer2.Panel2.Controls.Add(this.daysLabel);
-            this.splitContainer2.Size = new System.Drawing.Size(121, 131);
-            this.splitContainer2.SplitterDistance = 54;
-            this.splitContainer2.TabIndex = 0;
+            this.friday6Panel.Location = new System.Drawing.Point(397, 348);
+            this.friday6Panel.Name = "friday6Panel";
+            this.friday6Panel.Size = new System.Drawing.Size(79, 27);
+            this.friday6Panel.TabIndex = 59;
+            this.friday6Panel.Tag = "friday";
             // 
-            // daysLabel
+            // wednesday8PMPanel
             // 
-            this.daysLabel.AutoSize = true;
-            this.daysLabel.Location = new System.Drawing.Point(40, 8);
-            this.daysLabel.Name = "daysLabel";
-            this.daysLabel.Size = new System.Drawing.Size(31, 13);
-            this.daysLabel.TabIndex = 0;
-            this.daysLabel.Text = "Days";
+            this.wednesday8PMPanel.Location = new System.Drawing.Point(244, 414);
+            this.wednesday8PMPanel.Name = "wednesday8PMPanel";
+            this.wednesday8PMPanel.Size = new System.Drawing.Size(79, 27);
+            this.wednesday8PMPanel.TabIndex = 67;
+            this.wednesday8PMPanel.Tag = "wednesday";
             // 
-            // timeLabel
+            // thursday7Panel
             // 
-            this.timeLabel.AutoSize = true;
-            this.timeLabel.Location = new System.Drawing.Point(41, 27);
-            this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(30, 13);
-            this.timeLabel.TabIndex = 1;
-            this.timeLabel.Text = "Time";
+            this.thursday7Panel.Location = new System.Drawing.Point(321, 381);
+            this.thursday7Panel.Name = "thursday7Panel";
+            this.thursday7Panel.Size = new System.Drawing.Size(79, 27);
+            this.thursday7Panel.TabIndex = 63;
+            this.thursday7Panel.Tag = "thursday ";
             // 
-            // placeLabel
+            // tuesday8PMPanel
             // 
-            this.placeLabel.AutoSize = true;
-            this.placeLabel.Location = new System.Drawing.Point(41, 50);
-            this.placeLabel.Name = "placeLabel";
-            this.placeLabel.Size = new System.Drawing.Size(34, 13);
-            this.placeLabel.TabIndex = 2;
-            this.placeLabel.Text = "Place";
+            this.tuesday8PMPanel.Location = new System.Drawing.Point(171, 414);
+            this.tuesday8PMPanel.Name = "tuesday8PMPanel";
+            this.tuesday8PMPanel.Size = new System.Drawing.Size(79, 27);
+            this.tuesday8PMPanel.TabIndex = 66;
+            this.tuesday8PMPanel.Tag = "tuesday";
+            // 
+            // monday8PMPanel
+            // 
+            this.monday8PMPanel.Location = new System.Drawing.Point(94, 414);
+            this.monday8PMPanel.Name = "monday8PMPanel";
+            this.monday8PMPanel.Size = new System.Drawing.Size(79, 27);
+            this.monday8PMPanel.TabIndex = 65;
+            this.monday8PMPanel.Tag = "monday";
+            // 
+            // wednesday7Panel
+            // 
+            this.wednesday7Panel.Location = new System.Drawing.Point(244, 381);
+            this.wednesday7Panel.Name = "wednesday7Panel";
+            this.wednesday7Panel.Size = new System.Drawing.Size(79, 27);
+            this.wednesday7Panel.TabIndex = 62;
+            this.wednesday7Panel.Tag = "wednesday";
+            // 
+            // friday3Panel
+            // 
+            this.friday3Panel.Location = new System.Drawing.Point(397, 249);
+            this.friday3Panel.Name = "friday3Panel";
+            this.friday3Panel.Size = new System.Drawing.Size(79, 27);
+            this.friday3Panel.TabIndex = 44;
+            this.friday3Panel.Tag = "friday";
+            // 
+            // tuesday7Panel
+            // 
+            this.tuesday7Panel.Location = new System.Drawing.Point(171, 381);
+            this.tuesday7Panel.Name = "tuesday7Panel";
+            this.tuesday7Panel.Size = new System.Drawing.Size(79, 27);
+            this.tuesday7Panel.TabIndex = 61;
+            this.tuesday7Panel.Tag = "tuesday";
+            // 
+            // friday4Panel
+            // 
+            this.friday4Panel.Location = new System.Drawing.Point(397, 282);
+            this.friday4Panel.Name = "friday4Panel";
+            this.friday4Panel.Size = new System.Drawing.Size(79, 27);
+            this.friday4Panel.TabIndex = 49;
+            this.friday4Panel.Tag = "friday";
+            // 
+            // monday7Panel
+            // 
+            this.monday7Panel.Location = new System.Drawing.Point(94, 381);
+            this.monday7Panel.Name = "monday7Panel";
+            this.monday7Panel.Size = new System.Drawing.Size(79, 27);
+            this.monday7Panel.TabIndex = 60;
+            this.monday7Panel.Tag = "monday";
+            // 
+            // friday11Panel
+            // 
+            this.friday11Panel.Location = new System.Drawing.Point(397, 117);
+            this.friday11Panel.Name = "friday11Panel";
+            this.friday11Panel.Size = new System.Drawing.Size(79, 27);
+            this.friday11Panel.TabIndex = 24;
+            this.friday11Panel.Tag = "friday";
+            // 
+            // friday5Panel
+            // 
+            this.friday5Panel.Location = new System.Drawing.Point(397, 315);
+            this.friday5Panel.Name = "friday5Panel";
+            this.friday5Panel.Size = new System.Drawing.Size(79, 27);
+            this.friday5Panel.TabIndex = 54;
+            this.friday5Panel.Tag = "friday";
+            // 
+            // friday1Panel
+            // 
+            this.friday1Panel.Location = new System.Drawing.Point(397, 183);
+            this.friday1Panel.Name = "friday1Panel";
+            this.friday1Panel.Size = new System.Drawing.Size(79, 27);
+            this.friday1Panel.TabIndex = 34;
+            this.friday1Panel.Tag = "friday";
+            // 
+            // thursday6Panel
+            // 
+            this.thursday6Panel.Location = new System.Drawing.Point(321, 348);
+            this.thursday6Panel.Name = "thursday6Panel";
+            this.thursday6Panel.Size = new System.Drawing.Size(79, 27);
+            this.thursday6Panel.TabIndex = 58;
+            this.thursday6Panel.Tag = "thursday ";
+            // 
+            // friday9Panel
+            // 
+            this.friday9Panel.Location = new System.Drawing.Point(397, 51);
+            this.friday9Panel.Name = "friday9Panel";
+            this.friday9Panel.Size = new System.Drawing.Size(79, 27);
+            this.friday9Panel.TabIndex = 14;
+            this.friday9Panel.Tag = "friday";
+            // 
+            // thursday4Panel
+            // 
+            this.thursday4Panel.Location = new System.Drawing.Point(321, 282);
+            this.thursday4Panel.Name = "thursday4Panel";
+            this.thursday4Panel.Size = new System.Drawing.Size(79, 27);
+            this.thursday4Panel.TabIndex = 48;
+            this.thursday4Panel.Tag = "thursday ";
+            // 
+            // friday2Panel
+            // 
+            this.friday2Panel.Location = new System.Drawing.Point(397, 216);
+            this.friday2Panel.Name = "friday2Panel";
+            this.friday2Panel.Size = new System.Drawing.Size(79, 27);
+            this.friday2Panel.TabIndex = 39;
+            this.friday2Panel.Tag = "friday";
+            // 
+            // wednesday6Panel
+            // 
+            this.wednesday6Panel.Location = new System.Drawing.Point(244, 348);
+            this.wednesday6Panel.Name = "wednesday6Panel";
+            this.wednesday6Panel.Size = new System.Drawing.Size(79, 27);
+            this.wednesday6Panel.TabIndex = 57;
+            this.wednesday6Panel.Tag = "wednesday";
+            // 
+            // friday10Panel
+            // 
+            this.friday10Panel.Location = new System.Drawing.Point(397, 84);
+            this.friday10Panel.Name = "friday10Panel";
+            this.friday10Panel.Size = new System.Drawing.Size(79, 27);
+            this.friday10Panel.TabIndex = 19;
+            this.friday10Panel.Tag = "friday";
+            // 
+            // wednesday4Panel
+            // 
+            this.wednesday4Panel.Location = new System.Drawing.Point(244, 282);
+            this.wednesday4Panel.Name = "wednesday4Panel";
+            this.wednesday4Panel.Size = new System.Drawing.Size(79, 27);
+            this.wednesday4Panel.TabIndex = 47;
+            this.wednesday4Panel.Tag = "wednesday";
+            // 
+            // friday12Panel
+            // 
+            this.friday12Panel.Location = new System.Drawing.Point(397, 150);
+            this.friday12Panel.Name = "friday12Panel";
+            this.friday12Panel.Size = new System.Drawing.Size(79, 27);
+            this.friday12Panel.TabIndex = 29;
+            this.friday12Panel.Tag = "friday";
+            // 
+            // thursday5Panel
+            // 
+            this.thursday5Panel.Location = new System.Drawing.Point(321, 315);
+            this.thursday5Panel.Name = "thursday5Panel";
+            this.thursday5Panel.Size = new System.Drawing.Size(79, 27);
+            this.thursday5Panel.TabIndex = 53;
+            this.thursday5Panel.Tag = "thursday ";
+            // 
+            // friday8AMPanel
+            // 
+            this.friday8AMPanel.Location = new System.Drawing.Point(397, 18);
+            this.friday8AMPanel.Name = "friday8AMPanel";
+            this.friday8AMPanel.Size = new System.Drawing.Size(79, 27);
+            this.friday8AMPanel.TabIndex = 9;
+            this.friday8AMPanel.Tag = "friday";
+            // 
+            // tuesday6Panel
+            // 
+            this.tuesday6Panel.Location = new System.Drawing.Point(171, 348);
+            this.tuesday6Panel.Name = "tuesday6Panel";
+            this.tuesday6Panel.Size = new System.Drawing.Size(79, 27);
+            this.tuesday6Panel.TabIndex = 56;
+            this.tuesday6Panel.Tag = "tuesday";
+            // 
+            // thursday3Panel
+            // 
+            this.thursday3Panel.Location = new System.Drawing.Point(321, 249);
+            this.thursday3Panel.Name = "thursday3Panel";
+            this.thursday3Panel.Size = new System.Drawing.Size(79, 27);
+            this.thursday3Panel.TabIndex = 43;
+            this.thursday3Panel.Tag = "thursday ";
+            // 
+            // wednesday5Panel
+            // 
+            this.wednesday5Panel.Location = new System.Drawing.Point(244, 315);
+            this.wednesday5Panel.Name = "wednesday5Panel";
+            this.wednesday5Panel.Size = new System.Drawing.Size(79, 27);
+            this.wednesday5Panel.TabIndex = 52;
+            this.wednesday5Panel.Tag = "wednesday";
+            // 
+            // thursday11Panel
+            // 
+            this.thursday11Panel.Location = new System.Drawing.Point(321, 117);
+            this.thursday11Panel.Name = "thursday11Panel";
+            this.thursday11Panel.Size = new System.Drawing.Size(79, 27);
+            this.thursday11Panel.TabIndex = 23;
+            this.thursday11Panel.Tag = "thursday ";
+            // 
+            // tuesday4Panel
+            // 
+            this.tuesday4Panel.Location = new System.Drawing.Point(171, 282);
+            this.tuesday4Panel.Name = "tuesday4Panel";
+            this.tuesday4Panel.Size = new System.Drawing.Size(79, 27);
+            this.tuesday4Panel.TabIndex = 46;
+            this.tuesday4Panel.Tag = "tuesday";
+            // 
+            // thursday1Panel
+            // 
+            this.thursday1Panel.Location = new System.Drawing.Point(321, 183);
+            this.thursday1Panel.Name = "thursday1Panel";
+            this.thursday1Panel.Size = new System.Drawing.Size(79, 27);
+            this.thursday1Panel.TabIndex = 33;
+            this.thursday1Panel.Tag = "thursday ";
+            // 
+            // monday6Panel
+            // 
+            this.monday6Panel.Location = new System.Drawing.Point(94, 348);
+            this.monday6Panel.Name = "monday6Panel";
+            this.monday6Panel.Size = new System.Drawing.Size(79, 27);
+            this.monday6Panel.TabIndex = 55;
+            this.monday6Panel.Tag = "monday";
+            // 
+            // thursday9Panel
+            // 
+            this.thursday9Panel.Location = new System.Drawing.Point(321, 51);
+            this.thursday9Panel.Name = "thursday9Panel";
+            this.thursday9Panel.Size = new System.Drawing.Size(79, 27);
+            this.thursday9Panel.TabIndex = 13;
+            this.thursday9Panel.Tag = "thursday ";
+            // 
+            // tuesday5Panel
+            // 
+            this.tuesday5Panel.Location = new System.Drawing.Point(171, 315);
+            this.tuesday5Panel.Name = "tuesday5Panel";
+            this.tuesday5Panel.Size = new System.Drawing.Size(79, 27);
+            this.tuesday5Panel.TabIndex = 51;
+            this.tuesday5Panel.Tag = "tuesday";
+            // 
+            // wednesday3Panel
+            // 
+            this.wednesday3Panel.Location = new System.Drawing.Point(244, 249);
+            this.wednesday3Panel.Name = "wednesday3Panel";
+            this.wednesday3Panel.Size = new System.Drawing.Size(79, 27);
+            this.wednesday3Panel.TabIndex = 42;
+            this.wednesday3Panel.Tag = "wednesday";
+            // 
+            // monday4Panel
+            // 
+            this.monday4Panel.Location = new System.Drawing.Point(94, 282);
+            this.monday4Panel.Name = "monday4Panel";
+            this.monday4Panel.Size = new System.Drawing.Size(79, 27);
+            this.monday4Panel.TabIndex = 45;
+            this.monday4Panel.Tag = "monday";
+            // 
+            // monday5Panel
+            // 
+            this.monday5Panel.Location = new System.Drawing.Point(94, 315);
+            this.monday5Panel.Name = "monday5Panel";
+            this.monday5Panel.Size = new System.Drawing.Size(79, 27);
+            this.monday5Panel.TabIndex = 50;
+            this.monday5Panel.Tag = "monday";
+            // 
+            // wednesday11Panel
+            // 
+            this.wednesday11Panel.Location = new System.Drawing.Point(244, 117);
+            this.wednesday11Panel.Name = "wednesday11Panel";
+            this.wednesday11Panel.Size = new System.Drawing.Size(79, 27);
+            this.wednesday11Panel.TabIndex = 22;
+            this.wednesday11Panel.Tag = "wednesday";
+            // 
+            // wednesday1Panel
+            // 
+            this.wednesday1Panel.Location = new System.Drawing.Point(244, 183);
+            this.wednesday1Panel.Name = "wednesday1Panel";
+            this.wednesday1Panel.Size = new System.Drawing.Size(79, 27);
+            this.wednesday1Panel.TabIndex = 32;
+            this.wednesday1Panel.Tag = "wednesday";
+            // 
+            // wednesday9Panel
+            // 
+            this.wednesday9Panel.Location = new System.Drawing.Point(244, 51);
+            this.wednesday9Panel.Name = "wednesday9Panel";
+            this.wednesday9Panel.Size = new System.Drawing.Size(79, 27);
+            this.wednesday9Panel.TabIndex = 12;
+            this.wednesday9Panel.Tag = "wednesday";
+            // 
+            // thursday2Panel
+            // 
+            this.thursday2Panel.Location = new System.Drawing.Point(321, 216);
+            this.thursday2Panel.Name = "thursday2Panel";
+            this.thursday2Panel.Size = new System.Drawing.Size(79, 27);
+            this.thursday2Panel.TabIndex = 38;
+            this.thursday2Panel.Tag = "thursday ";
+            // 
+            // thursday10Panel
+            // 
+            this.thursday10Panel.Location = new System.Drawing.Point(321, 84);
+            this.thursday10Panel.Name = "thursday10Panel";
+            this.thursday10Panel.Size = new System.Drawing.Size(79, 27);
+            this.thursday10Panel.TabIndex = 18;
+            this.thursday10Panel.Tag = "thursday ";
+            // 
+            // thursday12Panel
+            // 
+            this.thursday12Panel.Location = new System.Drawing.Point(321, 150);
+            this.thursday12Panel.Name = "thursday12Panel";
+            this.thursday12Panel.Size = new System.Drawing.Size(79, 27);
+            this.thursday12Panel.TabIndex = 28;
+            this.thursday12Panel.Tag = "thursday ";
+            // 
+            // thursday8AMPanel
+            // 
+            this.thursday8AMPanel.Location = new System.Drawing.Point(321, 18);
+            this.thursday8AMPanel.Name = "thursday8AMPanel";
+            this.thursday8AMPanel.Size = new System.Drawing.Size(79, 27);
+            this.thursday8AMPanel.TabIndex = 8;
+            this.thursday8AMPanel.Tag = "thursday ";
+            // 
+            // tuesday3Panel
+            // 
+            this.tuesday3Panel.Location = new System.Drawing.Point(171, 249);
+            this.tuesday3Panel.Name = "tuesday3Panel";
+            this.tuesday3Panel.Size = new System.Drawing.Size(79, 27);
+            this.tuesday3Panel.TabIndex = 41;
+            this.tuesday3Panel.Tag = "tuesday";
+            // 
+            // tuesday11Panel
+            // 
+            this.tuesday11Panel.Location = new System.Drawing.Point(171, 117);
+            this.tuesday11Panel.Name = "tuesday11Panel";
+            this.tuesday11Panel.Size = new System.Drawing.Size(79, 27);
+            this.tuesday11Panel.TabIndex = 21;
+            this.tuesday11Panel.Tag = "tuesday";
+            // 
+            // wednesday2Panel
+            // 
+            this.wednesday2Panel.Location = new System.Drawing.Point(244, 216);
+            this.wednesday2Panel.Name = "wednesday2Panel";
+            this.wednesday2Panel.Size = new System.Drawing.Size(79, 27);
+            this.wednesday2Panel.TabIndex = 37;
+            this.wednesday2Panel.Tag = "wednesday";
+            // 
+            // wednesday10Panel
+            // 
+            this.wednesday10Panel.Location = new System.Drawing.Point(244, 84);
+            this.wednesday10Panel.Name = "wednesday10Panel";
+            this.wednesday10Panel.Size = new System.Drawing.Size(79, 27);
+            this.wednesday10Panel.TabIndex = 17;
+            this.wednesday10Panel.Tag = "wednesday";
+            // 
+            // tuesday1Panel
+            // 
+            this.tuesday1Panel.Location = new System.Drawing.Point(171, 183);
+            this.tuesday1Panel.Name = "tuesday1Panel";
+            this.tuesday1Panel.Size = new System.Drawing.Size(79, 27);
+            this.tuesday1Panel.TabIndex = 31;
+            this.tuesday1Panel.Tag = "tuesday";
+            // 
+            // tuesday9Panel
+            // 
+            this.tuesday9Panel.Location = new System.Drawing.Point(171, 51);
+            this.tuesday9Panel.Name = "tuesday9Panel";
+            this.tuesday9Panel.Size = new System.Drawing.Size(79, 27);
+            this.tuesday9Panel.TabIndex = 11;
+            this.tuesday9Panel.Tag = "tuesday";
+            // 
+            // monday3Panel
+            // 
+            this.monday3Panel.Location = new System.Drawing.Point(94, 249);
+            this.monday3Panel.Name = "monday3Panel";
+            this.monday3Panel.Size = new System.Drawing.Size(79, 27);
+            this.monday3Panel.TabIndex = 40;
+            this.monday3Panel.Tag = "monday";
+            // 
+            // monday11Panel
+            // 
+            this.monday11Panel.Location = new System.Drawing.Point(94, 117);
+            this.monday11Panel.Name = "monday11Panel";
+            this.monday11Panel.Size = new System.Drawing.Size(79, 27);
+            this.monday11Panel.TabIndex = 20;
+            this.monday11Panel.Tag = "monday";
+            // 
+            // wednesday12Panel
+            // 
+            this.wednesday12Panel.Location = new System.Drawing.Point(244, 150);
+            this.wednesday12Panel.Name = "wednesday12Panel";
+            this.wednesday12Panel.Size = new System.Drawing.Size(79, 27);
+            this.wednesday12Panel.TabIndex = 27;
+            this.wednesday12Panel.Tag = "wednesday";
+            // 
+            // wednesday8AMPanel
+            // 
+            this.wednesday8AMPanel.Location = new System.Drawing.Point(244, 18);
+            this.wednesday8AMPanel.Name = "wednesday8AMPanel";
+            this.wednesday8AMPanel.Size = new System.Drawing.Size(79, 27);
+            this.wednesday8AMPanel.TabIndex = 7;
+            this.wednesday8AMPanel.Tag = "wednesday";
+            // 
+            // tuesday2Panel
+            // 
+            this.tuesday2Panel.Location = new System.Drawing.Point(171, 216);
+            this.tuesday2Panel.Name = "tuesday2Panel";
+            this.tuesday2Panel.Size = new System.Drawing.Size(79, 27);
+            this.tuesday2Panel.TabIndex = 36;
+            this.tuesday2Panel.Tag = "tuesday";
+            // 
+            // tuesday10Panel
+            // 
+            this.tuesday10Panel.Location = new System.Drawing.Point(171, 84);
+            this.tuesday10Panel.Name = "tuesday10Panel";
+            this.tuesday10Panel.Size = new System.Drawing.Size(79, 27);
+            this.tuesday10Panel.TabIndex = 16;
+            this.tuesday10Panel.Tag = "tuesday";
+            // 
+            // monday1Panel
+            // 
+            this.monday1Panel.Location = new System.Drawing.Point(94, 183);
+            this.monday1Panel.Name = "monday1Panel";
+            this.monday1Panel.Size = new System.Drawing.Size(79, 27);
+            this.monday1Panel.TabIndex = 30;
+            this.monday1Panel.Tag = "monday";
+            // 
+            // monday9Panel
+            // 
+            this.monday9Panel.Location = new System.Drawing.Point(94, 51);
+            this.monday9Panel.Name = "monday9Panel";
+            this.monday9Panel.Size = new System.Drawing.Size(79, 27);
+            this.monday9Panel.TabIndex = 10;
+            this.monday9Panel.Tag = "monday";
+            // 
+            // monday2Panel
+            // 
+            this.monday2Panel.Location = new System.Drawing.Point(94, 216);
+            this.monday2Panel.Name = "monday2Panel";
+            this.monday2Panel.Size = new System.Drawing.Size(79, 27);
+            this.monday2Panel.TabIndex = 35;
+            this.monday2Panel.Tag = "monday";
+            // 
+            // monday10Panel
+            // 
+            this.monday10Panel.Location = new System.Drawing.Point(94, 84);
+            this.monday10Panel.Name = "monday10Panel";
+            this.monday10Panel.Size = new System.Drawing.Size(79, 27);
+            this.monday10Panel.TabIndex = 15;
+            this.monday10Panel.Tag = "monday";
+            // 
+            // tuesday12Panel
+            // 
+            this.tuesday12Panel.Location = new System.Drawing.Point(171, 150);
+            this.tuesday12Panel.Name = "tuesday12Panel";
+            this.tuesday12Panel.Size = new System.Drawing.Size(79, 27);
+            this.tuesday12Panel.TabIndex = 26;
+            this.tuesday12Panel.Tag = "tuesday";
+            // 
+            // monday12Panel
+            // 
+            this.monday12Panel.Location = new System.Drawing.Point(94, 150);
+            this.monday12Panel.Name = "monday12Panel";
+            this.monday12Panel.Size = new System.Drawing.Size(79, 27);
+            this.monday12Panel.TabIndex = 25;
+            this.monday12Panel.Tag = "monday";
+            // 
+            // tuesday8AMPanel
+            // 
+            this.tuesday8AMPanel.Location = new System.Drawing.Point(171, 18);
+            this.tuesday8AMPanel.Name = "tuesday8AMPanel";
+            this.tuesday8AMPanel.Size = new System.Drawing.Size(79, 27);
+            this.tuesday8AMPanel.TabIndex = 6;
+            this.tuesday8AMPanel.Tag = "tuesday";
+            // 
+            // monday8AMPanel
+            // 
+            this.monday8AMPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.monday8AMPanel.Location = new System.Drawing.Point(94, 18);
+            this.monday8AMPanel.Name = "monday8AMPanel";
+            this.monday8AMPanel.Size = new System.Drawing.Size(79, 27);
+            this.monday8AMPanel.TabIndex = 5;
+            this.monday8AMPanel.Tag = "monday";
+            // 
+            // fridayLabel
+            // 
+            this.fridayLabel.AutoSize = true;
+            this.fridayLabel.Location = new System.Drawing.Point(421, 2);
+            this.fridayLabel.Name = "fridayLabel";
+            this.fridayLabel.Size = new System.Drawing.Size(35, 13);
+            this.fridayLabel.TabIndex = 4;
+            this.fridayLabel.Text = "Friday";
+            // 
+            // thursdayLabel
+            // 
+            this.thursdayLabel.AutoSize = true;
+            this.thursdayLabel.Location = new System.Drawing.Point(335, 2);
+            this.thursdayLabel.Name = "thursdayLabel";
+            this.thursdayLabel.Size = new System.Drawing.Size(51, 13);
+            this.thursdayLabel.TabIndex = 3;
+            this.thursdayLabel.Text = "Thursday";
+            // 
+            // wednesdayLabel
+            // 
+            this.wednesdayLabel.AutoSize = true;
+            this.wednesdayLabel.Location = new System.Drawing.Point(250, 2);
+            this.wednesdayLabel.Name = "wednesdayLabel";
+            this.wednesdayLabel.Size = new System.Drawing.Size(64, 13);
+            this.wednesdayLabel.TabIndex = 2;
+            this.wednesdayLabel.Text = "Wednesday";
+            // 
+            // tuesdayLabel
+            // 
+            this.tuesdayLabel.AutoSize = true;
+            this.tuesdayLabel.Location = new System.Drawing.Point(185, 2);
+            this.tuesdayLabel.Name = "tuesdayLabel";
+            this.tuesdayLabel.Size = new System.Drawing.Size(48, 13);
+            this.tuesdayLabel.TabIndex = 1;
+            this.tuesdayLabel.Text = "Tuesday";
+            // 
+            // mondayLabel
+            // 
+            this.mondayLabel.AutoSize = true;
+            this.mondayLabel.Location = new System.Drawing.Point(110, 2);
+            this.mondayLabel.Name = "mondayLabel";
+            this.mondayLabel.Size = new System.Drawing.Size(45, 13);
+            this.mondayLabel.TabIndex = 0;
+            this.mondayLabel.Text = "Monday";
             // 
             // CurrentClasses
             // 
@@ -1012,14 +923,6 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.classesFlowLayoutPanel.ResumeLayout(false);
-            this.classPanel.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel1.PerformLayout();
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            this.splitContainer2.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1110,13 +1013,6 @@
         private System.Windows.Forms.Panel wednesday8PMPanel;
         private System.Windows.Forms.Panel tuesday8PMPanel;
         private System.Windows.Forms.Panel monday8PMPanel;
-        private System.Windows.Forms.Panel classPanel;
-        private System.Windows.Forms.Label codeLabel;
-        private System.Windows.Forms.Label className;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Label placeLabel;
-        private System.Windows.Forms.Label timeLabel;
-        private System.Windows.Forms.Label daysLabel;
     }
 }
 
