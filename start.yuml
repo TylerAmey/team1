@@ -4,21 +4,28 @@
 
 // {direction:topDown}
 
-[+Student:s|+name:string:s;-uID:int:s;+major:string:s;+requirements:KeyValuePair<string,Requirement>:s;+ProjectedSchedule:List<Course>:s;+totalCredits:int:s]
+[+Student:s|+name:string:s;+major:string:s; +projectedSchedule:List<Course>:s; +savedCourses:List<Course>:s; +completedCourses:List<Course>:s; +enrolledCourses:List<Section>:s;+requirements:Dictionary<string,Requirement>:s;+totalCredits:int:s; +year:int:s]
 
-[+Course|+id:string;+name:string;+description:string;+requisites:List<string>;+yearLvl:int;+credits:int]
+[+Course|+id:string;+crn:int;+name:string;+description:string;+requisites:List<string>;+sections:List<Section>;+yearLvl:int;+credits:int]
 
-[+Section|+professor:string;+seats:SeatManager;+sessions:List<Session>]
+[+Section|+courseID:string;+number:int;+professor:string;+seats:SeatManager;+sessions:List<Session>; +ParentCourse:Course:g]
 
 [+Session|+startTime:DateTime;+endTime:DateTime;+location:string;]
 
 [+SeatManager|+seatPosition:int;+waitListPosition:int;+capacity:int]
 
-[+Requirement|+displayName:string;+bool:isFulfilled;+validCourses:List<string>|+FulfillsRequirement(course:Course):bool]
+[+A:Requirement|+displayName:string;+bool:isFulfilled;+validCourses:List<string>:g|+FulfillsRequirement(course:Course):bool | (displayName:string)]
 
-[+Student:s] 1-1..* [+Requirement]
+[+MajorRequirement |||(id:string, completed:List<Course>;):base(id)]
+
+[+GeneralRequirement |||(id:string, completed:List<Course>;):base(id)]
+
+[+Student:s] 1-1..* [+A:Requirement]
 
 [+Student:s] 1-0..* [+Course]
 [+Course]<-[+Section]
 [+Section] 1-1..* [+Session]
 [+Section] 1-1 [+SeatManager]
+
+[+A:Requirement] <-.- [+MajorRequirement]
+[+A:Requirement] <-.- [+GeneralRequirement]

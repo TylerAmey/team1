@@ -404,8 +404,7 @@ namespace CurrentClasses
                 splitter.Panel2.Controls.Add(locationsLabel);
 
             }
-        }
-        
+        }     
     }
    
 }
