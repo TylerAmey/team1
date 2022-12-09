@@ -159,5 +159,23 @@ namespace SearchApp
             ResultsForm resultsForm = new ResultsForm(results);
             resultsForm.Show();
         }
+
+        private void CompileFilter()
+        {
+            foreach (Control control in advancedGroupBox.Controls) {
+                if (control is GroupBox)
+                {
+                    foreach (Control groupBox_Control in control.Controls)
+                    {
+
+                    }
+                }
+
+                if (control is CheckBox)
+                {
+                    
+                }
+            }
+        }
     }
 }

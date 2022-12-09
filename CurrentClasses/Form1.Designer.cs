@@ -346,6 +346,7 @@
             // 
             // friday8PMPanel
             // 
+            this.friday8PMPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.friday8PMPanel.Location = new System.Drawing.Point(397, 414);
             this.friday8PMPanel.Name = "friday8PMPanel";
             this.friday8PMPanel.Size = new System.Drawing.Size(79, 27);
@@ -354,6 +355,7 @@
             // 
             // friday7Panel
             // 
+            this.friday7Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.friday7Panel.Location = new System.Drawing.Point(397, 381);
             this.friday7Panel.Name = "friday7Panel";
             this.friday7Panel.Size = new System.Drawing.Size(79, 27);
@@ -362,6 +364,7 @@
             // 
             // thursday8PMPanel
             // 
+            this.thursday8PMPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thursday8PMPanel.Location = new System.Drawing.Point(321, 414);
             this.thursday8PMPanel.Name = "thursday8PMPanel";
             this.thursday8PMPanel.Size = new System.Drawing.Size(79, 27);
@@ -370,6 +373,7 @@
             // 
             // friday6Panel
             // 
+            this.friday6Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.friday6Panel.Location = new System.Drawing.Point(397, 348);
             this.friday6Panel.Name = "friday6Panel";
             this.friday6Panel.Size = new System.Drawing.Size(79, 27);
@@ -378,6 +382,7 @@
             // 
             // wednesday8PMPanel
             // 
+            this.wednesday8PMPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wednesday8PMPanel.Location = new System.Drawing.Point(244, 414);
             this.wednesday8PMPanel.Name = "wednesday8PMPanel";
             this.wednesday8PMPanel.Size = new System.Drawing.Size(79, 27);
@@ -386,6 +391,7 @@
             // 
             // thursday7Panel
             // 
+            this.thursday7Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thursday7Panel.Location = new System.Drawing.Point(321, 381);
             this.thursday7Panel.Name = "thursday7Panel";
             this.thursday7Panel.Size = new System.Drawing.Size(79, 27);
@@ -394,6 +400,7 @@
             // 
             // tuesday8PMPanel
             // 
+            this.tuesday8PMPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tuesday8PMPanel.Location = new System.Drawing.Point(171, 414);
             this.tuesday8PMPanel.Name = "tuesday8PMPanel";
             this.tuesday8PMPanel.Size = new System.Drawing.Size(79, 27);
@@ -402,6 +409,7 @@
             // 
             // monday8PMPanel
             // 
+            this.monday8PMPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.monday8PMPanel.Location = new System.Drawing.Point(94, 414);
             this.monday8PMPanel.Name = "monday8PMPanel";
             this.monday8PMPanel.Size = new System.Drawing.Size(79, 27);
@@ -410,6 +418,7 @@
             // 
             // wednesday7Panel
             // 
+            this.wednesday7Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wednesday7Panel.Location = new System.Drawing.Point(244, 381);
             this.wednesday7Panel.Name = "wednesday7Panel";
             this.wednesday7Panel.Size = new System.Drawing.Size(79, 27);
@@ -418,6 +427,7 @@
             // 
             // friday3Panel
             // 
+            this.friday3Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.friday3Panel.Location = new System.Drawing.Point(397, 249);
             this.friday3Panel.Name = "friday3Panel";
             this.friday3Panel.Size = new System.Drawing.Size(79, 27);
@@ -426,6 +436,7 @@
             // 
             // tuesday7Panel
             // 
+            this.tuesday7Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tuesday7Panel.Location = new System.Drawing.Point(171, 381);
             this.tuesday7Panel.Name = "tuesday7Panel";
             this.tuesday7Panel.Size = new System.Drawing.Size(79, 27);
@@ -434,6 +445,7 @@
             // 
             // friday4Panel
             // 
+            this.friday4Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.friday4Panel.Location = new System.Drawing.Point(397, 282);
             this.friday4Panel.Name = "friday4Panel";
             this.friday4Panel.Size = new System.Drawing.Size(79, 27);
@@ -442,6 +454,7 @@
             // 
             // monday7Panel
             // 
+            this.monday7Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.monday7Panel.Location = new System.Drawing.Point(94, 381);
             this.monday7Panel.Name = "monday7Panel";
             this.monday7Panel.Size = new System.Drawing.Size(79, 27);
@@ -450,6 +463,7 @@
             // 
             // friday11Panel
             // 
+            this.friday11Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.friday11Panel.Location = new System.Drawing.Point(397, 117);
             this.friday11Panel.Name = "friday11Panel";
             this.friday11Panel.Size = new System.Drawing.Size(79, 27);
@@ -458,6 +472,7 @@
             // 
             // friday5Panel
             // 
+            this.friday5Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.friday5Panel.Location = new System.Drawing.Point(397, 315);
             this.friday5Panel.Name = "friday5Panel";
             this.friday5Panel.Size = new System.Drawing.Size(79, 27);
@@ -466,6 +481,7 @@
             // 
             // friday1Panel
             // 
+            this.friday1Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.friday1Panel.Location = new System.Drawing.Point(397, 183);
             this.friday1Panel.Name = "friday1Panel";
             this.friday1Panel.Size = new System.Drawing.Size(79, 27);
@@ -474,6 +490,7 @@
             // 
             // thursday6Panel
             // 
+            this.thursday6Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thursday6Panel.Location = new System.Drawing.Point(321, 348);
             this.thursday6Panel.Name = "thursday6Panel";
             this.thursday6Panel.Size = new System.Drawing.Size(79, 27);
@@ -482,6 +499,7 @@
             // 
             // friday9Panel
             // 
+            this.friday9Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.friday9Panel.Location = new System.Drawing.Point(397, 51);
             this.friday9Panel.Name = "friday9Panel";
             this.friday9Panel.Size = new System.Drawing.Size(79, 27);
@@ -490,6 +508,7 @@
             // 
             // thursday4Panel
             // 
+            this.thursday4Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thursday4Panel.Location = new System.Drawing.Point(321, 282);
             this.thursday4Panel.Name = "thursday4Panel";
             this.thursday4Panel.Size = new System.Drawing.Size(79, 27);
@@ -498,6 +517,7 @@
             // 
             // friday2Panel
             // 
+            this.friday2Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.friday2Panel.Location = new System.Drawing.Point(397, 216);
             this.friday2Panel.Name = "friday2Panel";
             this.friday2Panel.Size = new System.Drawing.Size(79, 27);
@@ -506,6 +526,7 @@
             // 
             // wednesday6Panel
             // 
+            this.wednesday6Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wednesday6Panel.Location = new System.Drawing.Point(244, 348);
             this.wednesday6Panel.Name = "wednesday6Panel";
             this.wednesday6Panel.Size = new System.Drawing.Size(79, 27);
@@ -514,6 +535,7 @@
             // 
             // friday10Panel
             // 
+            this.friday10Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.friday10Panel.Location = new System.Drawing.Point(397, 84);
             this.friday10Panel.Name = "friday10Panel";
             this.friday10Panel.Size = new System.Drawing.Size(79, 27);
@@ -522,6 +544,7 @@
             // 
             // wednesday4Panel
             // 
+            this.wednesday4Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wednesday4Panel.Location = new System.Drawing.Point(244, 282);
             this.wednesday4Panel.Name = "wednesday4Panel";
             this.wednesday4Panel.Size = new System.Drawing.Size(79, 27);
@@ -530,6 +553,7 @@
             // 
             // friday12Panel
             // 
+            this.friday12Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.friday12Panel.Location = new System.Drawing.Point(397, 150);
             this.friday12Panel.Name = "friday12Panel";
             this.friday12Panel.Size = new System.Drawing.Size(79, 27);
@@ -538,6 +562,7 @@
             // 
             // thursday5Panel
             // 
+            this.thursday5Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thursday5Panel.Location = new System.Drawing.Point(321, 315);
             this.thursday5Panel.Name = "thursday5Panel";
             this.thursday5Panel.Size = new System.Drawing.Size(79, 27);
@@ -546,6 +571,7 @@
             // 
             // friday8AMPanel
             // 
+            this.friday8AMPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.friday8AMPanel.Location = new System.Drawing.Point(397, 18);
             this.friday8AMPanel.Name = "friday8AMPanel";
             this.friday8AMPanel.Size = new System.Drawing.Size(79, 27);
@@ -554,6 +580,7 @@
             // 
             // tuesday6Panel
             // 
+            this.tuesday6Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tuesday6Panel.Location = new System.Drawing.Point(171, 348);
             this.tuesday6Panel.Name = "tuesday6Panel";
             this.tuesday6Panel.Size = new System.Drawing.Size(79, 27);
@@ -562,6 +589,7 @@
             // 
             // thursday3Panel
             // 
+            this.thursday3Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thursday3Panel.Location = new System.Drawing.Point(321, 249);
             this.thursday3Panel.Name = "thursday3Panel";
             this.thursday3Panel.Size = new System.Drawing.Size(79, 27);
@@ -570,6 +598,7 @@
             // 
             // wednesday5Panel
             // 
+            this.wednesday5Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wednesday5Panel.Location = new System.Drawing.Point(244, 315);
             this.wednesday5Panel.Name = "wednesday5Panel";
             this.wednesday5Panel.Size = new System.Drawing.Size(79, 27);
@@ -578,6 +607,7 @@
             // 
             // thursday11Panel
             // 
+            this.thursday11Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thursday11Panel.Location = new System.Drawing.Point(321, 117);
             this.thursday11Panel.Name = "thursday11Panel";
             this.thursday11Panel.Size = new System.Drawing.Size(79, 27);
@@ -586,6 +616,7 @@
             // 
             // tuesday4Panel
             // 
+            this.tuesday4Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tuesday4Panel.Location = new System.Drawing.Point(171, 282);
             this.tuesday4Panel.Name = "tuesday4Panel";
             this.tuesday4Panel.Size = new System.Drawing.Size(79, 27);
@@ -594,6 +625,7 @@
             // 
             // thursday1Panel
             // 
+            this.thursday1Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thursday1Panel.Location = new System.Drawing.Point(321, 183);
             this.thursday1Panel.Name = "thursday1Panel";
             this.thursday1Panel.Size = new System.Drawing.Size(79, 27);
@@ -602,6 +634,7 @@
             // 
             // monday6Panel
             // 
+            this.monday6Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.monday6Panel.Location = new System.Drawing.Point(94, 348);
             this.monday6Panel.Name = "monday6Panel";
             this.monday6Panel.Size = new System.Drawing.Size(79, 27);
@@ -610,6 +643,7 @@
             // 
             // thursday9Panel
             // 
+            this.thursday9Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thursday9Panel.Location = new System.Drawing.Point(321, 51);
             this.thursday9Panel.Name = "thursday9Panel";
             this.thursday9Panel.Size = new System.Drawing.Size(79, 27);
@@ -618,6 +652,7 @@
             // 
             // tuesday5Panel
             // 
+            this.tuesday5Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tuesday5Panel.Location = new System.Drawing.Point(171, 315);
             this.tuesday5Panel.Name = "tuesday5Panel";
             this.tuesday5Panel.Size = new System.Drawing.Size(79, 27);
@@ -626,6 +661,7 @@
             // 
             // wednesday3Panel
             // 
+            this.wednesday3Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wednesday3Panel.Location = new System.Drawing.Point(244, 249);
             this.wednesday3Panel.Name = "wednesday3Panel";
             this.wednesday3Panel.Size = new System.Drawing.Size(79, 27);
@@ -634,6 +670,7 @@
             // 
             // monday4Panel
             // 
+            this.monday4Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.monday4Panel.Location = new System.Drawing.Point(94, 282);
             this.monday4Panel.Name = "monday4Panel";
             this.monday4Panel.Size = new System.Drawing.Size(79, 27);
@@ -642,6 +679,7 @@
             // 
             // monday5Panel
             // 
+            this.monday5Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.monday5Panel.Location = new System.Drawing.Point(94, 315);
             this.monday5Panel.Name = "monday5Panel";
             this.monday5Panel.Size = new System.Drawing.Size(79, 27);
@@ -650,6 +688,7 @@
             // 
             // wednesday11Panel
             // 
+            this.wednesday11Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wednesday11Panel.Location = new System.Drawing.Point(244, 117);
             this.wednesday11Panel.Name = "wednesday11Panel";
             this.wednesday11Panel.Size = new System.Drawing.Size(79, 27);
@@ -658,6 +697,7 @@
             // 
             // wednesday1Panel
             // 
+            this.wednesday1Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wednesday1Panel.Location = new System.Drawing.Point(244, 183);
             this.wednesday1Panel.Name = "wednesday1Panel";
             this.wednesday1Panel.Size = new System.Drawing.Size(79, 27);
@@ -666,6 +706,7 @@
             // 
             // wednesday9Panel
             // 
+            this.wednesday9Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wednesday9Panel.Location = new System.Drawing.Point(244, 51);
             this.wednesday9Panel.Name = "wednesday9Panel";
             this.wednesday9Panel.Size = new System.Drawing.Size(79, 27);
@@ -674,6 +715,7 @@
             // 
             // thursday2Panel
             // 
+            this.thursday2Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thursday2Panel.Location = new System.Drawing.Point(321, 216);
             this.thursday2Panel.Name = "thursday2Panel";
             this.thursday2Panel.Size = new System.Drawing.Size(79, 27);
@@ -682,6 +724,7 @@
             // 
             // thursday10Panel
             // 
+            this.thursday10Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thursday10Panel.Location = new System.Drawing.Point(321, 84);
             this.thursday10Panel.Name = "thursday10Panel";
             this.thursday10Panel.Size = new System.Drawing.Size(79, 27);
@@ -690,6 +733,7 @@
             // 
             // thursday12Panel
             // 
+            this.thursday12Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thursday12Panel.Location = new System.Drawing.Point(321, 150);
             this.thursday12Panel.Name = "thursday12Panel";
             this.thursday12Panel.Size = new System.Drawing.Size(79, 27);
@@ -698,6 +742,7 @@
             // 
             // thursday8AMPanel
             // 
+            this.thursday8AMPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.thursday8AMPanel.Location = new System.Drawing.Point(321, 18);
             this.thursday8AMPanel.Name = "thursday8AMPanel";
             this.thursday8AMPanel.Size = new System.Drawing.Size(79, 27);
@@ -706,6 +751,7 @@
             // 
             // tuesday3Panel
             // 
+            this.tuesday3Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tuesday3Panel.Location = new System.Drawing.Point(171, 249);
             this.tuesday3Panel.Name = "tuesday3Panel";
             this.tuesday3Panel.Size = new System.Drawing.Size(79, 27);
@@ -714,6 +760,7 @@
             // 
             // tuesday11Panel
             // 
+            this.tuesday11Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tuesday11Panel.Location = new System.Drawing.Point(171, 117);
             this.tuesday11Panel.Name = "tuesday11Panel";
             this.tuesday11Panel.Size = new System.Drawing.Size(79, 27);
@@ -722,6 +769,7 @@
             // 
             // wednesday2Panel
             // 
+            this.wednesday2Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wednesday2Panel.Location = new System.Drawing.Point(244, 216);
             this.wednesday2Panel.Name = "wednesday2Panel";
             this.wednesday2Panel.Size = new System.Drawing.Size(79, 27);
@@ -730,6 +778,7 @@
             // 
             // wednesday10Panel
             // 
+            this.wednesday10Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wednesday10Panel.Location = new System.Drawing.Point(244, 84);
             this.wednesday10Panel.Name = "wednesday10Panel";
             this.wednesday10Panel.Size = new System.Drawing.Size(79, 27);
@@ -738,6 +787,7 @@
             // 
             // tuesday1Panel
             // 
+            this.tuesday1Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tuesday1Panel.Location = new System.Drawing.Point(171, 183);
             this.tuesday1Panel.Name = "tuesday1Panel";
             this.tuesday1Panel.Size = new System.Drawing.Size(79, 27);
@@ -746,6 +796,7 @@
             // 
             // tuesday9Panel
             // 
+            this.tuesday9Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tuesday9Panel.Location = new System.Drawing.Point(171, 51);
             this.tuesday9Panel.Name = "tuesday9Panel";
             this.tuesday9Panel.Size = new System.Drawing.Size(79, 27);
@@ -754,6 +805,7 @@
             // 
             // monday3Panel
             // 
+            this.monday3Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.monday3Panel.Location = new System.Drawing.Point(94, 249);
             this.monday3Panel.Name = "monday3Panel";
             this.monday3Panel.Size = new System.Drawing.Size(79, 27);
@@ -762,6 +814,7 @@
             // 
             // monday11Panel
             // 
+            this.monday11Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.monday11Panel.Location = new System.Drawing.Point(94, 117);
             this.monday11Panel.Name = "monday11Panel";
             this.monday11Panel.Size = new System.Drawing.Size(79, 27);
@@ -770,6 +823,7 @@
             // 
             // wednesday12Panel
             // 
+            this.wednesday12Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wednesday12Panel.Location = new System.Drawing.Point(244, 150);
             this.wednesday12Panel.Name = "wednesday12Panel";
             this.wednesday12Panel.Size = new System.Drawing.Size(79, 27);
@@ -778,6 +832,7 @@
             // 
             // wednesday8AMPanel
             // 
+            this.wednesday8AMPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wednesday8AMPanel.Location = new System.Drawing.Point(244, 18);
             this.wednesday8AMPanel.Name = "wednesday8AMPanel";
             this.wednesday8AMPanel.Size = new System.Drawing.Size(79, 27);
@@ -786,6 +841,7 @@
             // 
             // tuesday2Panel
             // 
+            this.tuesday2Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tuesday2Panel.Location = new System.Drawing.Point(171, 216);
             this.tuesday2Panel.Name = "tuesday2Panel";
             this.tuesday2Panel.Size = new System.Drawing.Size(79, 27);
@@ -794,6 +850,7 @@
             // 
             // tuesday10Panel
             // 
+            this.tuesday10Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tuesday10Panel.Location = new System.Drawing.Point(171, 84);
             this.tuesday10Panel.Name = "tuesday10Panel";
             this.tuesday10Panel.Size = new System.Drawing.Size(79, 27);
@@ -802,6 +859,7 @@
             // 
             // monday1Panel
             // 
+            this.monday1Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.monday1Panel.Location = new System.Drawing.Point(94, 183);
             this.monday1Panel.Name = "monday1Panel";
             this.monday1Panel.Size = new System.Drawing.Size(79, 27);
@@ -810,6 +868,7 @@
             // 
             // monday9Panel
             // 
+            this.monday9Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.monday9Panel.Location = new System.Drawing.Point(94, 51);
             this.monday9Panel.Name = "monday9Panel";
             this.monday9Panel.Size = new System.Drawing.Size(79, 27);
@@ -818,6 +877,7 @@
             // 
             // monday2Panel
             // 
+            this.monday2Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.monday2Panel.Location = new System.Drawing.Point(94, 216);
             this.monday2Panel.Name = "monday2Panel";
             this.monday2Panel.Size = new System.Drawing.Size(79, 27);
@@ -826,6 +886,7 @@
             // 
             // monday10Panel
             // 
+            this.monday10Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.monday10Panel.Location = new System.Drawing.Point(94, 84);
             this.monday10Panel.Name = "monday10Panel";
             this.monday10Panel.Size = new System.Drawing.Size(79, 27);
@@ -834,6 +895,7 @@
             // 
             // tuesday12Panel
             // 
+            this.tuesday12Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tuesday12Panel.Location = new System.Drawing.Point(171, 150);
             this.tuesday12Panel.Name = "tuesday12Panel";
             this.tuesday12Panel.Size = new System.Drawing.Size(79, 27);
@@ -842,6 +904,7 @@
             // 
             // monday12Panel
             // 
+            this.monday12Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.monday12Panel.Location = new System.Drawing.Point(94, 150);
             this.monday12Panel.Name = "monday12Panel";
             this.monday12Panel.Size = new System.Drawing.Size(79, 27);
@@ -850,6 +913,7 @@
             // 
             // tuesday8AMPanel
             // 
+            this.tuesday8AMPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tuesday8AMPanel.Location = new System.Drawing.Point(171, 18);
             this.tuesday8AMPanel.Name = "tuesday8AMPanel";
             this.tuesday8AMPanel.Size = new System.Drawing.Size(79, 27);
@@ -859,6 +923,7 @@
             // monday8AMPanel
             // 
             this.monday8AMPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.monday8AMPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.monday8AMPanel.Location = new System.Drawing.Point(94, 18);
             this.monday8AMPanel.Name = "monday8AMPanel";
             this.monday8AMPanel.Size = new System.Drawing.Size(79, 27);
