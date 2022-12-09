@@ -37,6 +37,7 @@ namespace EnrollBasics
         private int position = 0; // position out of capacity
         private int capacity = 0; // position out of capacity
 
+        public EventHandler DisenrollClick;
         public EventHandler EnrollClick;
         public EventHandler WaitListClick;
 
@@ -184,8 +185,8 @@ namespace EnrollBasics
             switch (status)
             {
                 case Status.ENROLLED:
-                    thisText = "You are enrolled in this section";
-                    enrollButton.Enabled = false;
+                    thisText = "× Disenroll from this section";
+                    enrollButton.Click += DisenrollClick;
                     break;
                 case Status.OPEN:
                     thisText = "> Enroll in this section";
