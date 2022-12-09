@@ -18,6 +18,8 @@ namespace SearchApp
         public ResultsForm(List<SearchResult> results)
         {
             InitializeComponent();
+            Globals.Init();
+            Student.Init();
 
             Course course = new Course();
             course.id = "IGME201";
