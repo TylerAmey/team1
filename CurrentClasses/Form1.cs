@@ -391,12 +391,17 @@ namespace CurrentClasses
                             day = letter1.ToString();
                         }
                         //Add the abbreviation to the time string and a new line for each time
+                        //If there are an even amounts of starts and end times in the lists
                         try
                         {
                             timeString += day + ": " + startTimes[i] + "-" + endTimes[i] + "\n";
                         }
+                        //If not...
                         catch
                         {
+                            //Acount for variations (examples would be labs)
+                            //This only happens for 2 day classes with variations. 3 day classes with
+                            //variations are accounted in lines 145-196
                             try
                             {
                                 timeString += day + ": " + startTimes[0] + "-" + endTimes[i] + "\n";
