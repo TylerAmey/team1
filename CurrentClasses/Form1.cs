@@ -28,29 +28,72 @@ namespace CurrentClasses
             List<Control> fridayPanels = new List<Control>();
 
             //Add each panel to their individual lists
-            foreach (Control control in splitContainer1.Panel2.Controls)
-            {
-                if((string)control.Tag == "monday")
-                {
-                    mondayPanels.Add(control);
-                }
-                if ((string)control.Tag == "tuesday")
-                {
-                    tuesdayPanels.Add(control);
-                }
-                if ((string)control.Tag == "wednesday")
-                {
-                    wednesdayPanels.Add(control);
-                }
-                if ((string)control.Tag == "thursday")
-                {
-                    thursdayPanels.Add(control);
-                }
-                if ((string)control.Tag == "friday")
-                {
-                    fridayPanels.Add(control);
-                }
-            }
+                
+                    mondayPanels.Add(monday8AMPanel);
+                    mondayPanels.Add(monday9Panel);
+                    mondayPanels.Add(monday10Panel);
+                    mondayPanels.Add(monday11Panel);
+                    mondayPanels.Add(monday12Panel);
+                    mondayPanels.Add(monday1Panel);
+                    mondayPanels.Add(monday2Panel);
+                    mondayPanels.Add(monday3Panel);
+                    mondayPanels.Add(monday4Panel);
+                    mondayPanels.Add(monday5Panel);
+                    mondayPanels.Add(monday6Panel);
+                    mondayPanels.Add(monday7Panel);
+
+                    tuesdayPanels.Add(tuesday8AMPanel);
+                    tuesdayPanels.Add(tuesday9Panel);
+                    tuesdayPanels.Add(tuesday10Panel);
+                    tuesdayPanels.Add(tuesday11Panel);
+                    tuesdayPanels.Add(tuesday12Panel);
+                    tuesdayPanels.Add(tuesday1Panel);
+                    tuesdayPanels.Add(tuesday2Panel);
+                    tuesdayPanels.Add(tuesday3Panel);
+                    tuesdayPanels.Add(tuesday4Panel);
+                    tuesdayPanels.Add(tuesday5Panel);
+                    tuesdayPanels.Add(tuesday6Panel);
+                    tuesdayPanels.Add(tuesday7Panel);
+
+                    wednesdayPanels.Add(wednesday8AMPanel);
+                    wednesdayPanels.Add(wednesday9Panel);
+                    wednesdayPanels.Add(wednesday10Panel);
+                    wednesdayPanels.Add(wednesday11Panel);
+                    wednesdayPanels.Add(wednesday12Panel);
+                    wednesdayPanels.Add(wednesday1Panel);
+                    wednesdayPanels.Add(wednesday2Panel);
+                    wednesdayPanels.Add(wednesday3Panel);
+                    wednesdayPanels.Add(wednesday4Panel);
+                    wednesdayPanels.Add(wednesday5Panel);
+                    wednesdayPanels.Add(wednesday6Panel);
+                    wednesdayPanels.Add(wednesday7Panel);
+
+                    thursdayPanels.Add(thursday8AMPanel);
+                    thursdayPanels.Add(thursday9Panel);
+                    thursdayPanels.Add(thursday10Panel);
+                    thursdayPanels.Add(thursday11Panel);
+                    thursdayPanels.Add(thursday12Panel);
+                    thursdayPanels.Add(thursday1Panel);
+                    thursdayPanels.Add(thursday2Panel);
+                    thursdayPanels.Add(thursday3Panel);
+                    thursdayPanels.Add(thursday4Panel);
+                    thursdayPanels.Add(thursday5Panel);
+                    thursdayPanels.Add(thursday6Panel);
+                    thursdayPanels.Add(thursday7Panel);
+
+                    fridayPanels.Add(friday8AMPanel);
+                    fridayPanels.Add(friday9Panel);
+                    fridayPanels.Add(friday10Panel);
+                    fridayPanels.Add(friday11Panel);
+                    fridayPanels.Add(friday12Panel);
+                    fridayPanels.Add(friday1Panel);
+                    fridayPanels.Add(friday2Panel);
+                    fridayPanels.Add(friday3Panel);
+                    fridayPanels.Add(friday4Panel);
+                    fridayPanels.Add(friday5Panel);
+                    fridayPanels.Add(friday6Panel);
+                    fridayPanels.Add(friday7Panel);
+            
 
             //For each course the student has enrolled in...
             foreach (Section section in Student.enrolledCourses)
@@ -187,13 +230,13 @@ namespace CurrentClasses
                         //Create an int to sift through the list
                         int nStart = 0;
                         //start at 8 and go until 21 due to military time
-                        for (int i = 8; i < 21; i++)
+                        for (int i = 8; i < 20; i++)
                         {
                             //Create a double so we can compare the true end time
                             double dEndTime = nEndTimeHour + (.1 * nEndTimeMinute);
                             //If i is greater than or equal to the start time and
                             //Less than or equal to end time + 1 (to account for minutes)
-                            if (i >= nStartTimeHour && i <= dEndTime)
+                            if (i >= nStartTimeHour && i < dEndTime)
                             {
                                 //Add it to the panels to highlight
                                 panelToHighlight.Add(mondayPanels[nStart]);
@@ -207,13 +250,13 @@ namespace CurrentClasses
                         //Create an int to sift through the list
                         int nStart = 0;
                         //start at 8 and go until 21 due to military time
-                        for (int i = 8; i < 21; i++)
+                        for (int i = 8; i < 20; i++)
                         {
                             //Create a double so we can compare the true end time
                             double dEndTime = nEndTimeHour + (.1 * nEndTimeMinute);
                             //If i is greater than or equal to the start time and
                             //Less than or equal to end time + 1 (to account for minutes)
-                            if (i >= nStartTimeHour && i <= dEndTime)
+                            if (i >= nStartTimeHour && i < dEndTime)
                             {
                                 //Add it to the panels to highlight
                                 panelToHighlight.Add(tuesdayPanels[nStart]);
@@ -227,13 +270,13 @@ namespace CurrentClasses
                         //Create an int to sift through the list
                         int nStart = 0;
                         //start at 8 and go until 21 due to military time
-                        for (int i = 8; i < 21; i++)
+                        for (int i = 8; i < 20; i++)
                         {
                             //Create a double so we can compare the true end time
                             double dEndTime = nEndTimeHour + (.1 * nEndTimeMinute);
                             //If i is greater than or equal to the start time and
                             //Less than or equal to end time + 1 (to account for minutes)
-                            if (i >= nStartTimeHour && i <= dEndTime)
+                            if (i >= nStartTimeHour && i < dEndTime)
                             {
                                 //Add it to the panels to highlight
                                 panelToHighlight.Add(wednesdayPanels[nStart]);
@@ -247,13 +290,13 @@ namespace CurrentClasses
                         //Create an int to sift through the list
                         int nStart = 0;
                         //start at 8 and go until 21 due to military time
-                        for (int i = 8; i < 21; i++)
+                        for (int i = 8; i < 20; i++)
                         {
                             //Create a double so we can compare the true end time
                             double dEndTime = nEndTimeHour + (.1 * nEndTimeMinute);
                             //If i is greater than or equal to the start time and
                             //Less than or equal to end time + 1 (to account for minutes)
-                            if (i >= nStartTimeHour && i <= dEndTime)
+                            if (i >= nStartTimeHour && i < dEndTime)
                             {
                                 //Add it to the panels to highlight
                                 panelToHighlight.Add(thursdayPanels[nStart]);
@@ -267,13 +310,13 @@ namespace CurrentClasses
                         //Create an int to sift through the list
                         int nStart = 0;
                         //start at 8 and go until 21 due to military time
-                        for (int i = 8; i < 21; i++)
+                        for (int i = 8; i < 20; i++)
                         {
                             //Create a double so we can compare the true end time
                             double dEndTime = nEndTimeHour + (.1 * nEndTimeMinute);
                             //If i is greater than or equal to the start time and
                             //Less than or equal to end time + 1 (to account for minutes)
-                            if (i >= nStartTimeHour && i <= dEndTime)
+                            if (i >= nStartTimeHour && i < dEndTime)
                             {
                                 //Add it to the panels to highlight
                                 panelToHighlight.Add(fridayPanels[nStart]);

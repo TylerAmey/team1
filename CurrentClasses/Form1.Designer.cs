@@ -43,14 +43,9 @@
             this.tenLabel = new System.Windows.Forms.Label();
             this.nineLabel = new System.Windows.Forms.Label();
             this.eightAMLabel = new System.Windows.Forms.Label();
-            this.friday8PMPanel = new System.Windows.Forms.Panel();
             this.friday7Panel = new System.Windows.Forms.Panel();
-            this.thursday8PMPanel = new System.Windows.Forms.Panel();
             this.friday6Panel = new System.Windows.Forms.Panel();
-            this.wednesday8PMPanel = new System.Windows.Forms.Panel();
             this.thursday7Panel = new System.Windows.Forms.Panel();
-            this.tuesday8PMPanel = new System.Windows.Forms.Panel();
-            this.monday8PMPanel = new System.Windows.Forms.Panel();
             this.wednesday7Panel = new System.Windows.Forms.Panel();
             this.friday3Panel = new System.Windows.Forms.Panel();
             this.tuesday7Panel = new System.Windows.Forms.Panel();
@@ -143,14 +138,9 @@
             this.splitContainer1.Panel2.Controls.Add(this.tenLabel);
             this.splitContainer1.Panel2.Controls.Add(this.nineLabel);
             this.splitContainer1.Panel2.Controls.Add(this.eightAMLabel);
-            this.splitContainer1.Panel2.Controls.Add(this.friday8PMPanel);
             this.splitContainer1.Panel2.Controls.Add(this.friday7Panel);
-            this.splitContainer1.Panel2.Controls.Add(this.thursday8PMPanel);
             this.splitContainer1.Panel2.Controls.Add(this.friday6Panel);
-            this.splitContainer1.Panel2.Controls.Add(this.wednesday8PMPanel);
             this.splitContainer1.Panel2.Controls.Add(this.thursday7Panel);
-            this.splitContainer1.Panel2.Controls.Add(this.tuesday8PMPanel);
-            this.splitContainer1.Panel2.Controls.Add(this.monday8PMPanel);
             this.splitContainer1.Panel2.Controls.Add(this.wednesday7Panel);
             this.splitContainer1.Panel2.Controls.Add(this.friday3Panel);
             this.splitContainer1.Panel2.Controls.Add(this.tuesday7Panel);
@@ -230,7 +220,7 @@
             // eightPMLabel
             // 
             this.eightPMLabel.AutoSize = true;
-            this.eightPMLabel.Location = new System.Drawing.Point(30, 414);
+            this.eightPMLabel.Location = new System.Drawing.Point(31, 405);
             this.eightPMLabel.Name = "eightPMLabel";
             this.eightPMLabel.Size = new System.Drawing.Size(47, 13);
             this.eightPMLabel.TabIndex = 81;
@@ -239,7 +229,7 @@
             // sevenLabel
             // 
             this.sevenLabel.AutoSize = true;
-            this.sevenLabel.Location = new System.Drawing.Point(30, 381);
+            this.sevenLabel.Location = new System.Drawing.Point(31, 372);
             this.sevenLabel.Name = "sevenLabel";
             this.sevenLabel.Size = new System.Drawing.Size(47, 13);
             this.sevenLabel.TabIndex = 80;
@@ -248,7 +238,7 @@
             // sixLabel
             // 
             this.sixLabel.AutoSize = true;
-            this.sixLabel.Location = new System.Drawing.Point(30, 348);
+            this.sixLabel.Location = new System.Drawing.Point(31, 339);
             this.sixLabel.Name = "sixLabel";
             this.sixLabel.Size = new System.Drawing.Size(47, 13);
             this.sixLabel.TabIndex = 79;
@@ -257,7 +247,7 @@
             // fiveLabel
             // 
             this.fiveLabel.AutoSize = true;
-            this.fiveLabel.Location = new System.Drawing.Point(29, 315);
+            this.fiveLabel.Location = new System.Drawing.Point(30, 306);
             this.fiveLabel.Name = "fiveLabel";
             this.fiveLabel.Size = new System.Drawing.Size(47, 13);
             this.fiveLabel.TabIndex = 78;
@@ -266,7 +256,7 @@
             // fourLabel
             // 
             this.fourLabel.AutoSize = true;
-            this.fourLabel.Location = new System.Drawing.Point(29, 282);
+            this.fourLabel.Location = new System.Drawing.Point(30, 273);
             this.fourLabel.Name = "fourLabel";
             this.fourLabel.Size = new System.Drawing.Size(47, 13);
             this.fourLabel.TabIndex = 77;
@@ -275,7 +265,7 @@
             // threeLabel
             // 
             this.threeLabel.AutoSize = true;
-            this.threeLabel.Location = new System.Drawing.Point(29, 249);
+            this.threeLabel.Location = new System.Drawing.Point(30, 240);
             this.threeLabel.Name = "threeLabel";
             this.threeLabel.Size = new System.Drawing.Size(47, 13);
             this.threeLabel.TabIndex = 76;
@@ -284,7 +274,7 @@
             // twoLabel
             // 
             this.twoLabel.AutoSize = true;
-            this.twoLabel.Location = new System.Drawing.Point(29, 216);
+            this.twoLabel.Location = new System.Drawing.Point(30, 207);
             this.twoLabel.Name = "twoLabel";
             this.twoLabel.Size = new System.Drawing.Size(47, 13);
             this.twoLabel.TabIndex = 75;
@@ -293,7 +283,7 @@
             // oneLabel
             // 
             this.oneLabel.AutoSize = true;
-            this.oneLabel.Location = new System.Drawing.Point(29, 183);
+            this.oneLabel.Location = new System.Drawing.Point(30, 174);
             this.oneLabel.Name = "oneLabel";
             this.oneLabel.Size = new System.Drawing.Size(47, 13);
             this.oneLabel.TabIndex = 74;
@@ -302,7 +292,7 @@
             // twelveLabel
             // 
             this.twelveLabel.AutoSize = true;
-            this.twelveLabel.Location = new System.Drawing.Point(29, 150);
+            this.twelveLabel.Location = new System.Drawing.Point(30, 141);
             this.twelveLabel.Name = "twelveLabel";
             this.twelveLabel.Size = new System.Drawing.Size(53, 13);
             this.twelveLabel.TabIndex = 73;
@@ -311,7 +301,7 @@
             // elevenLabel
             // 
             this.elevenLabel.AutoSize = true;
-            this.elevenLabel.Location = new System.Drawing.Point(29, 117);
+            this.elevenLabel.Location = new System.Drawing.Point(30, 108);
             this.elevenLabel.Name = "elevenLabel";
             this.elevenLabel.Size = new System.Drawing.Size(53, 13);
             this.elevenLabel.TabIndex = 72;
@@ -320,7 +310,7 @@
             // tenLabel
             // 
             this.tenLabel.AutoSize = true;
-            this.tenLabel.Location = new System.Drawing.Point(29, 84);
+            this.tenLabel.Location = new System.Drawing.Point(30, 75);
             this.tenLabel.Name = "tenLabel";
             this.tenLabel.Size = new System.Drawing.Size(53, 13);
             this.tenLabel.TabIndex = 71;
@@ -329,7 +319,7 @@
             // nineLabel
             // 
             this.nineLabel.AutoSize = true;
-            this.nineLabel.Location = new System.Drawing.Point(29, 51);
+            this.nineLabel.Location = new System.Drawing.Point(30, 42);
             this.nineLabel.Name = "nineLabel";
             this.nineLabel.Size = new System.Drawing.Size(47, 13);
             this.nineLabel.TabIndex = 70;
@@ -338,20 +328,11 @@
             // eightAMLabel
             // 
             this.eightAMLabel.AutoSize = true;
-            this.eightAMLabel.Location = new System.Drawing.Point(30, 18);
+            this.eightAMLabel.Location = new System.Drawing.Point(31, 9);
             this.eightAMLabel.Name = "eightAMLabel";
             this.eightAMLabel.Size = new System.Drawing.Size(47, 13);
             this.eightAMLabel.TabIndex = 65;
             this.eightAMLabel.Text = "8:00 AM";
-            // 
-            // friday8PMPanel
-            // 
-            this.friday8PMPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.friday8PMPanel.Location = new System.Drawing.Point(397, 414);
-            this.friday8PMPanel.Name = "friday8PMPanel";
-            this.friday8PMPanel.Size = new System.Drawing.Size(79, 27);
-            this.friday8PMPanel.TabIndex = 69;
-            this.friday8PMPanel.Tag = "friday";
             // 
             // friday7Panel
             // 
@@ -362,15 +343,6 @@
             this.friday7Panel.TabIndex = 64;
             this.friday7Panel.Tag = "friday";
             // 
-            // thursday8PMPanel
-            // 
-            this.thursday8PMPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thursday8PMPanel.Location = new System.Drawing.Point(321, 414);
-            this.thursday8PMPanel.Name = "thursday8PMPanel";
-            this.thursday8PMPanel.Size = new System.Drawing.Size(79, 27);
-            this.thursday8PMPanel.TabIndex = 68;
-            this.thursday8PMPanel.Tag = "thursday ";
-            // 
             // friday6Panel
             // 
             this.friday6Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -380,15 +352,6 @@
             this.friday6Panel.TabIndex = 59;
             this.friday6Panel.Tag = "friday";
             // 
-            // wednesday8PMPanel
-            // 
-            this.wednesday8PMPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.wednesday8PMPanel.Location = new System.Drawing.Point(244, 414);
-            this.wednesday8PMPanel.Name = "wednesday8PMPanel";
-            this.wednesday8PMPanel.Size = new System.Drawing.Size(79, 27);
-            this.wednesday8PMPanel.TabIndex = 67;
-            this.wednesday8PMPanel.Tag = "wednesday";
-            // 
             // thursday7Panel
             // 
             this.thursday7Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -397,24 +360,6 @@
             this.thursday7Panel.Size = new System.Drawing.Size(79, 27);
             this.thursday7Panel.TabIndex = 63;
             this.thursday7Panel.Tag = "thursday ";
-            // 
-            // tuesday8PMPanel
-            // 
-            this.tuesday8PMPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tuesday8PMPanel.Location = new System.Drawing.Point(171, 414);
-            this.tuesday8PMPanel.Name = "tuesday8PMPanel";
-            this.tuesday8PMPanel.Size = new System.Drawing.Size(79, 27);
-            this.tuesday8PMPanel.TabIndex = 66;
-            this.tuesday8PMPanel.Tag = "tuesday";
-            // 
-            // monday8PMPanel
-            // 
-            this.monday8PMPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.monday8PMPanel.Location = new System.Drawing.Point(94, 414);
-            this.monday8PMPanel.Name = "monday8PMPanel";
-            this.monday8PMPanel.Size = new System.Drawing.Size(79, 27);
-            this.monday8PMPanel.TabIndex = 65;
-            this.monday8PMPanel.Tag = "monday";
             // 
             // wednesday7Panel
             // 
@@ -1073,11 +1018,6 @@
         private System.Windows.Forms.Label elevenLabel;
         private System.Windows.Forms.Label tenLabel;
         private System.Windows.Forms.Label nineLabel;
-        private System.Windows.Forms.Panel friday8PMPanel;
-        private System.Windows.Forms.Panel thursday8PMPanel;
-        private System.Windows.Forms.Panel wednesday8PMPanel;
-        private System.Windows.Forms.Panel tuesday8PMPanel;
-        private System.Windows.Forms.Panel monday8PMPanel;
     }
 }
 
