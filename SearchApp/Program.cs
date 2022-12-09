@@ -19,9 +19,6 @@ namespace SearchApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new SearchForm());
-
-            Globals.Setup();
-            Globals.Spit();
         }
     }
 }

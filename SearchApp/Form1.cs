@@ -159,5 +159,88 @@ namespace SearchApp
             ResultsForm resultsForm = new ResultsForm(results);
             resultsForm.Show();
         }
+
+        private void CompileFilter()
+        {
+            foreach (Control control in advancedGroupBox.Controls)
+            {
+                if (control is GroupBox)
+                {
+                    GroupBox groupBox = (GroupBox)control;
+
+                    switch (groupBox.Name)
+                    {
+                        case "timeGroupBox":
+                            CompileTimes(groupBox);
+                            break;
+                        case "daysGroupBox":
+                            CompileDays(groupBox);
+                            break;
+                        case "perspectivesGroupBox":
+                            CompilePerspectives(groupBox);
+                            break;
+                        case "availabilityGroupBox":
+                            CompileAvailability(groupBox);
+                            break;
+                        default:
+                            return;
+                    }
+                }
+
+                if (control is TextBox)
+                {
+                    TextBox tb = (TextBox)control;
+                    switch (tb.Name)
+                    {
+                        case "subjectMaskedTextBox":
+                            if (tb.Text.Length > 0)
+                            {
+                                filter.Add(new QuerySubject(tb.Text));
+                            }
+                            break;
+                        case "numberMaskedTextBox":
+                            if (tb.Text.Length > 0)
+                            {
+                                filter.Add(new QueryNumber(Int32.Parse(tb.Text)));
+                            }
+                            break;
+                        case "majorTextBox":
+                            if (tb.Text.Length > 0)
+                            {
+                                filter.Add(new QueryMajor(tb.Text));
+                            }
+                            break;
+                        default:
+                            continue;
+                    }
+                }
+            }
+        }
+        
+        private void CompileTimes(GroupBox groupBox)
+        {
+
+        }
+
+        private void CompileDays(GroupBox groupBox)
+        {
+            Days query = 0;
+            foreach (Control control in groupBox.Controls)
+            {
+                if (control is CheckBox)
+                {
+                    CheckBox cb = (CheckBox)control;
+                    if (cb.Checked)
+                    {
+                        Days thisQuery;
+                        if (Days.TryParse(cb.Text, true, out thisQuery))
+                        {
+                            query |= thisQuery;
+                        }
+                    }
+                }
+            }
+            filter.Add(new QueryDays(query));
+        }
     }
 }

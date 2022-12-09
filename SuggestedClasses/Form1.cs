@@ -20,6 +20,8 @@ namespace SuggestedClasses
         public Form1()
         {
             InitializeComponent();
+            Student.Init();
+            Globals.Init();
 
             /*Course course = new Course();
             course.id = "IGME201";
@@ -58,13 +60,17 @@ namespace SuggestedClasses
 
             section.seats = seats;
 
-            CourseBox box = new CourseBox(course, section);
+            CourseBox box = new CourseBox(Course, section);
+            box.EnrollClick += new EventHandler(DoFunny);
+            box.AddToPanel(ref panel1);*/
+
+            CourseBox box = new CourseBox(Globals.Courses[0], Globals.Courses[0].sections[0]);
             box.EnrollClick += new EventHandler(DoFunny);
             box.AddToPanel(ref panel1);
-            */
+
         }
 
-        public Form1(List<Course> courses) //receives the list of all courses
+        /*public Form1()
         {
             Section temp; //temp section variable for sorting the list of recommended sections 
             int i = 0; //iterator variable
@@ -73,7 +79,7 @@ namespace SuggestedClasses
             //initialize the recommended list to contain the first sections of the first 3 existing courses
             for(i = 0; i < 3; i++)
             {
-                recommendedSections[i] = courses[i].sections[0];
+                recommendedSections[i] = Globals.Courses[i].sections[0];
             }
 
             //sorts the initial recommended list in descending order by their recValue
@@ -90,7 +96,7 @@ namespace SuggestedClasses
                 }
             }
 
-        }
+        }*/
 
         public int CalcRecValue(Section section)
         {
