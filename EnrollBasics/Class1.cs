@@ -82,7 +82,7 @@ namespace EnrollBasics
 
         /* public bool prereqsFulfilled(List<Course> completed)
         {
-            return requisites.Any(req => !completed.Any(course => course.id == req));
+            return !requisites.Any(req => !completed.Any(course => course.id == req));
         } */
     }
 
