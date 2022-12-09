@@ -79,6 +79,11 @@ namespace EnrollBasics
 
             return fulfilled;
         }*/
+
+        /* public bool prereqsFulfilled(List<Course> completed)
+        {
+            return !requisites.Any(req => !completed.Any(course => course.id == req));
+        } */
     }
 
     public abstract class Requirement
