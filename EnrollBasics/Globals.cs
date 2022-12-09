@@ -12,7 +12,9 @@ namespace EnrollBasics
     {
         public static List<Course> Courses;
 
-        public static string rawCourses = "[]";
+        public static string rawCourses = @"[
+
+        ]";
 
         public static Dictionary<string, List<string>> RequirementCourses = InitializeRequirements();
         public static void Init()
