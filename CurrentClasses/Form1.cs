@@ -104,6 +104,7 @@ namespace CurrentClasses
                 splitter.Orientation = Orientation.Horizontal;
                 splitter.Dock = DockStyle.Fill;
                 splitter.Panel1.BackColor = Color.DarkOrange;
+                splitter.BorderStyle = BorderStyle.Fixed3D;
 
                 //Create all labels for the course
                 Label className = new Label();
