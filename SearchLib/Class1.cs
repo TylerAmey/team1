@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using EnrollBasics;
+
 namespace SearchLib
 {
     public class SearchResult : IComparable
@@ -12,7 +14,7 @@ namespace SearchLib
         public Course course;
         public int relevance;
 
-        public string Name { get { return course.Name; } }
+        public string Name { get { return course.name; } }
 
         public SearchResult(Course course, int relevance)
         {
@@ -78,7 +80,9 @@ namespace SearchLib
         int GetDistance(Course course);
     }
 
-    public abstract class QueryCondition { }
+    public abstract class QueryCondition { 
+        public abstract bool IsSatisfied(Course course);
+    }
 
     public abstract class QueryCondition<T> : QueryCondition
     {
@@ -88,8 +92,6 @@ namespace SearchLib
         {
             Query = query;
         }
-
-        public abstract bool IsSatisfied(Course course);
     }
 
     public class QueryNumber : QueryCondition<int>, IQuerySimilar
@@ -98,12 +100,20 @@ namespace SearchLib
 
         public override bool IsSatisfied(Course course)
         {
-
+            return course.id.Contains(Query.ToString());
         }
 
         public int GetDistance(Course course)
         {
+            char[] cQuery = Query.ToString().ToCharArray();
+            char[] cNumber = course.id.Substring(4).ToCharArray();
 
+            int distance = 0;
+            for (int i = 0; i < cQuery.Length; i++)
+            {
+                distance += Math.Abs(cQuery[i] - cNumber[i]);
+            }
+            return distance;
         }
     }
 
@@ -113,12 +123,12 @@ namespace SearchLib
 
         public override bool IsSatisfied(Course course)
         {
-
+            return course.crn == Query;
         }
 
         public int GetDistance(Course course)
         {
-
+            return Math.Abs(course.crn - Query);
         }
     }
 
@@ -128,12 +138,31 @@ namespace SearchLib
 
         public override bool IsSatisfied(Course course)
         {
-
+            return (
+                course.name.Contains(Query) ||
+                course.id.Contains(Query) ||
+                course.description.Contains(Query) );
         }
 
         public int GetDistance(Course course)
         {
+            int distance = 0;
 
+            foreach (string word in Query.Split(' '))
+            {
+                if (course.id.Contains(Query)) distance -= 25;
+                if (course.name.Contains(Query)) distance -= 20;
+                if (course.description.Contains(Query)) distance -= 15;
+            }
+
+            int countLetters(string str)
+            {
+                int index = str.IndexOfAny(Query.Replace(" ", "").ToCharArray());
+                if (index != -1) return 0;
+                return 1 + countLetters(str.Substring(index));
+            }
+
+            return distance - countLetters(course.description);
         }
     }
 
@@ -143,32 +172,50 @@ namespace SearchLib
 
         public override bool IsSatisfied(Course course)
         {
-
+            return course.id.Contains(Query);
         }
 
         public int GetDistance(Course course)
         {
+            int distance = 0;
 
+            for (int i = 0; i < 4; i++)
+            {
+                distance += Math.Abs(Query.ToCharArray()[i] - course.id.ToCharArray()[i]);
+                // if the right letter is in there, we might be close
+                distance -= course.id.Contains(Query.ToCharArray()[i]) ? 10 : 0;
+                // if it's in the wrong place, maybe not
+                distance += Math.Abs(course.id.IndexOf(Query.ToCharArray()[i]) - i);
+            }
+
+            return distance;
         }
     }
 
-    public class QueryTimes : QueryCondition<(DateTime, DateTime)>
+    // TODO
+    public class QueryTimes : QueryCondition<(DateTime, DateTime)>, IQuerySimilar
     {
         public QueryTimes((DateTime, DateTime) query) : base(query) { }
 
         public override bool IsSatisfied(Course course)
         {
+            return true;
+        }
 
+        public int GetDistance(Course course)
+        {
+            return 0;
         }
     }
 
+    // TODO
     public class QueryAvailability : QueryCondition<Availability>
     {
         public QueryAvailability(Availability query) : base(query) { }
 
         public override bool IsSatisfied(Course course)
         {
-
+            return true;
         }
     }
 
@@ -178,7 +225,7 @@ namespace SearchLib
 
         public override bool IsSatisfied(Course course)
         {
-
+            return Globals.RequirementCourses[Query].Contains(course.id);
         }
     }
 
@@ -188,28 +235,48 @@ namespace SearchLib
 
         public override bool IsSatisfied(Course course)
         {
-
+            return Globals.RequirementCourses[Query].Contains(course.id);
         }
     }
 
+
+    // TODO
     public class QueryDays : QueryCondition<Days>
     {
         public QueryDays(Days query) : base(query) { }
 
         public override bool IsSatisfied(Course course)
         {
-
+            return true;
         }
     }
 
-    public class SearchManager
+    public static class SearchManager
     {
-        private SortType sorting;
-        public SortType Sorting { get { return sorting; } set { sorting = value; } }
+        private static SortType sorting;
+        public static SortType Sorting { get { return sorting; } set { sorting = value; } }
 
-        public List<SearchResult> Search(List<QueryCondition> query)
+        public static List<SearchResult> Search(List<QueryCondition> query)
         {
-            
+            List<SearchResult> results = new List<SearchResult>();
+
+            foreach (Course course in Globals.Courses)
+            {
+                bool passes = false;
+                bool passedAll = true;
+                int relevance = 0;
+                foreach (QueryCondition condition in query)
+                {
+                    if (condition.IsSatisfied(course)) passes = true;
+                    else passedAll = false;
+                    if (condition is IQuerySimilar) relevance += ((IQuerySimilar)condition).GetDistance(course);
+                }
+
+                if (passedAll) relevance = int.MinValue;
+                if (passes) results.Add(new SearchResult(course, relevance));
+            }
+
+            return results;
         }
     }
 

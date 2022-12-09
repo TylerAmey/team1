@@ -30,6 +30,25 @@ namespace EnrollBasics
         public static Dictionary<string, Requirement> requirements;
         public static int totalCredits;
         public static int year;
+
+        public static void Init()
+        {
+            name = "David Schuh";
+            major = "New Media Interactive Development";
+            projectedSchedule = new List<Course>();
+            savedCourses = new List<Course>();
+            enrolledCourses = new List<Section>();
+            completedCourses = new List<Course>()
+            {
+
+            };
+
+            requirements = new Dictionary<string, Requirement>();
+            requirements.Add("New Media Interactive Development", new MajorRequirement("New Media Interactive Development", completedCourses));
+            requirements.Add("Social Perspective", new GeneralRequirement("Social Perspective", completedCourses));
+            totalCredits = 0;
+            year = 2;
+        }
     }
 
     public class Course

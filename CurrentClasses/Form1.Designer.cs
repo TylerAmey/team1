@@ -120,41 +120,6 @@
             this.daysLabel = new System.Windows.Forms.Label();
             this.timeLabel = new System.Windows.Forms.Label();
             this.placeLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -165,31 +130,6 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
-            this.splitContainer4.Panel1.SuspendLayout();
-            this.splitContainer4.Panel2.SuspendLayout();
-            this.splitContainer4.SuspendLayout();
-            this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
-            this.splitContainer5.Panel1.SuspendLayout();
-            this.splitContainer5.Panel2.SuspendLayout();
-            this.splitContainer5.SuspendLayout();
-            this.panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
-            this.splitContainer6.Panel1.SuspendLayout();
-            this.splitContainer6.Panel2.SuspendLayout();
-            this.splitContainer6.SuspendLayout();
-            this.panel34.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
-            this.splitContainer7.Panel1.SuspendLayout();
-            this.splitContainer7.Panel2.SuspendLayout();
-            this.splitContainer7.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -294,11 +234,6 @@
             // 
             this.classesFlowLayoutPanel.AutoScroll = true;
             this.classesFlowLayoutPanel.Controls.Add(this.classPanel);
-            this.classesFlowLayoutPanel.Controls.Add(this.panel1);
-            this.classesFlowLayoutPanel.Controls.Add(this.panel18);
-            this.classesFlowLayoutPanel.Controls.Add(this.panel10);
-            this.classesFlowLayoutPanel.Controls.Add(this.panel34);
-            this.classesFlowLayoutPanel.Controls.Add(this.panel20);
             this.classesFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.classesFlowLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.classesFlowLayoutPanel.Name = "classesFlowLayoutPanel";
@@ -353,10 +288,12 @@
             // 
             // monday8AMPanel
             // 
+            this.monday8AMPanel.BackColor = System.Drawing.SystemColors.Control;
             this.monday8AMPanel.Location = new System.Drawing.Point(94, 18);
             this.monday8AMPanel.Name = "monday8AMPanel";
             this.monday8AMPanel.Size = new System.Drawing.Size(79, 27);
             this.monday8AMPanel.TabIndex = 5;
+            this.monday8AMPanel.Tag = "monday";
             // 
             // tuesday8AMPanel
             // 
@@ -364,6 +301,7 @@
             this.tuesday8AMPanel.Name = "tuesday8AMPanel";
             this.tuesday8AMPanel.Size = new System.Drawing.Size(79, 27);
             this.tuesday8AMPanel.TabIndex = 6;
+            this.tuesday8AMPanel.Tag = "tuesday";
             // 
             // thursday8AMPanel
             // 
@@ -371,6 +309,7 @@
             this.thursday8AMPanel.Name = "thursday8AMPanel";
             this.thursday8AMPanel.Size = new System.Drawing.Size(79, 27);
             this.thursday8AMPanel.TabIndex = 8;
+            this.thursday8AMPanel.Tag = "thursday ";
             // 
             // wednesday8AMPanel
             // 
@@ -378,6 +317,7 @@
             this.wednesday8AMPanel.Name = "wednesday8AMPanel";
             this.wednesday8AMPanel.Size = new System.Drawing.Size(79, 27);
             this.wednesday8AMPanel.TabIndex = 7;
+            this.wednesday8AMPanel.Tag = "wednesday";
             // 
             // friday8AMPanel
             // 
@@ -385,6 +325,7 @@
             this.friday8AMPanel.Name = "friday8AMPanel";
             this.friday8AMPanel.Size = new System.Drawing.Size(79, 27);
             this.friday8AMPanel.TabIndex = 9;
+            this.friday8AMPanel.Tag = "friday";
             // 
             // friday9Panel
             // 
@@ -392,6 +333,7 @@
             this.friday9Panel.Name = "friday9Panel";
             this.friday9Panel.Size = new System.Drawing.Size(79, 27);
             this.friday9Panel.TabIndex = 14;
+            this.friday9Panel.Tag = "friday";
             // 
             // thursday9Panel
             // 
@@ -399,6 +341,7 @@
             this.thursday9Panel.Name = "thursday9Panel";
             this.thursday9Panel.Size = new System.Drawing.Size(79, 27);
             this.thursday9Panel.TabIndex = 13;
+            this.thursday9Panel.Tag = "thursday ";
             // 
             // wednesday9Panel
             // 
@@ -406,6 +349,7 @@
             this.wednesday9Panel.Name = "wednesday9Panel";
             this.wednesday9Panel.Size = new System.Drawing.Size(79, 27);
             this.wednesday9Panel.TabIndex = 12;
+            this.wednesday9Panel.Tag = "wednesday";
             // 
             // tuesday9Panel
             // 
@@ -413,6 +357,7 @@
             this.tuesday9Panel.Name = "tuesday9Panel";
             this.tuesday9Panel.Size = new System.Drawing.Size(79, 27);
             this.tuesday9Panel.TabIndex = 11;
+            this.tuesday9Panel.Tag = "tuesday";
             // 
             // monday9Panel
             // 
@@ -420,6 +365,7 @@
             this.monday9Panel.Name = "monday9Panel";
             this.monday9Panel.Size = new System.Drawing.Size(79, 27);
             this.monday9Panel.TabIndex = 10;
+            this.monday9Panel.Tag = "monday";
             // 
             // friday11Panel
             // 
@@ -427,6 +373,7 @@
             this.friday11Panel.Name = "friday11Panel";
             this.friday11Panel.Size = new System.Drawing.Size(79, 27);
             this.friday11Panel.TabIndex = 24;
+            this.friday11Panel.Tag = "friday";
             // 
             // friday10Panel
             // 
@@ -434,6 +381,7 @@
             this.friday10Panel.Name = "friday10Panel";
             this.friday10Panel.Size = new System.Drawing.Size(79, 27);
             this.friday10Panel.TabIndex = 19;
+            this.friday10Panel.Tag = "friday";
             // 
             // thursday11Panel
             // 
@@ -441,6 +389,7 @@
             this.thursday11Panel.Name = "thursday11Panel";
             this.thursday11Panel.Size = new System.Drawing.Size(79, 27);
             this.thursday11Panel.TabIndex = 23;
+            this.thursday11Panel.Tag = "thursday ";
             // 
             // wednesday11Panel
             // 
@@ -448,6 +397,7 @@
             this.wednesday11Panel.Name = "wednesday11Panel";
             this.wednesday11Panel.Size = new System.Drawing.Size(79, 27);
             this.wednesday11Panel.TabIndex = 22;
+            this.wednesday11Panel.Tag = "wednesday";
             // 
             // thursday10Panel
             // 
@@ -455,6 +405,7 @@
             this.thursday10Panel.Name = "thursday10Panel";
             this.thursday10Panel.Size = new System.Drawing.Size(79, 27);
             this.thursday10Panel.TabIndex = 18;
+            this.thursday10Panel.Tag = "thursday ";
             // 
             // tuesday11Panel
             // 
@@ -462,6 +413,7 @@
             this.tuesday11Panel.Name = "tuesday11Panel";
             this.tuesday11Panel.Size = new System.Drawing.Size(79, 27);
             this.tuesday11Panel.TabIndex = 21;
+            this.tuesday11Panel.Tag = "tuesday";
             // 
             // wednesday10Panel
             // 
@@ -469,6 +421,7 @@
             this.wednesday10Panel.Name = "wednesday10Panel";
             this.wednesday10Panel.Size = new System.Drawing.Size(79, 27);
             this.wednesday10Panel.TabIndex = 17;
+            this.wednesday10Panel.Tag = "wednesday";
             // 
             // monday11Panel
             // 
@@ -476,6 +429,7 @@
             this.monday11Panel.Name = "monday11Panel";
             this.monday11Panel.Size = new System.Drawing.Size(79, 27);
             this.monday11Panel.TabIndex = 20;
+            this.monday11Panel.Tag = "monday";
             // 
             // tuesday10Panel
             // 
@@ -483,6 +437,7 @@
             this.tuesday10Panel.Name = "tuesday10Panel";
             this.tuesday10Panel.Size = new System.Drawing.Size(79, 27);
             this.tuesday10Panel.TabIndex = 16;
+            this.tuesday10Panel.Tag = "tuesday";
             // 
             // monday10Panel
             // 
@@ -490,6 +445,7 @@
             this.monday10Panel.Name = "monday10Panel";
             this.monday10Panel.Size = new System.Drawing.Size(79, 27);
             this.monday10Panel.TabIndex = 15;
+            this.monday10Panel.Tag = "monday";
             // 
             // friday3Panel
             // 
@@ -497,6 +453,7 @@
             this.friday3Panel.Name = "friday3Panel";
             this.friday3Panel.Size = new System.Drawing.Size(79, 27);
             this.friday3Panel.TabIndex = 44;
+            this.friday3Panel.Tag = "friday";
             // 
             // friday1Panel
             // 
@@ -504,6 +461,7 @@
             this.friday1Panel.Name = "friday1Panel";
             this.friday1Panel.Size = new System.Drawing.Size(79, 27);
             this.friday1Panel.TabIndex = 34;
+            this.friday1Panel.Tag = "friday";
             // 
             // friday2Panel
             // 
@@ -511,6 +469,7 @@
             this.friday2Panel.Name = "friday2Panel";
             this.friday2Panel.Size = new System.Drawing.Size(79, 27);
             this.friday2Panel.TabIndex = 39;
+            this.friday2Panel.Tag = "friday";
             // 
             // friday12Panel
             // 
@@ -518,6 +477,7 @@
             this.friday12Panel.Name = "friday12Panel";
             this.friday12Panel.Size = new System.Drawing.Size(79, 27);
             this.friday12Panel.TabIndex = 29;
+            this.friday12Panel.Tag = "friday";
             // 
             // thursday3Panel
             // 
@@ -525,6 +485,7 @@
             this.thursday3Panel.Name = "thursday3Panel";
             this.thursday3Panel.Size = new System.Drawing.Size(79, 27);
             this.thursday3Panel.TabIndex = 43;
+            this.thursday3Panel.Tag = "thursday ";
             // 
             // thursday1Panel
             // 
@@ -532,6 +493,7 @@
             this.thursday1Panel.Name = "thursday1Panel";
             this.thursday1Panel.Size = new System.Drawing.Size(79, 27);
             this.thursday1Panel.TabIndex = 33;
+            this.thursday1Panel.Tag = "thursday ";
             // 
             // wednesday3Panel
             // 
@@ -539,6 +501,7 @@
             this.wednesday3Panel.Name = "wednesday3Panel";
             this.wednesday3Panel.Size = new System.Drawing.Size(79, 27);
             this.wednesday3Panel.TabIndex = 42;
+            this.wednesday3Panel.Tag = "wednesday";
             // 
             // wednesday1Panel
             // 
@@ -546,6 +509,7 @@
             this.wednesday1Panel.Name = "wednesday1Panel";
             this.wednesday1Panel.Size = new System.Drawing.Size(79, 27);
             this.wednesday1Panel.TabIndex = 32;
+            this.wednesday1Panel.Tag = "wednesday";
             // 
             // thursday2Panel
             // 
@@ -553,6 +517,7 @@
             this.thursday2Panel.Name = "thursday2Panel";
             this.thursday2Panel.Size = new System.Drawing.Size(79, 27);
             this.thursday2Panel.TabIndex = 38;
+            this.thursday2Panel.Tag = "thursday ";
             // 
             // thursday12Panel
             // 
@@ -560,6 +525,7 @@
             this.thursday12Panel.Name = "thursday12Panel";
             this.thursday12Panel.Size = new System.Drawing.Size(79, 27);
             this.thursday12Panel.TabIndex = 28;
+            this.thursday12Panel.Tag = "thursday ";
             // 
             // tuesday3Panel
             // 
@@ -567,6 +533,7 @@
             this.tuesday3Panel.Name = "tuesday3Panel";
             this.tuesday3Panel.Size = new System.Drawing.Size(79, 27);
             this.tuesday3Panel.TabIndex = 41;
+            this.tuesday3Panel.Tag = "tuesday";
             // 
             // wednesday2Panel
             // 
@@ -574,6 +541,7 @@
             this.wednesday2Panel.Name = "wednesday2Panel";
             this.wednesday2Panel.Size = new System.Drawing.Size(79, 27);
             this.wednesday2Panel.TabIndex = 37;
+            this.wednesday2Panel.Tag = "wednesday";
             // 
             // tuesday1Panel
             // 
@@ -581,6 +549,7 @@
             this.tuesday1Panel.Name = "tuesday1Panel";
             this.tuesday1Panel.Size = new System.Drawing.Size(79, 27);
             this.tuesday1Panel.TabIndex = 31;
+            this.tuesday1Panel.Tag = "tuesday";
             // 
             // monday3Panel
             // 
@@ -588,6 +557,7 @@
             this.monday3Panel.Name = "monday3Panel";
             this.monday3Panel.Size = new System.Drawing.Size(79, 27);
             this.monday3Panel.TabIndex = 40;
+            this.monday3Panel.Tag = "monday";
             // 
             // wednesday12Panel
             // 
@@ -595,6 +565,7 @@
             this.wednesday12Panel.Name = "wednesday12Panel";
             this.wednesday12Panel.Size = new System.Drawing.Size(79, 27);
             this.wednesday12Panel.TabIndex = 27;
+            this.wednesday12Panel.Tag = "wednesday";
             // 
             // tuesday2Panel
             // 
@@ -602,6 +573,7 @@
             this.tuesday2Panel.Name = "tuesday2Panel";
             this.tuesday2Panel.Size = new System.Drawing.Size(79, 27);
             this.tuesday2Panel.TabIndex = 36;
+            this.tuesday2Panel.Tag = "tuesday";
             // 
             // monday1Panel
             // 
@@ -609,6 +581,7 @@
             this.monday1Panel.Name = "monday1Panel";
             this.monday1Panel.Size = new System.Drawing.Size(79, 27);
             this.monday1Panel.TabIndex = 30;
+            this.monday1Panel.Tag = "monday";
             // 
             // monday2Panel
             // 
@@ -616,6 +589,7 @@
             this.monday2Panel.Name = "monday2Panel";
             this.monday2Panel.Size = new System.Drawing.Size(79, 27);
             this.monday2Panel.TabIndex = 35;
+            this.monday2Panel.Tag = "monday";
             // 
             // tuesday12Panel
             // 
@@ -623,6 +597,7 @@
             this.tuesday12Panel.Name = "tuesday12Panel";
             this.tuesday12Panel.Size = new System.Drawing.Size(79, 27);
             this.tuesday12Panel.TabIndex = 26;
+            this.tuesday12Panel.Tag = "tuesday";
             // 
             // monday12Panel
             // 
@@ -630,6 +605,7 @@
             this.monday12Panel.Name = "monday12Panel";
             this.monday12Panel.Size = new System.Drawing.Size(79, 27);
             this.monday12Panel.TabIndex = 25;
+            this.monday12Panel.Tag = "monday";
             // 
             // friday6Panel
             // 
@@ -637,6 +613,7 @@
             this.friday6Panel.Name = "friday6Panel";
             this.friday6Panel.Size = new System.Drawing.Size(79, 27);
             this.friday6Panel.TabIndex = 59;
+            this.friday6Panel.Tag = "friday";
             // 
             // friday4Panel
             // 
@@ -644,6 +621,7 @@
             this.friday4Panel.Name = "friday4Panel";
             this.friday4Panel.Size = new System.Drawing.Size(79, 27);
             this.friday4Panel.TabIndex = 49;
+            this.friday4Panel.Tag = "friday";
             // 
             // friday5Panel
             // 
@@ -651,6 +629,7 @@
             this.friday5Panel.Name = "friday5Panel";
             this.friday5Panel.Size = new System.Drawing.Size(79, 27);
             this.friday5Panel.TabIndex = 54;
+            this.friday5Panel.Tag = "friday";
             // 
             // thursday6Panel
             // 
@@ -658,6 +637,7 @@
             this.thursday6Panel.Name = "thursday6Panel";
             this.thursday6Panel.Size = new System.Drawing.Size(79, 27);
             this.thursday6Panel.TabIndex = 58;
+            this.thursday6Panel.Tag = "thursday ";
             // 
             // thursday4Panel
             // 
@@ -665,6 +645,7 @@
             this.thursday4Panel.Name = "thursday4Panel";
             this.thursday4Panel.Size = new System.Drawing.Size(79, 27);
             this.thursday4Panel.TabIndex = 48;
+            this.thursday4Panel.Tag = "thursday ";
             // 
             // wednesday6Panel
             // 
@@ -672,6 +653,7 @@
             this.wednesday6Panel.Name = "wednesday6Panel";
             this.wednesday6Panel.Size = new System.Drawing.Size(79, 27);
             this.wednesday6Panel.TabIndex = 57;
+            this.wednesday6Panel.Tag = "wednesday";
             // 
             // wednesday4Panel
             // 
@@ -679,6 +661,7 @@
             this.wednesday4Panel.Name = "wednesday4Panel";
             this.wednesday4Panel.Size = new System.Drawing.Size(79, 27);
             this.wednesday4Panel.TabIndex = 47;
+            this.wednesday4Panel.Tag = "wednesday";
             // 
             // thursday5Panel
             // 
@@ -686,6 +669,7 @@
             this.thursday5Panel.Name = "thursday5Panel";
             this.thursday5Panel.Size = new System.Drawing.Size(79, 27);
             this.thursday5Panel.TabIndex = 53;
+            this.thursday5Panel.Tag = "thursday ";
             // 
             // tuesday6Panel
             // 
@@ -693,6 +677,7 @@
             this.tuesday6Panel.Name = "tuesday6Panel";
             this.tuesday6Panel.Size = new System.Drawing.Size(79, 27);
             this.tuesday6Panel.TabIndex = 56;
+            this.tuesday6Panel.Tag = "tuesday";
             // 
             // wednesday5Panel
             // 
@@ -700,6 +685,7 @@
             this.wednesday5Panel.Name = "wednesday5Panel";
             this.wednesday5Panel.Size = new System.Drawing.Size(79, 27);
             this.wednesday5Panel.TabIndex = 52;
+            this.wednesday5Panel.Tag = "wednesday";
             // 
             // tuesday4Panel
             // 
@@ -707,6 +693,7 @@
             this.tuesday4Panel.Name = "tuesday4Panel";
             this.tuesday4Panel.Size = new System.Drawing.Size(79, 27);
             this.tuesday4Panel.TabIndex = 46;
+            this.tuesday4Panel.Tag = "tuesday";
             // 
             // monday6Panel
             // 
@@ -714,6 +701,7 @@
             this.monday6Panel.Name = "monday6Panel";
             this.monday6Panel.Size = new System.Drawing.Size(79, 27);
             this.monday6Panel.TabIndex = 55;
+            this.monday6Panel.Tag = "monday";
             // 
             // tuesday5Panel
             // 
@@ -721,6 +709,7 @@
             this.tuesday5Panel.Name = "tuesday5Panel";
             this.tuesday5Panel.Size = new System.Drawing.Size(79, 27);
             this.tuesday5Panel.TabIndex = 51;
+            this.tuesday5Panel.Tag = "tuesday";
             // 
             // monday4Panel
             // 
@@ -728,6 +717,7 @@
             this.monday4Panel.Name = "monday4Panel";
             this.monday4Panel.Size = new System.Drawing.Size(79, 27);
             this.monday4Panel.TabIndex = 45;
+            this.monday4Panel.Tag = "monday";
             // 
             // monday5Panel
             // 
@@ -735,6 +725,7 @@
             this.monday5Panel.Name = "monday5Panel";
             this.monday5Panel.Size = new System.Drawing.Size(79, 27);
             this.monday5Panel.TabIndex = 50;
+            this.monday5Panel.Tag = "monday";
             // 
             // friday7Panel
             // 
@@ -742,6 +733,7 @@
             this.friday7Panel.Name = "friday7Panel";
             this.friday7Panel.Size = new System.Drawing.Size(79, 27);
             this.friday7Panel.TabIndex = 64;
+            this.friday7Panel.Tag = "friday";
             // 
             // thursday7Panel
             // 
@@ -749,6 +741,7 @@
             this.thursday7Panel.Name = "thursday7Panel";
             this.thursday7Panel.Size = new System.Drawing.Size(79, 27);
             this.thursday7Panel.TabIndex = 63;
+            this.thursday7Panel.Tag = "thursday ";
             // 
             // wednesday7Panel
             // 
@@ -756,6 +749,7 @@
             this.wednesday7Panel.Name = "wednesday7Panel";
             this.wednesday7Panel.Size = new System.Drawing.Size(79, 27);
             this.wednesday7Panel.TabIndex = 62;
+            this.wednesday7Panel.Tag = "wednesday";
             // 
             // tuesday7Panel
             // 
@@ -763,6 +757,7 @@
             this.tuesday7Panel.Name = "tuesday7Panel";
             this.tuesday7Panel.Size = new System.Drawing.Size(79, 27);
             this.tuesday7Panel.TabIndex = 61;
+            this.tuesday7Panel.Tag = "tuesday";
             // 
             // monday7Panel
             // 
@@ -770,6 +765,7 @@
             this.monday7Panel.Name = "monday7Panel";
             this.monday7Panel.Size = new System.Drawing.Size(79, 27);
             this.monday7Panel.TabIndex = 60;
+            this.monday7Panel.Tag = "monday";
             // 
             // eightAMLabel
             // 
@@ -786,6 +782,7 @@
             this.friday8PMPanel.Name = "friday8PMPanel";
             this.friday8PMPanel.Size = new System.Drawing.Size(79, 27);
             this.friday8PMPanel.TabIndex = 69;
+            this.friday8PMPanel.Tag = "friday";
             // 
             // thursday8PMPanel
             // 
@@ -793,6 +790,7 @@
             this.thursday8PMPanel.Name = "thursday8PMPanel";
             this.thursday8PMPanel.Size = new System.Drawing.Size(79, 27);
             this.thursday8PMPanel.TabIndex = 68;
+            this.thursday8PMPanel.Tag = "thursday ";
             // 
             // wednesday8PMPanel
             // 
@@ -800,6 +798,7 @@
             this.wednesday8PMPanel.Name = "wednesday8PMPanel";
             this.wednesday8PMPanel.Size = new System.Drawing.Size(79, 27);
             this.wednesday8PMPanel.TabIndex = 67;
+            this.wednesday8PMPanel.Tag = "wednesday";
             // 
             // tuesday8PMPanel
             // 
@@ -807,6 +806,7 @@
             this.tuesday8PMPanel.Name = "tuesday8PMPanel";
             this.tuesday8PMPanel.Size = new System.Drawing.Size(79, 27);
             this.tuesday8PMPanel.TabIndex = 66;
+            this.tuesday8PMPanel.Tag = "tuesday";
             // 
             // monday8PMPanel
             // 
@@ -814,6 +814,7 @@
             this.monday8PMPanel.Name = "monday8PMPanel";
             this.monday8PMPanel.Size = new System.Drawing.Size(79, 27);
             this.monday8PMPanel.TabIndex = 65;
+            this.monday8PMPanel.Tag = "monday";
             // 
             // nineLabel
             // 
@@ -998,381 +999,6 @@
             this.placeLabel.TabIndex = 2;
             this.placeLabel.Text = "Place";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.splitContainer3);
-            this.panel1.Location = new System.Drawing.Point(140, 13);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(121, 131);
-            this.panel1.TabIndex = 1;
-            // 
-            // splitContainer3
-            // 
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer3.Name = "splitContainer3";
-            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.BackColor = System.Drawing.Color.DarkOrange;
-            this.splitContainer3.Panel1.Controls.Add(this.label1);
-            this.splitContainer3.Panel1.Controls.Add(this.label2);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.label3);
-            this.splitContainer3.Panel2.Controls.Add(this.label4);
-            this.splitContainer3.Panel2.Controls.Add(this.label5);
-            this.splitContainer3.Size = new System.Drawing.Size(121, 131);
-            this.splitContainer3.SplitterDistance = 54;
-            this.splitContainer3.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Class Code";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Class Name";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Place";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Time";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(40, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Days";
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.splitContainer4);
-            this.panel10.Location = new System.Drawing.Point(140, 150);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(121, 131);
-            this.panel10.TabIndex = 2;
-            // 
-            // splitContainer4
-            // 
-            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer4.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer4.Name = "splitContainer4";
-            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer4.Panel1
-            // 
-            this.splitContainer4.Panel1.BackColor = System.Drawing.Color.DarkOrange;
-            this.splitContainer4.Panel1.Controls.Add(this.label6);
-            this.splitContainer4.Panel1.Controls.Add(this.label7);
-            // 
-            // splitContainer4.Panel2
-            // 
-            this.splitContainer4.Panel2.Controls.Add(this.label8);
-            this.splitContainer4.Panel2.Controls.Add(this.label9);
-            this.splitContainer4.Panel2.Controls.Add(this.label10);
-            this.splitContainer4.Size = new System.Drawing.Size(121, 131);
-            this.splitContainer4.SplitterDistance = 54;
-            this.splitContainer4.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Class Code";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 5);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Class Name";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(41, 50);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Place";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(41, 27);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Time";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(40, 8);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(31, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Days";
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.splitContainer5);
-            this.panel18.Location = new System.Drawing.Point(13, 150);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(121, 131);
-            this.panel18.TabIndex = 3;
-            // 
-            // splitContainer5
-            // 
-            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer5.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer5.Name = "splitContainer5";
-            this.splitContainer5.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer5.Panel1
-            // 
-            this.splitContainer5.Panel1.BackColor = System.Drawing.Color.DarkOrange;
-            this.splitContainer5.Panel1.Controls.Add(this.label11);
-            this.splitContainer5.Panel1.Controls.Add(this.label12);
-            // 
-            // splitContainer5.Panel2
-            // 
-            this.splitContainer5.Panel2.Controls.Add(this.label13);
-            this.splitContainer5.Panel2.Controls.Add(this.label14);
-            this.splitContainer5.Panel2.Controls.Add(this.label15);
-            this.splitContainer5.Size = new System.Drawing.Size(121, 131);
-            this.splitContainer5.SplitterDistance = 54;
-            this.splitContainer5.TabIndex = 0;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(28, 33);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 13);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Class Code";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(28, 5);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Class Name";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(41, 50);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 13);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Place";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(41, 27);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(30, 13);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Time";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(40, 8);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(31, 13);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Days";
-            // 
-            // panel20
-            // 
-            this.panel20.Controls.Add(this.splitContainer6);
-            this.panel20.Location = new System.Drawing.Point(140, 287);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(121, 131);
-            this.panel20.TabIndex = 5;
-            // 
-            // splitContainer6
-            // 
-            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer6.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer6.Name = "splitContainer6";
-            this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer6.Panel1
-            // 
-            this.splitContainer6.Panel1.BackColor = System.Drawing.Color.DarkOrange;
-            this.splitContainer6.Panel1.Controls.Add(this.label16);
-            this.splitContainer6.Panel1.Controls.Add(this.label17);
-            // 
-            // splitContainer6.Panel2
-            // 
-            this.splitContainer6.Panel2.Controls.Add(this.label18);
-            this.splitContainer6.Panel2.Controls.Add(this.label19);
-            this.splitContainer6.Panel2.Controls.Add(this.label20);
-            this.splitContainer6.Size = new System.Drawing.Size(121, 131);
-            this.splitContainer6.SplitterDistance = 54;
-            this.splitContainer6.TabIndex = 0;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(28, 33);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 13);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "Class Code";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(28, 5);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(63, 13);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Class Name";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(41, 50);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(34, 13);
-            this.label18.TabIndex = 2;
-            this.label18.Text = "Place";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(41, 27);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(30, 13);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "Time";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(40, 8);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(31, 13);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Days";
-            // 
-            // panel34
-            // 
-            this.panel34.Controls.Add(this.splitContainer7);
-            this.panel34.Location = new System.Drawing.Point(13, 287);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(121, 131);
-            this.panel34.TabIndex = 4;
-            // 
-            // splitContainer7
-            // 
-            this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer7.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer7.Name = "splitContainer7";
-            this.splitContainer7.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer7.Panel1
-            // 
-            this.splitContainer7.Panel1.BackColor = System.Drawing.Color.DarkOrange;
-            this.splitContainer7.Panel1.Controls.Add(this.label21);
-            this.splitContainer7.Panel1.Controls.Add(this.label22);
-            // 
-            // splitContainer7.Panel2
-            // 
-            this.splitContainer7.Panel2.Controls.Add(this.label23);
-            this.splitContainer7.Panel2.Controls.Add(this.label24);
-            this.splitContainer7.Panel2.Controls.Add(this.label25);
-            this.splitContainer7.Size = new System.Drawing.Size(121, 131);
-            this.splitContainer7.SplitterDistance = 54;
-            this.splitContainer7.TabIndex = 0;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(28, 33);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(60, 13);
-            this.label21.TabIndex = 2;
-            this.label21.Text = "Class Code";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(28, 5);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(63, 13);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Class Name";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(41, 50);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(34, 13);
-            this.label23.TabIndex = 2;
-            this.label23.Text = "Place";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(41, 27);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(30, 13);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "Time";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(40, 8);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(31, 13);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "Days";
-            // 
             // CurrentClasses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1394,41 +1020,6 @@
             this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel1.PerformLayout();
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            this.splitContainer3.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.splitContainer4.Panel1.ResumeLayout(false);
-            this.splitContainer4.Panel1.PerformLayout();
-            this.splitContainer4.Panel2.ResumeLayout(false);
-            this.splitContainer4.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
-            this.splitContainer4.ResumeLayout(false);
-            this.panel18.ResumeLayout(false);
-            this.splitContainer5.Panel1.ResumeLayout(false);
-            this.splitContainer5.Panel1.PerformLayout();
-            this.splitContainer5.Panel2.ResumeLayout(false);
-            this.splitContainer5.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
-            this.splitContainer5.ResumeLayout(false);
-            this.panel20.ResumeLayout(false);
-            this.splitContainer6.Panel1.ResumeLayout(false);
-            this.splitContainer6.Panel1.PerformLayout();
-            this.splitContainer6.Panel2.ResumeLayout(false);
-            this.splitContainer6.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
-            this.splitContainer6.ResumeLayout(false);
-            this.panel34.ResumeLayout(false);
-            this.splitContainer7.Panel1.ResumeLayout(false);
-            this.splitContainer7.Panel1.PerformLayout();
-            this.splitContainer7.Panel2.ResumeLayout(false);
-            this.splitContainer7.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
-            this.splitContainer7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1526,41 +1117,6 @@
         private System.Windows.Forms.Label placeLabel;
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Label daysLabel;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.SplitContainer splitContainer5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.SplitContainer splitContainer4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel34;
-        private System.Windows.Forms.SplitContainer splitContainer7;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.SplitContainer splitContainer6;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
     }
 }
 
