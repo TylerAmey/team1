@@ -99,7 +99,7 @@ namespace SuggestedClasses
             {
                 foreach(Section section in course.sections)
                 {
-                    if (CalcRecValue(section) > CalcRecValue(recommendedSections[2]))
+                    if (CalcRecValue(section) > CalcRecValue(recommendedSections[2]) && !IsInList(section))
                     {
                         recommendedSections[2] = section;
                         SortList();
@@ -118,6 +118,19 @@ namespace SuggestedClasses
             box = new CourseBox(recommendedSections[2].ParentCourse, recommendedSections[2]);
             box.EnrollClick += new EventHandler(DoFunny);
             box.AddToPanel(ref panel3);
+        }
+
+        public Boolean IsInList(Section section)
+        {
+            foreach(Section recSection in recommendedSections)
+            {
+                if(recSection == section)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public void SortList()
