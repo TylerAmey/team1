@@ -24,6 +24,13 @@ namespace SearchApp
             InitializeComponent();
             Student.Init();
 
+            if (results.Count == 0)
+            {
+                MessageBox.Show("No Results Found");
+                Close();
+                return;
+            }
+
             this.results = results;
             this.results.Sort((a, b) => a.relevance.CompareTo(b.relevance));
 
@@ -31,6 +38,8 @@ namespace SearchApp
             {
                 if (!AddPanel()) break;
             }
+
+            ShowDialog();
         }
 
         private bool AddPanel()
