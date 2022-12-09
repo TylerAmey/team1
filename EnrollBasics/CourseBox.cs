@@ -45,7 +45,7 @@ namespace EnrollBasics
         public CourseBox(Section section)
         {
             this.section = section;
-            Course course = Globals.Courses.Find(c => c.id == section.courseID); 
+            Course course = section.ParentCourse;
 
             this.subject = course.id.Substring(0, 4);
             this.number = Int32.Parse(course.id.Substring(4));
