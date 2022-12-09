@@ -250,6 +250,36 @@ namespace SearchLib
             return true;
         }
     }
+    
+    public class Timeblocks
+    {
+        private List<TimeBlock> times;
+        public List<TimeBlock> Times { get { return times; } }
+
+        public void Add(TimeBlock tb)
+        {
+            times.Add(tb);
+            Collapse();
+        }
+
+        private void Collapse()
+        {
+
+        }
+
+    }
+
+    public class TimeBlock
+    {
+        public DateTime start;
+        public DateTime end;
+
+        public TimeBlock(DateTime start, DateTime end)
+        {
+            this.start = new DateTime(0001, 01, 01, start.Hour, start.Minute, 0);
+            this.end = new DateTime(0001, 01, 01, end.Hour, end.Minute, 0); ;
+        }
+    }
 
     public static class SearchManager
     {
