@@ -139,9 +139,9 @@ namespace SearchLib
         public override bool IsSatisfied(Course course)
         {
             return (
-                course.name.Contains(Query) ||
-                course.id.Contains(Query) ||
-                course.description.Contains(Query) );
+                course.name.ToLower().Contains(Query.ToLower()) ||
+                course.id.ToLower().Contains(Query.ToLower()) ||
+                course.description.ToLower().Contains(Query.ToLower()) );
         }
 
         public int GetDistance(Course course)
@@ -150,19 +150,19 @@ namespace SearchLib
 
             foreach (string word in Query.Split(' '))
             {
-                if (course.id.Contains(Query)) distance -= 25;
-                if (course.name.Contains(Query)) distance -= 20;
-                if (course.description.Contains(Query)) distance -= 15;
+                if (course.id.ToLower().Contains(Query.ToLower())) distance -= 25;
+                if (course.name.ToLower().Contains(Query.ToLower())) distance -= 20;
+                if (course.description.ToLower().Contains(Query.ToLower())) distance -= 15;
             }
 
             int countLetters(string str)
             {
-                int index = str.IndexOfAny(Query.Replace(" ", "").ToCharArray());
+                int index = str.IndexOfAny(Query.Replace(" ", "").ToLower().ToCharArray());
                 if (index != -1) return 0;
                 return 1 + countLetters(str.Substring(index));
             }
 
-            return distance - countLetters(course.description);
+            return distance - countLetters(course.description.ToLower());
         }
     }
 
@@ -309,7 +309,7 @@ namespace SearchLib
         {
             List<SearchResult> results = new List<SearchResult>();
 
-            Console.WriteLine(Globals.Course.Count);
+            Console.WriteLine(query.Count);
 
             foreach (Course course in Globals.Courses)
             {
