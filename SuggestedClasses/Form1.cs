@@ -107,15 +107,15 @@ namespace SuggestedClasses
                 }
             }
 
-            CourseBox box = new CourseBox(recommendedSections[0].ParentCourse, recommendedSections[0]);
+            CourseBox box = new CourseBox(recommendedSections[0]);
             box.EnrollClick += new EventHandler(DoFunny);
             box.AddToPanel(ref panel1);
 
-            box = new CourseBox(recommendedSections[1].ParentCourse, recommendedSections[1]);
+            box = new CourseBox(recommendedSections[1]);
             box.EnrollClick += new EventHandler(DoFunny);
             box.AddToPanel(ref panel2);
 
-            box = new CourseBox(recommendedSections[2].ParentCourse, recommendedSections[2]);
+            box = new CourseBox(recommendedSections[2]);
             box.EnrollClick += new EventHandler(DoFunny);
             box.AddToPanel(ref panel3);
         }
