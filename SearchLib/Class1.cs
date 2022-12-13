@@ -225,7 +225,10 @@ namespace SearchLib
 
         public override bool IsSatisfied(Section section)
         {
-            return true;
+            // convert availability to enum
+            Availability thisAvailability = 0;
+
+            
         }
     }
 
@@ -258,14 +261,34 @@ namespace SearchLib
     }
 
 
-    // TODO
-    public class QueryDays : QueryCondition<Days>
+    public class QueryDays : QueryCondition<Days>, IQuerySimilar
     {
         public QueryDays(Days query) : base(query) { }
 
         public override bool IsSatisfied(Section section)
         {
-            return true;
+            Days sectionDays = 0; // converting DateTime to our custom Days enum
+            foreach (Session session in section.sessions)
+            {
+                Days thisDay;
+                if (Days.TryParse(session.startTime.ToString(), true, out thisDay)) // if we're able to parse it
+                    sectionDays |= thisDay; // add it to the list
+            }
+
+            return (Query & sectionDays) == sectionDays; // query contains section days
+        }
+
+        public int GetDistance(Section section)
+        {
+            int distance = 0;
+            foreach (Session session in section.sessions)
+            {
+                Days thisDay;
+                if (!Days.TryParse(session.startTime.ToString(), true, out thisDay)) continue; // if we can't parse, move to the next
+                if ((Query & thisDay) != thisDay) distance++; // if our day isn't in the query, increase the distance
+            }
+
+            return distance;
         }
     }
     
@@ -372,12 +395,12 @@ namespace SearchLib
     [Flags]
     public enum Days
     {
-        Monday = 0b_0000_0001,
-        Tuesday = 0b_0000_0010,
-        Wednesday = 0b_0000_0100,
-        Thursday = 0b_0000_1000,
-        Friday = 0b_0001_0000,
-        Saturday = 0b_0010_0000,
-        Sunday = 0b_0100_0000
+        Monday      = 0b_0000_0001,
+        Tuesday     = 0b_0000_0010,
+        Wednesday   = 0b_0000_0100,
+        Thursday    = 0b_0000_1000,
+        Friday      = 0b_0001_0000,
+        Saturday    = 0b_0010_0000,
+        Sunday      = 0b_0100_0000
     }
 }

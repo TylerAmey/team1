@@ -160,6 +160,7 @@ namespace EnrollBasics
 
             this.professor = section.professor;
             this.sectionNumber = section.number;
+            Status.TryParse(section.SectionStatus.ToString(), true, out status);
 
             // add all the sessions into the special list to have their data extracted
             // special list also groups them so we can display them more succintly
@@ -170,21 +171,16 @@ namespace EnrollBasics
             }
 
             SeatManager seats = section.seats;
-            if (section.seats.seatPosition > 0)  // open seats
+            switch (status)
             {
-                this.position = seats.seatPosition;
-                this.capacity = seats.capacity;
-                this.status = Status.OPEN;
-            }
-            else if (seats.waitListPosition <= seats.capacity) // hasn't passed capacity
-            {
-                this.position = seats.waitListPosition;
-                this.capacity = seats.capacity;
-                this.status = Status.WAITLIST;
-            }
-            else
-            {
-                this.status = Status.CLOSED;
+                case Status.OPEN:
+                    position = seats.seatPosition;
+                    capacity = seats.capacity;
+                    break;
+                case Status.WAITLIST:
+                    position = seats.waitListPosition;
+                    capacity = seats.capacity;
+                    break;
             }
         }
         
