@@ -162,7 +162,7 @@ namespace EnrollBasics
             } 
         }
 
-        public Status SectionStatus
+        public Status Status
         {
             get
             {
@@ -172,12 +172,12 @@ namespace EnrollBasics
             }
         }
 
-        [Flags]
-        public enum Status
+        public Days Days
         {
-            OPEN =      0b_0001,
-            WAITLIST =  0b_0010,
-            CLOSED =    0b_0100
+            get
+            {
+                return sessions.Aggregate(new Days(), (days, session) => days |= session.Day);
+            }
         }
     }
 
@@ -186,6 +186,16 @@ namespace EnrollBasics
         public DateTime startTime;
         public DateTime endTime;
         public string location;
+
+        public Days Day
+        {
+            get
+            {
+                Days thisDay = 0;
+                Days.TryParse(startTime.DayOfWeek.ToString(), true, out thisDay);
+                return thisDay;
+            }
+        }
     }
 
     public class SeatManager
@@ -193,5 +203,24 @@ namespace EnrollBasics
         public int seatPosition;
         public int waitListPosition;
         public int capacity;
+    }
+
+    [Flags]
+    public enum Status
+    {
+        OPEN        = 0b_0001,
+        WAITLIST    = 0b_0010,
+        CLOSED      = 0b_0100
+    }
+
+    [Flags]
+    public enum Days
+    {
+        MONDAY      = 0b_0000_0001,
+        TUESDAY     = 0b_0000_0010,
+        WEDNESDAY   = 0b_0000_0100,
+        THURSDAY    = 0b_0000_1000,
+        FRIDAY      = 0b_0001_0000,
+        SATURDAY    = 0b_0010_0000,
     }
 }

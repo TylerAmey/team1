@@ -361,7 +361,7 @@ namespace SearchApp
 
         private void CompileAvailability(GroupBox groupBox)
         {
-            Availability query = Availability.Open;
+            Status query = Status.OPEN;
 
             foreach (Control control in groupBox.Controls)
             {
@@ -373,10 +373,10 @@ namespace SearchApp
                         switch (cb.Name)
                         {
                             case "waitlistCheckBox":
-                                query |= Availability.Waitlist;
+                                query |= Status.WAITLIST;
                                 break;
                             case "closedCheckBox":
-                                query |= Availability.Closed;
+                                query |= Status.CLOSED;
                                 break;
                             default:
                                 continue;
@@ -385,7 +385,7 @@ namespace SearchApp
                 }
             }
 
-            if(query != Availability.Open) filter.Add(new QueryAvailability(query));
+            if(query != Status.OPEN) filter.Add(new QueryAvailability(query));
         }
     }
 }

@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using EnrollBasics;
+using Status = EnrollBasics.Status;
+using Days = EnrollBasics.Days;
 
 namespace SearchLib
 {
@@ -218,17 +218,13 @@ namespace SearchLib
         }
     }
 
-    // TODO
-    public class QueryAvailability : QueryCondition<Availability>
+    public class QueryAvailability : QueryCondition<Status>
     {
-        public QueryAvailability(Availability query) : base(query) { }
+        public QueryAvailability(Status query) : base(query) { }
 
         public override bool IsSatisfied(Section section)
         {
-            // convert availability to enum
-            Availability thisAvailability = 0;
-
-            
+            return (Query & section.Status) == section.Status; // query contains section status
         }
     }
 
@@ -334,6 +330,18 @@ namespace SearchLib
             this.start = new DateTime(0001, 01, 01, start.Hour, start.Minute, 0);
             this.end = new DateTime(0001, 01, 01, end.Hour, end.Minute, 0); ;
         }
+
+        public TimeSpan Deviation(TimeBlock other)
+        {
+            TimeSpan startOffset = (this.start - other.start).Duration();
+            TimeSpan endOffset = (this.end - other.end).Duration();
+
+            TimeSpan totalOffset = TimeSpan.Zero;
+            if (this.start < other.start) totalOffset += startOffset;
+            if (this.end > other.end) totalOffset += endOffset;
+
+            return totalOffset;
+        }
     }
 
     public static class SearchManager
@@ -382,25 +390,5 @@ namespace SearchLib
         AlphabetAscending,
         AlphabetDescending,
         Relevance
-    }
-
-    [Flags]
-    public enum Availability
-    {
-        Open,
-        Waitlist,
-        Closed
-    }
-
-    [Flags]
-    public enum Days
-    {
-        Monday      = 0b_0000_0001,
-        Tuesday     = 0b_0000_0010,
-        Wednesday   = 0b_0000_0100,
-        Thursday    = 0b_0000_1000,
-        Friday      = 0b_0001_0000,
-        Saturday    = 0b_0010_0000,
-        Sunday      = 0b_0100_0000
     }
 }
