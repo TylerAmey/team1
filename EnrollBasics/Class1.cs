@@ -154,10 +154,31 @@ namespace EnrollBasics
         public SeatManager seats;
         public List<Session> sessions;
 
-        public Course ParentCourse { get
+        public Course ParentCourse 
+        { 
+            get
             {
                 return Globals.Courses.Find((course) => course.id == courseID);
-            } }
+            } 
+        }
+
+        public Status SectionStatus
+        {
+            get
+            {
+                if (seats.seatPosition > 0) return Status.OPEN;
+                if (seats.waitListPosition <= seats.capacity) return Status.WAITLIST;
+                return Status.CLOSED;
+            }
+        }
+
+        [Flags]
+        public enum Status
+        {
+            OPEN =      0b_0001,
+            WAITLIST =  0b_0010,
+            CLOSED =    0b_0100
+        }
     }
 
     public class Session
