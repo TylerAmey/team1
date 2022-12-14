@@ -160,7 +160,7 @@ namespace EnrollBasics
 
             this.professor = section.professor;
             this.sectionNumber = section.number;
-            Status.TryParse(section.SectionStatus.ToString(), true, out status);
+            Status.TryParse(section.Status.ToString(), true, out status);
 
             // add all the sessions into the special list to have their data extracted
             // special list also groups them so we can display them more succintly
@@ -210,6 +210,8 @@ namespace EnrollBasics
             TableLayoutPanel scheduleTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             SplitContainer headerSplitContainer = new System.Windows.Forms.SplitContainer();
             RichTextBox descRichTextBox = new System.Windows.Forms.RichTextBox();
+            Button saveButton = new System.Windows.Forms.Button();
+            SplitContainer headerHorizontalSplitContainer = new System.Windows.Forms.SplitContainer();
 
             //
             // p1
@@ -258,6 +260,34 @@ namespace EnrollBasics
             titleLabel.TabIndex = 1;
             titleLabel.Text = $"{subject} {number} - {sectionNumber} {name}"; // "XXXX ### - ## Course Title"
             titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // saveButton
+            // 
+            saveButton.FlatAppearance.BorderSize = 0;
+            saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            saveButton.Location = new System.Drawing.Point(0, 0);
+            saveButton.Name = "saveButton";
+            saveButton.Size = new System.Drawing.Size(42, 41);
+            saveButton.TabIndex = 2;
+            saveButton.Text = "★";
+            saveButton.UseVisualStyleBackColor = false;
+            // 
+            // headerHorizontalSplitContainer
+            // 
+            headerHorizontalSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            headerHorizontalSplitContainer.Name = "headerHorizontalSplitContainer";
+            headerHorizontalSplitContainer.IsSplitterFixed = true;
+            // 
+            // headerHorizontalSplitContainer.Panel1
+            // 
+            headerHorizontalSplitContainer.Panel1.Controls.Add(titleLabel);
+            // 
+            // headerHorizontalSplitContainer.Panel2
+            // 
+            headerHorizontalSplitContainer.Panel2.Controls.Add(saveButton);
+            headerHorizontalSplitContainer.SplitterDistance = p1.Width;
+            headerHorizontalSplitContainer.TabIndex = 0;
             // 
             // profLabel
             // 
@@ -387,7 +417,7 @@ namespace EnrollBasics
             // 
             // headerSplitContainer.Panel1
             // 
-            headerSplitContainer.Panel1.Controls.Add(titleLabel);
+            headerSplitContainer.Panel1.Controls.Add(headerHorizontalSplitContainer);
             // 
             // headerSplitContainer.Panel2
             // 
