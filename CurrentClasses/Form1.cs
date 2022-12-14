@@ -105,6 +105,7 @@ namespace CurrentClasses
                 splitter.Dock = DockStyle.Fill;
                 splitter.Panel1.BackColor = Color.DarkOrange;
                 splitter.BorderStyle = BorderStyle.Fixed3D;
+                splitter.Size = new Size(300, 200);
 
                 //Create all labels for the course
                 Label className = new Label();
@@ -451,21 +452,34 @@ namespace CurrentClasses
                 //set the label text to the string
                 locationsLabel.Text = locationLabelString;
 
-                //Add the class name and code to the first splitter panel
-                Control[] panel1Controls = { className, classCode };
-                splitter.Panel1.Controls.AddRange(panel1Controls);
-                //Add the days times and location to the second splitter panel
-                Control[] panel2Controls = { daysLabel, timesLabel, locationsLabel };
-                splitter.Panel2.Controls.AddRange(panel2Controls);
+                /*                //Add the class name and code to the first splitter panel
+                                Control[] panel1Controls = { className, classCode };
+                                splitter.Panel1.Controls.AddRange(panel1Controls);
+                                //Add the days times and location to the second splitter panel
+                                Control[] panel2Controls = { daysLabel, timesLabel, locationsLabel };
+                                splitter.Panel2.Controls.AddRange(panel2Controls);
+                */
 
-/*                splitter.Panel1.Controls.Add(className);
+                className.BackColor = Color.Transparent;
+                classCode.BackColor = Color.Transparent;
+                daysLabel.BackColor = Color.Transparent;
+                timesLabel.BackColor = Color.Transparent;
+                locationsLabel.BackColor = Color.Transparent;
+
+                splitter.Panel1.Controls.Add(className);
+                classCode.Location = new Point(className.Location.X, className.Location.Y + 30);
                 splitter.Panel1.Controls.Add(classCode);
+
                 splitter.Panel2.Controls.Add(daysLabel);
+                timesLabel.Location = new Point(daysLabel.Location.X, daysLabel.Location.Y + 30);
                 splitter.Panel2.Controls.Add(timesLabel);
-                splitter.Panel2.Controls.Add(locationsLabel);*/
+                locationsLabel.Location = new Point(timesLabel.Location.X, timesLabel.Location.Y + 30);
+                splitter.Panel2.Controls.Add(locationsLabel);
 
                 coursePanel.Controls.Add(splitter);
                 classesFlowLayoutPanel.Controls.Add(coursePanel); 
+
+                
             }
         }     
     }
