@@ -247,6 +247,7 @@
             // fiveLabel
             // 
             this.fiveLabel.AutoSize = true;
+            this.fiveLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.fiveLabel.Location = new System.Drawing.Point(30, 306);
             this.fiveLabel.Name = "fiveLabel";
             this.fiveLabel.Size = new System.Drawing.Size(47, 13);
