@@ -28,28 +28,101 @@ namespace CurrentClasses
             List<Control> fridayPanels = new List<Control>();
 
             //Add each panel to their individual lists
-            foreach (Control control in splitContainer1.Panel2.Controls)
+                
+            mondayPanels.Add(monday8AMPanel);
+            mondayPanels.Add(monday9Panel);
+            mondayPanels.Add(monday10Panel);
+            mondayPanels.Add(monday11Panel);
+            mondayPanels.Add(monday12Panel);
+            mondayPanels.Add(monday1Panel);
+            mondayPanels.Add(monday2Panel);
+            mondayPanels.Add(monday3Panel);
+            mondayPanels.Add(monday4Panel);
+            mondayPanels.Add(monday5Panel);
+            mondayPanels.Add(monday6Panel);
+            mondayPanels.Add(monday7Panel);
+
+            tuesdayPanels.Add(tuesday8AMPanel);
+            tuesdayPanels.Add(tuesday9Panel);
+            tuesdayPanels.Add(tuesday10Panel);
+            tuesdayPanels.Add(tuesday11Panel);
+            tuesdayPanels.Add(tuesday12Panel);
+            tuesdayPanels.Add(tuesday1Panel);
+            tuesdayPanels.Add(tuesday2Panel);
+            tuesdayPanels.Add(tuesday3Panel);
+            tuesdayPanels.Add(tuesday4Panel);
+            tuesdayPanels.Add(tuesday5Panel);
+            tuesdayPanels.Add(tuesday6Panel);
+            tuesdayPanels.Add(tuesday7Panel);
+
+            wednesdayPanels.Add(wednesday8AMPanel);
+            wednesdayPanels.Add(wednesday9Panel);
+            wednesdayPanels.Add(wednesday10Panel);
+            wednesdayPanels.Add(wednesday11Panel);
+            wednesdayPanels.Add(wednesday12Panel);
+            wednesdayPanels.Add(wednesday1Panel);
+            wednesdayPanels.Add(wednesday2Panel);
+            wednesdayPanels.Add(wednesday3Panel);
+            wednesdayPanels.Add(wednesday4Panel);
+            wednesdayPanels.Add(wednesday5Panel);
+            wednesdayPanels.Add(wednesday6Panel);
+            wednesdayPanels.Add(wednesday7Panel);
+
+            thursdayPanels.Add(thursday8AMPanel);
+            thursdayPanels.Add(thursday9Panel);
+            thursdayPanels.Add(thursday10Panel);
+            thursdayPanels.Add(thursday11Panel);
+            thursdayPanels.Add(thursday12Panel);
+            thursdayPanels.Add(thursday1Panel);
+            thursdayPanels.Add(thursday2Panel);
+            thursdayPanels.Add(thursday3Panel);
+            thursdayPanels.Add(thursday4Panel);
+            thursdayPanels.Add(thursday5Panel);
+            thursdayPanels.Add(thursday6Panel);
+            thursdayPanels.Add(thursday7Panel);
+
+            fridayPanels.Add(friday8AMPanel);
+            fridayPanels.Add(friday9Panel);
+            fridayPanels.Add(friday10Panel);
+            fridayPanels.Add(friday11Panel);
+            fridayPanels.Add(friday12Panel);
+            fridayPanels.Add(friday1Panel);
+            fridayPanels.Add(friday2Panel);
+            fridayPanels.Add(friday3Panel);
+            fridayPanels.Add(friday4Panel);
+            fridayPanels.Add(friday5Panel);
+            fridayPanels.Add(friday6Panel);
+            fridayPanels.Add(friday7Panel);
+
+            //Stylize the panels
+            foreach(Control control in mondayPanels)
             {
-                if((string)control.Tag == "monday")
-                {
-                    mondayPanels.Add(control);
-                }
-                if ((string)control.Tag == "tuesday")
-                {
-                    tuesdayPanels.Add(control);
-                }
-                if ((string)control.Tag == "wednesday")
-                {
-                    wednesdayPanels.Add(control);
-                }
-                if ((string)control.Tag == "thursday")
-                {
-                    thursdayPanels.Add(control);
-                }
-                if ((string)control.Tag == "friday")
-                {
-                    fridayPanels.Add(control);
-                }
+                control.Font = new Font(new FontFamily("Arial"), 8, style: FontStyle.Bold);
+                control.BackColor = Color.White;
+            }
+
+            foreach (Control control in tuesdayPanels)
+            {
+                control.Font = new Font(new FontFamily("Arial"), 8, style: FontStyle.Bold);
+                control.BackColor = Color.White;
+            }
+
+            foreach (Control control in wednesdayPanels)
+            {
+                control.Font = new Font(new FontFamily("Arial"), 8, style: FontStyle.Bold);
+                control.BackColor = Color.White;
+            }
+
+            foreach (Control control in thursdayPanels)
+            {
+                control.Font = new Font(new FontFamily("Arial"), 8, style: FontStyle.Bold);
+                control.BackColor = Color.White;
+            }
+
+            foreach (Control control in fridayPanels)
+            {
+                control.Font = new Font(new FontFamily("Arial"), 8, style: FontStyle.Bold);
+                control.BackColor = Color.White;
             }
 
             //For each course the student has enrolled in...
@@ -57,19 +130,45 @@ namespace CurrentClasses
             {
                 //Create a panel and a splitter within it
                 Panel coursePanel = new Panel();
+                coursePanel.AutoSize = true;
+                coursePanel.Padding = new Padding(0, 0, 0, 0);
                 SplitContainer splitter = new SplitContainer();
                 splitter.Orientation = Orientation.Horizontal;
-                splitter.Dock = DockStyle.Fill;
+                splitter.Dock = DockStyle.None;
+                splitter.IsSplitterFixed = true;
                 splitter.Panel1.BackColor = Color.DarkOrange;
+                splitter.Panel2.BackColor = Color.White;
+                splitter.BorderStyle = BorderStyle.Fixed3D;
+                splitter.Size = new Size(105, 175);
 
                 //Create all labels for the course
                 Label className = new Label();
                 className.Text = section.ParentCourse.name;
+                className.AutoSize = false;
+                className.TextAlign = ContentAlignment.MiddleCenter;
+                className.Dock = DockStyle.None;
+
                 Label classCode = new Label();
                 classCode.Text = section.ParentCourse.id;
+                classCode.AutoSize = false;
+                classCode.TextAlign = ContentAlignment.MiddleCenter;
+                classCode.Dock = DockStyle.None;
+
                 Label daysLabel = new Label();
+                daysLabel.AutoSize = false;
+                daysLabel.TextAlign = ContentAlignment.MiddleCenter;
+                daysLabel.Dock = DockStyle.None;
+
                 Label timesLabel = new Label();
+                timesLabel.AutoSize = false;
+                timesLabel.TextAlign = ContentAlignment.MiddleCenter;
+                timesLabel.Dock = DockStyle.None;
+                bool multipleTimes = false;
+
                 Label locationsLabel = new Label();
+                locationsLabel.AutoSize = false;
+                locationsLabel.TextAlign = ContentAlignment.MiddleCenter;
+                locationsLabel.Dock = DockStyle.None;
 
                 //Create lists of days and end time for each class session
                 List<string> days = new List<string>();
@@ -97,9 +196,25 @@ namespace CurrentClasses
                         days.Add(day);
                     }
 
-
                     //Get the start time of the session
-                    string startTimeHour = session.startTime.Hour.ToString();
+                    bool pmStartIndicator = false;
+                    string startTimeHour = "";
+                    //To transition from military time to standard
+                    if (session.startTime.Hour < 13)
+                    {
+                        startTimeHour = session.startTime.Hour.ToString();
+                    }
+                    else
+                    {
+                        for(int i = 1; i < 13; i++)
+                        {
+                            if(i + 12 == session.startTime.Hour)
+                            {
+                                startTimeHour = i.ToString();
+                            }
+                        }
+                        pmStartIndicator = true;
+                    }
                     string startTimeMin = session.startTime.Minute.ToString();
                     //Due to how DateTime is used, if it is 8:01, it would return the minutes as "1";
                     //Fix this issue
@@ -107,8 +222,16 @@ namespace CurrentClasses
                     {
                         startTimeMin = "0" + startTimeMin;
                     }
-                    //Create the full start time
-                    string startTime = startTimeHour + ":" + startTimeMin;
+                    //To add either PM or AM to the times
+                    string startTime = "";
+                    if (pmStartIndicator == false)
+                    {
+                        startTime = startTimeHour + ":" + startTimeMin + " A.M";
+                    }
+                    else
+                    {
+                        startTime = startTimeHour + ":" + startTimeMin + " P.M";
+                    }
 
                     //If the time is already in the sessions list, don't add to the list UNLESS
                     bool truthStart = true;
@@ -128,14 +251,40 @@ namespace CurrentClasses
 
 
                     //Get the end time of the session
-                    string endTimeHour = session.endTime.Hour.ToString();
+                    bool pmEndIndicator = false;
+                    //To transition from military time to standard
+                    string endTimeHour = "";
+                    if (session.startTime.Hour < 13)
+                    {
+                        endTimeHour = session.endTime.Hour.ToString();
+                    }
+                    else
+                    {
+                        for (int i = 1; i < 13; i++)
+                        {
+                            if (i + 12 == session.endTime.Hour)
+                            {
+                                endTimeHour = i.ToString();
+                            }
+                        }
+                        pmEndIndicator = true;
+                    }
                     string endTimeMinute = session.endTime.Minute.ToString();
                     //The same exact code as above, EXCEPT
                     if (endTimeMinute.Length == 1)
                     {
                         endTimeMinute = "0" + endTimeMinute;
                     }
-                    string endTime = endTimeHour + ":" + endTimeMinute;
+                    //To add either PM or AM to the times
+                    string endTime = "";
+                    if (pmEndIndicator == false)
+                    {
+                        endTime = endTimeHour + ":" + endTimeMinute + " AM";
+                    }
+                    else
+                    {
+                        endTime = endTimeHour + ":" + endTimeMinute + " PM";
+                    }
 
                     bool truthEnd = true;
                     foreach (string e in endTimes)
@@ -187,13 +336,13 @@ namespace CurrentClasses
                         //Create an int to sift through the list
                         int nStart = 0;
                         //start at 8 and go until 21 due to military time
-                        for (int i = 8; i < 21; i++)
+                        for (int i = 8; i < 20; i++)
                         {
                             //Create a double so we can compare the true end time
                             double dEndTime = nEndTimeHour + (.1 * nEndTimeMinute);
                             //If i is greater than or equal to the start time and
                             //Less than or equal to end time + 1 (to account for minutes)
-                            if (i >= nStartTimeHour && i <= dEndTime)
+                            if (i >= nStartTimeHour && i < dEndTime)
                             {
                                 //Add it to the panels to highlight
                                 panelToHighlight.Add(mondayPanels[nStart]);
@@ -207,13 +356,13 @@ namespace CurrentClasses
                         //Create an int to sift through the list
                         int nStart = 0;
                         //start at 8 and go until 21 due to military time
-                        for (int i = 8; i < 21; i++)
+                        for (int i = 8; i < 20; i++)
                         {
                             //Create a double so we can compare the true end time
                             double dEndTime = nEndTimeHour + (.1 * nEndTimeMinute);
                             //If i is greater than or equal to the start time and
                             //Less than or equal to end time + 1 (to account for minutes)
-                            if (i >= nStartTimeHour && i <= dEndTime)
+                            if (i >= nStartTimeHour && i < dEndTime)
                             {
                                 //Add it to the panels to highlight
                                 panelToHighlight.Add(tuesdayPanels[nStart]);
@@ -227,13 +376,13 @@ namespace CurrentClasses
                         //Create an int to sift through the list
                         int nStart = 0;
                         //start at 8 and go until 21 due to military time
-                        for (int i = 8; i < 21; i++)
+                        for (int i = 8; i < 20; i++)
                         {
                             //Create a double so we can compare the true end time
                             double dEndTime = nEndTimeHour + (.1 * nEndTimeMinute);
                             //If i is greater than or equal to the start time and
                             //Less than or equal to end time + 1 (to account for minutes)
-                            if (i >= nStartTimeHour && i <= dEndTime)
+                            if (i >= nStartTimeHour && i < dEndTime)
                             {
                                 //Add it to the panels to highlight
                                 panelToHighlight.Add(wednesdayPanels[nStart]);
@@ -247,13 +396,13 @@ namespace CurrentClasses
                         //Create an int to sift through the list
                         int nStart = 0;
                         //start at 8 and go until 21 due to military time
-                        for (int i = 8; i < 21; i++)
+                        for (int i = 8; i < 20; i++)
                         {
                             //Create a double so we can compare the true end time
                             double dEndTime = nEndTimeHour + (.1 * nEndTimeMinute);
                             //If i is greater than or equal to the start time and
                             //Less than or equal to end time + 1 (to account for minutes)
-                            if (i >= nStartTimeHour && i <= dEndTime)
+                            if (i >= nStartTimeHour && i < dEndTime)
                             {
                                 //Add it to the panels to highlight
                                 panelToHighlight.Add(thursdayPanels[nStart]);
@@ -267,13 +416,13 @@ namespace CurrentClasses
                         //Create an int to sift through the list
                         int nStart = 0;
                         //start at 8 and go until 21 due to military time
-                        for (int i = 8; i < 21; i++)
+                        for (int i = 8; i < 20; i++)
                         {
                             //Create a double so we can compare the true end time
                             double dEndTime = nEndTimeHour + (.1 * nEndTimeMinute);
                             //If i is greater than or equal to the start time and
                             //Less than or equal to end time + 1 (to account for minutes)
-                            if (i >= nStartTimeHour && i <= dEndTime)
+                            if (i >= nStartTimeHour && i < dEndTime)
                             {
                                 //Add it to the panels to highlight
                                 panelToHighlight.Add(fridayPanels[nStart]);
@@ -289,8 +438,11 @@ namespace CurrentClasses
                         //Create a label to inducate what class it is
                         Label lbl = new Label();
                         lbl.Text = section.courseID;
+                        lbl.AutoSize = false;
+                        lbl.TextAlign = ContentAlignment.MiddleCenter;
+                        lbl.Dock = DockStyle.Fill;
                         //Turn the background color of the panel lime adn add the label to it
-                        panel.BackColor = Color.Lime;
+                        panel.BackColor = Color.DarkOrange;
                         panel.Controls.Add(lbl);
                     }
                 }
@@ -329,6 +481,8 @@ namespace CurrentClasses
                 string timeString ="";
                 if(endTimes.Count > 1 || startTimes.Count > 1)
                 {
+                    //Set the multiple times boolean to true for later in the code
+                    multipleTimes = true;
                     //iterate through all of the lists
                     for(int i = 0; i < endTimes.Count; i++)
                     {
@@ -347,7 +501,26 @@ namespace CurrentClasses
                             day = letter1.ToString();
                         }
                         //Add the abbreviation to the time string and a new line for each time
-                        timeString += day + ": " + startTimes[i] + "-" + endTimes[i] + "\n";
+                        //If there are an even amounts of starts and end times in the lists
+                        try
+                        {
+                            timeString += day + ": " + startTimes[i] + "-" + endTimes[i] + "\n";
+                        }
+                        //If not...
+                        catch
+                        {
+                            //Acount for variations (examples would be labs)
+                            //This only happens for 2 day classes with variations. 3 day classes with
+                            //variations are accounted in lines 145-196
+                            try
+                            {
+                                timeString += day + ": " + startTimes[0] + "-" + endTimes[i] + "\n";
+                            }
+                            catch
+                            {
+                                timeString += day + ": " + startTimes[i] + "-" + endTimes[0] + "\n";
+                            }
+                        }
                     }
                 }
                 //If there are no multiple times in the list, just add the one time
@@ -388,17 +561,42 @@ namespace CurrentClasses
                 //set the label text to the string
                 locationsLabel.Text = locationLabelString;
 
-                //Add the class name and code to the first splitter panel
+                //Set the text color to transparent
+                className.BackColor = Color.Transparent;
+                classCode.BackColor = Color.Transparent;
+                daysLabel.BackColor = Color.Transparent;
+                timesLabel.BackColor = Color.Transparent;
+                locationsLabel.BackColor = Color.Transparent;
+
+                //If there are multiple times, uncenter the text
+                if(multipleTimes == true)
+                {
+                    timesLabel.AutoSize = true;
+                }
+
+                //Change the fonts
+                className.Font = new Font(new FontFamily("Arial"), 8, style: FontStyle.Regular);
+                classCode.Font = new Font(new FontFamily("Arial"), 8, style: FontStyle.Regular);
+                daysLabel.Font = new Font(new FontFamily("Arial"), 8, style: FontStyle.Regular);
+                timesLabel.Font = new Font(new FontFamily("Arial"), 8, style: FontStyle.Regular);
+                locationsLabel.Font = new Font(new FontFamily("Arial"), 8, style: FontStyle.Regular);
+
+                //Add the controls to the splitter
+                className.Location = new Point(className.Location.X, className.Location.Y + 15);
                 splitter.Panel1.Controls.Add(className);
+                classCode.Location = new Point(className.Location.X, className.Location.Y + 25);
                 splitter.Panel1.Controls.Add(classCode);
-                //Add the days times and location to the second splitter panel
+
                 splitter.Panel2.Controls.Add(daysLabel);
+                timesLabel.Location = new Point(daysLabel.Location.X, daysLabel.Location.Y + 25);
                 splitter.Panel2.Controls.Add(timesLabel);
+                locationsLabel.Location = new Point(timesLabel.Location.X, timesLabel.Location.Y + 30);
                 splitter.Panel2.Controls.Add(locationsLabel);
+                //Add the splitter to the panel
                 coursePanel.Controls.Add(splitter);
                 classesFlowLayoutPanel.Controls.Add(coursePanel); 
             }
-        }     
+        }
     }
    
 }

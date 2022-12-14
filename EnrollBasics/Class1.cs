@@ -23,9 +23,9 @@ namespace EnrollBasics
     {
         public static string name;
         public static string major;
-        public static List<Course> projectedSchedule;
-        public static List<Course> savedCourses;
         public static List<Course> completedCourses;
+        public static List<Section> projectedSchedule;
+        public static List<Section> savedCourses;
         public static List<Section> enrolledCourses;
         public static Dictionary<string, Requirement> requirements;
         public static int totalCredits;
@@ -35,11 +35,13 @@ namespace EnrollBasics
         {
             name = "David Schuh";
             major = "New Media Interactive Development";
-            projectedSchedule = new List<Course>();
-            savedCourses = new List<Course>();
+            projectedSchedule = new List<Section>();
+            savedCourses = new List<Section>();
             enrolledCourses = new List<Section>()
             {
-                Globals.Courses[3].sections[0]
+                Globals.Courses[3].sections[0],
+                Globals.Courses[4].sections[0],
+                Globals.Courses[5].sections[0]
             };
             completedCourses = new List<Course>()
             {
@@ -152,10 +154,31 @@ namespace EnrollBasics
         public SeatManager seats;
         public List<Session> sessions;
 
-        public Course ParentCourse { get
+        public Course ParentCourse 
+        { 
+            get
             {
                 return Globals.Courses.Find((course) => course.id == courseID);
-            } }
+            } 
+        }
+
+        public Status Status
+        {
+            get
+            {
+                if (seats.seatPosition > 0) return Status.OPEN;
+                if (seats.waitListPosition <= seats.capacity) return Status.WAITLIST;
+                return Status.CLOSED;
+            }
+        }
+
+        public Days Days
+        {
+            get
+            {
+                return sessions.Aggregate(new Days(), (days, session) => days |= session.Day);
+            }
+        }
     }
 
     public class Session
@@ -163,6 +186,16 @@ namespace EnrollBasics
         public DateTime startTime;
         public DateTime endTime;
         public string location;
+
+        public Days Day
+        {
+            get
+            {
+                Days thisDay = 0;
+                Days.TryParse(startTime.DayOfWeek.ToString(), true, out thisDay);
+                return thisDay;
+            }
+        }
     }
 
     public class SeatManager
@@ -170,5 +203,24 @@ namespace EnrollBasics
         public int seatPosition;
         public int waitListPosition;
         public int capacity;
+    }
+
+    [Flags]
+    public enum Status
+    {
+        OPEN        = 0b_0001,
+        WAITLIST    = 0b_0010,
+        CLOSED      = 0b_0100
+    }
+
+    [Flags]
+    public enum Days
+    {
+        MONDAY      = 0b_0000_0001,
+        TUESDAY     = 0b_0000_0010,
+        WEDNESDAY   = 0b_0000_0100,
+        THURSDAY    = 0b_0000_1000,
+        FRIDAY      = 0b_0001_0000,
+        SATURDAY    = 0b_0010_0000,
     }
 }

@@ -34,7 +34,7 @@ namespace SearchApp
             this.results = results;
             this.results.Sort((a, b) => a.relevance.CompareTo(b.relevance));
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 6; i++)
             {
                 if (!AddPanel()) break;
             }
@@ -54,7 +54,7 @@ namespace SearchApp
 
             if (index == results.Count) return false;
 
-            CourseBox box = new CourseBox(results[index].course.sections[0]);
+            CourseBox box = new CourseBox(results[index].section);
             box.AddToPanel(ref panel);
 
             flowLayoutPanel1.Controls.Add(panel);

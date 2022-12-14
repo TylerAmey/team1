@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SearchApp"
   ],
+  "SelectedNode": "\\SearchApp\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
