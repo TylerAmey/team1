@@ -28,7 +28,7 @@ namespace EnrollBasics
             Dictionary<string, List<string>> ret = new Dictionary<string, List<string>>();
             ret.Add("New Media Interactive Development", new List<string>()
             {
-                
+                "NMDE 111", "NMDE 112", "IGME 235", "IGME 102"
             });
             ret.Add("Artistic Perspective", new List<string>()
             {

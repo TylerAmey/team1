@@ -17,71 +17,12 @@ namespace SuggestedClasses
     public partial class Form1 : Form 
     {
         List<Section> recommendedSections = new List<Section>();
-        /*public Form1()
-        {
-            InitializeComponent();
-            Student.Init();
-            //Globals.Init();
-
-            /*Course course = new Course();
-            course.id = "IGME201";
-            course.name = "Interac Des & Alg Prob Sol III";
-            course.description = "This is the third course in the software development sequence for new media interactive development students. Students further their exploration of problem solving and abstraction through coverage of topics such as GUI development, events, file I/O, networking, threading, and other advanced topics related to the design and development of modern dynamic applications. Programming assignments are an integral part of the course.";
-            course.credits = 3;
-
-            Section section = new Section();
-            section.number = 1;
-            section.professor = "David Schuh";
-
-            Session session1 = new Session();
-            session1.location = "Online";
-            session1.startTime = new DateTime(2022, 1, 3, 12, 00, 0);
-            session1.endTime = new DateTime(2022, 1, 3, 12, 50, 0);
-
-            Session session2 = new Session();
-            session2.location = "Online";
-            session2.startTime = new DateTime(2022, 1, 5, 12, 00, 0);
-            session2.endTime = new DateTime(2022, 1, 5, 12, 50, 0);
-
-            Session session3 = new Session();
-            session3.location = "Online";
-            session3.startTime = new DateTime(2022, 1, 7, 12, 00, 0);
-            session3.endTime = new DateTime(2022, 1, 7, 12, 50, 0);
-
-            section.sessions = new List<Session>();
-            section.sessions.Add(session1);
-            section.sessions.Add(session2);
-            section.sessions.Add(session3);
-
-            SeatManager seats = new SeatManager();
-            seats.seatPosition = 12;
-            seats.capacity = 30;
-            seats.waitListPosition = 0;
-
-            section.seats = seats;
-
-            CourseBox box = new CourseBox(Course, section);
-            box.EnrollClick += new EventHandler(DoFunny);
-            box.AddToPanel(ref panel1);*/
-
-            /*CourseBox box = new CourseBox(Globals.Courses[0], Globals.Courses[0].sections[0]);
-            box.EnrollClick += new EventHandler(DoFunny);
-            box.AddToPanel(ref panel1);
-
-            box = new CourseBox(Globals.Courses[1], Globals.Courses[1].sections[1]);
-            box.EnrollClick += new EventHandler(DoFunny);
-            box.AddToPanel(ref panel2);
-
-            box = new CourseBox(Globals.Courses[2], Globals.Courses[2].sections[0]);
-            box.EnrollClick += new EventHandler(DoFunny);
-            box.AddToPanel(ref panel3);
-        }*/
 
         public Form1()
         {
             InitializeComponent();
             Student.Init();
-            //Globals.Init();
+            
 
             int i = 0; //iterator variable
 
@@ -108,15 +49,12 @@ namespace SuggestedClasses
             }
 
             CourseBox box = new CourseBox(recommendedSections[0]);
-            box.EnrollClick += new EventHandler(DoFunny);
             box.AddToPanel(ref panel1);
 
             box = new CourseBox(recommendedSections[1]);
-            box.EnrollClick += new EventHandler(DoFunny);
             box.AddToPanel(ref panel2);
 
             box = new CourseBox(recommendedSections[2]);
-            box.EnrollClick += new EventHandler(DoFunny);
             box.AddToPanel(ref panel3);
         }
 
@@ -158,10 +96,23 @@ namespace SuggestedClasses
         {
             Course course = section.ParentCourse;
             int recValue = 0;
+            bool found = false;
 
             //foreach (requirement in student's requirements)
             //if this course to that requirement's FulfillsRequirement method returns true, break loop and continue
-            //after loop if not found(maybe use found boolean variable), method returns 0
+            //after loop if not found method returns 0
+            foreach (KeyValuePair<string, Requirement> requirement in Student.requirements)
+            {
+                if (requirement.Value.FullfillsRequirement(section.ParentCourse))
+                {
+                    found = true;
+                    break;
+                }
+            }
+            if (found == false)
+            {
+                return 0;
+            }
             
             if (Student.year < course.yearLvl) //1-Freshman, 2-Sophomore, 3-Junior, 4-Senior
             {
@@ -189,11 +140,6 @@ namespace SuggestedClasses
             //It is preferred that the sessions of the section fit into the current schedule
 
             return recValue;
-        }
-
-        private void DoFunny(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
