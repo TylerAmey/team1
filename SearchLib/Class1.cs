@@ -23,7 +23,7 @@ namespace SearchLib
             this.relevance = relevance; 
         }
 
-        private class SortRelevanceHelper : IComparer
+        public class SortRelevanceHelper : IComparer
         {
             int IComparer.Compare(object a, object b)
             {
@@ -33,7 +33,7 @@ namespace SearchLib
             }
         }
 
-        private class SortAlphabeticalDescendingHelper : IComparer
+        public class SortAlphabeticalDescendingHelper : IComparer
         {
             int IComparer.Compare(object a, object b)
             {
@@ -43,7 +43,7 @@ namespace SearchLib
             }
         }
 
-        private class SortAlphabeticalAscendingHelper : IComparer
+        public class SortAlphabeticalAscendingHelper : IComparer
         {
             int IComparer.Compare(object a, object b)
             {
@@ -202,19 +202,39 @@ namespace SearchLib
         }
     }
 
-    // TODO
     public class QueryTimes : QueryCondition<TimeBlocks>, IQuerySimilar
     {
         public QueryTimes(TimeBlocks query) : base(query) { }
 
         public override bool IsSatisfied(Section section)
         {
-            return true;
+            foreach(Session session in section.sessions)
+            {
+                TimeBlock tbSession = new TimeBlock(session.startTime, session.endTime);
+                if (Query.Times.Any(tb => tbSession.Deviation(tb) == TimeSpan.Zero)) continue; // if it's in there, keep going
+                return false; // if not it fails
+            }
+            return true; // if it makes it to the end it passes
         }
 
         public int GetDistance(Section section)
         {
-            return 0;
+            int distance = 0;
+
+            foreach (Session session in section.sessions)
+            {
+                TimeBlock tbSession = new TimeBlock(session.startTime, session.endTime);
+                TimeSpan currentMin = TimeSpan.MaxValue;
+                
+                foreach (TimeBlock tb in Query.Times)
+                {
+                    if (tbSession.Deviation(tb) < currentMin) currentMin = tbSession.Deviation(tb);
+                };
+
+                distance += (int)(currentMin.TotalMinutes);
+            }
+
+            return distance;
         }
     }
 
@@ -309,9 +329,11 @@ namespace SearchLib
         {
             for (int i = 1; i < times.Count; i++)
             {
-                if ( times[i].start <= times[i - 1].end )
+                if (!(times[i].start <= times[i - 1].end && times[i].end >= times[i - 1].start)) continue;
+                if (!(times[i - 1].start <= times[i].end && times[i - 1].end >= times[i].start)) continue;
                 {
-                    times[i - 1].end = times[i].end;
+                    if (times[i].end > times[i - 1].end) times[i - 1].end = times[i].end;
+                    if (times[i].start < times[i - 1].start) times[i - 1].start = times[i].start;
                     times.RemoveAt(i);
                     Collapse();
                 }

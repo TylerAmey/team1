@@ -23,6 +23,8 @@ namespace SearchApp
         {
             InitializeComponent();
 
+            backButton.Click += new EventHandler(BackButton__Click);
+
             if (results.Count == 0)
             {
                 MessageBox.Show("No Results Found");
@@ -34,8 +36,12 @@ namespace SearchApp
             this.results.Sort((a, b) => a.relevance.CompareTo(b.relevance));
 
             LoadResults();
-
             ShowDialog();
+        }
+
+        private void BackButton__Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void LoadResults()
@@ -62,10 +68,7 @@ namespace SearchApp
             if (index == results.Count) return false;
 
             CourseBox box = new CourseBox(results[index].section);
-            // box.EnrollClick += (sender, e) =>
-            // {
-            //    LoadResults();
-            // };
+
             box.AddToPanel(ref panel);
 
             flowLayoutPanel1.Controls.Add(panel);
