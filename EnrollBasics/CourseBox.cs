@@ -550,6 +550,12 @@ namespace EnrollBasics
             }
         }
 
+        private void DisenrollButton__Click(object sender, EventArgs e)
+        {
+            Student.enrolledCourses.Remove(section);
+            Reload(sender, e);
+        }
+
         private void SaveButton__Click(object sender, EventArgs e)
         {
             Student.savedCourses.Add(section);
