@@ -33,15 +33,16 @@ namespace SearchApp
             perspectivesButton.Click += new EventHandler(PerspectivesButton__Click);
             availabilityButton.Click += new EventHandler(AvailabilityButton__Click);
 
-            // unfocusing time/days/pers/avai should cloes the box
+            // unfocusing time/days/pers/avai should close the box
+            timeGroupBox.Leave += new EventHandler(DropBox__Leave);
+            daysGroupBox.Leave += new EventHandler(DropBox__Leave);
+            perspectivesGroupBox.Leave += new EventHandler(DropBox__Leave);
+            availabilityGroupBox.Leave += new EventHandler(DropBox__Leave);
 
             // course code should open a course code dialog
             // if validated, skip to search results
 
             // ----------------
-            // update filter on:
-
-            // keyword entry
 
             // subject entry
             subjectTextBox.CharacterCasing = CharacterCasing.Upper;
@@ -50,17 +51,8 @@ namespace SearchApp
             // number entry
             numberTextBox.KeyPress += new KeyPressEventHandler(NumberTextBox__KeyPress);
 
-            // major entry
-
-            // time
-
-            // days
-
-            // perspetive
-
-            // availability
-
             // reset
+            resetButton.Click += new EventHandler(ResetButton__Click);
 
             // ----------------
             // search button
@@ -109,6 +101,13 @@ namespace SearchApp
             else availabilityGroupBox.Height = 23;
         }
 
+        // close boxes
+        private void DropBox__Leave(object sender, EventArgs e)
+        {
+            GroupBox groupBox = (GroupBox)sender;
+            groupBox.Height = 23;
+        }
+
         // timeGroupBox__Leave
         // close box
 
@@ -152,25 +151,16 @@ namespace SearchApp
             if (tb.Text.Length == 3 && e.KeyChar != '\b') e.Handled = true;
         }
 
-        // majorTextBox__TextChanged
-        // update filter
-
-        // timeCheckBox__CheckedChanged
-        // update filter
-
-        // daysCheckBox__CheckedChanged
-        // update filter
-        // update text
-
-        // perspectivesCheckBox__CheckedChanged
-        // update filter
-
-        // availabilityCheckBox__CheckedChanged
-        // update filter 
-
+        // TODO
         // resetButton__Click
-        // update filter
         // clear everything
+        private void ResetButton__Click(object sender, EventArgs e)
+        {
+            keywordTextBox.Text = "";
+            subjectTextBox.Text = "";
+            numberTextBox.Text = "";
+            majorTextBox.Text = "";
+        }
 
         // searchButton__Click
         // open ResultsForm

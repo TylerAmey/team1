@@ -54,6 +54,36 @@ namespace EnrollBasics
             totalCredits = 0;
             year = 2;
         }
+
+        public static void Enroll(Section section)
+        {
+            Course course = section.ParentCourse;
+            if (totalCredits + course.credits > 18) throw new MaximumCreditsSurpassedException("Could not complete enrollment, student would exceed maximum credits allowed (18).");
+            if (enrolledCourses.Any(s => s.courseID == course.id)) throw new DuplicateCoursesException($"Could not complete enrollment, you have already enrolled in a section of {course.id}.");
+            if (!course.prereqsFulfilled(completedCourses))
+            {
+                string missedPrereqs = "";
+                foreach(string prereq in course.requisites)
+                {
+                    if (!completedCourses.Any(c => c.id == prereq)) missedPrereqs += ", " + prereq;
+                }
+                missedPrereqs = missedPrereqs.Substring(2);
+
+                throw new RequisitesNotMetException($"Could not complete enrollment, requisites have not been met (missing {missedPrereqs}).");
+            }
+            if (ScheduleOverlap(section)) throw new OverlappingCoursesException("Could not complete enrollment, section overlaps with an enrolled course.");
+
+            enrolledCourses.Add(section);            
+        }
+
+        private static bool ScheduleOverlap(Section section)
+        {
+            foreach (Section enrolled in enrolledCourses)
+            {
+                if (enrolled.sessions.Any(e => section.sessions.Any(s => s.Overlap(e)))) return true;
+            }
+            return false;
+        }
     }
 
     public class Course
@@ -82,10 +112,10 @@ namespace EnrollBasics
             return fulfilled;
         }*/
 
-        /* public bool prereqsFulfilled(List<Course> completed)
+        public bool prereqsFulfilled(List<Course> completed)
         {
             return !requisites.Any(req => !completed.Any(course => course.id == req));
-        } */
+        }
     }
 
     public abstract class Requirement
@@ -196,6 +226,11 @@ namespace EnrollBasics
                 return thisDay;
             }
         }
+
+        public bool Overlap(Session other)
+        {
+            return (other.startTime > startTime) && (other.endTime < endTime);
+        }
     }
 
     public class SeatManager
@@ -203,6 +238,41 @@ namespace EnrollBasics
         public int seatPosition;
         public int waitListPosition;
         public int capacity;
+    }
+
+    public class EnrollException : Exception
+    {
+        public EnrollException() { }
+
+        public EnrollException(string message) : base(message) { }
+    }
+
+    public class MaximumCreditsSurpassedException : EnrollException
+    {
+        public MaximumCreditsSurpassedException() { }
+        
+        public MaximumCreditsSurpassedException(string message) : base(message) { }
+    }
+
+    public class RequisitesNotMetException : EnrollException
+    {
+        public RequisitesNotMetException() { }
+
+        public RequisitesNotMetException(string message) : base(message) { }
+    }
+
+    public class OverlappingCoursesException : EnrollException
+    {
+        public OverlappingCoursesException() { }
+
+        public OverlappingCoursesException(string message) : base(message) { }
+    }
+
+    public class DuplicateCoursesException : EnrollException
+    {
+        public DuplicateCoursesException() { }
+
+        public DuplicateCoursesException(string message) : base(message) { }
     }
 
     [Flags]
