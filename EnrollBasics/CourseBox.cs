@@ -136,7 +136,7 @@ namespace EnrollBasics
             this.fills = new Dictionary<CourseType, Brush>() {
                 { CourseType.ENROLLED, Brushes.Gray },
                 { CourseType.PROJECTED, Brushes.Gray },
-                { CourseType.VIEWING, Brushes.Orange },
+                { CourseType.VIEWING, Brushes.DarkOrange },
                 { CourseType.ACTIVE, Brushes.OrangeRed }
             };
 
