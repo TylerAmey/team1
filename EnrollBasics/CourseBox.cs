@@ -228,6 +228,7 @@ namespace EnrollBasics
             ((System.ComponentModel.ISupportInitialize)(headerSplitContainer)).BeginInit();
             p1.SuspendLayout();
             p1.Controls.Clear();
+            p1.Tag = new CourseBox(this);
 
 
             List<ListViewItem> listViewItems = new List<ListViewItem>();
@@ -332,6 +333,31 @@ namespace EnrollBasics
             enrollButton.Name = "enrollButton";
             enrollButton.Size = new System.Drawing.Size(p1.Width / 2, 30);
             enrollButton.TabIndex = 3;
+
+            Panel FindPanel(Control c)
+            {
+                if (c is Form) return null;
+                if (c.Tag != null && c.Tag is CourseBox) return (Panel)c;
+                return FindPanel(c.Parent);
+            }
+
+            EnrollClick += (sender, e) =>
+            {
+                Panel p = FindPanel((Control)sender);
+                if (p == null) return;
+
+                p.SuspendLayout();
+                p.Controls.Clear();
+
+                CourseBox box = (CourseBox)(p.Tag);
+                box = new CourseBox(box);
+                box.AddToPanel(ref p);
+
+                p.Tag = new CourseBox(box);
+
+                p.ResumeLayout();
+            };
+
             string thisText = "";
             switch (status)
             {

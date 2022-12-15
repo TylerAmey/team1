@@ -62,10 +62,10 @@ namespace SearchApp
             if (index == results.Count) return false;
 
             CourseBox box = new CourseBox(results[index].section);
-            box.EnrollClick += (sender, e) =>
-            {
-                LoadResults();
-            };
+            // box.EnrollClick += (sender, e) =>
+            // {
+            //    LoadResults();
+            // };
             box.AddToPanel(ref panel);
 
             flowLayoutPanel1.Controls.Add(panel);
