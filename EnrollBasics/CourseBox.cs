@@ -186,6 +186,7 @@ namespace EnrollBasics
 
             EnrollClick += new EventHandler(EnrollButton__Click);
             SaveClick += new EventHandler(SaveButton__Click);
+            DisenrollClick += new EventHandler(DisenrollButton__Click);
         }
         
         // copy styles and delegates from existing CourseBox
