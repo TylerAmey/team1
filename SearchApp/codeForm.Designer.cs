@@ -1,6 +1,6 @@
 ﻿namespace SearchApp
 {
-    partial class codeForm
+    partial class CodeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.submitButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
+            this.codeTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -42,15 +42,6 @@
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Course Code:";
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(89, 13);
-            this.maskedTextBox1.Mask = "00000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(40, 20);
-            this.maskedTextBox1.TabIndex = 1;
-            this.maskedTextBox1.ValidatingType = typeof(int);
             // 
             // submitButton
             // 
@@ -67,11 +58,18 @@
             this.backButton.Location = new System.Drawing.Point(12, 39);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(56, 23);
-            this.backButton.TabIndex = 3;
+            this.backButton.TabIndex = 1;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
             // 
-            // codeForm
+            // codeTextBox
+            // 
+            this.codeTextBox.Location = new System.Drawing.Point(89, 12);
+            this.codeTextBox.Name = "codeTextBox";
+            this.codeTextBox.Size = new System.Drawing.Size(44, 20);
+            this.codeTextBox.TabIndex = 0;
+            // 
+            // CodeForm
             // 
             this.AcceptButton = this.submitButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -79,11 +77,11 @@
             this.CancelButton = this.backButton;
             this.ClientSize = new System.Drawing.Size(147, 70);
             this.ControlBox = false;
+            this.Controls.Add(this.codeTextBox);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.submitButton);
-            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label1);
-            this.Name = "codeForm";
+            this.Name = "CodeForm";
             this.Text = "Search by Course Code";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -93,8 +91,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.TextBox codeTextBox;
     }
 }
