@@ -76,7 +76,7 @@ namespace EnrollBasics
             enrolledCourses.Add(section);            
         }
 
-        private static bool ScheduleOverlap(Section section)
+        public static bool ScheduleOverlap(Section section)
         {
             foreach (Section enrolled in enrolledCourses)
             {

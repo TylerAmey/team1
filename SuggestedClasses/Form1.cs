@@ -113,6 +113,12 @@ namespace SuggestedClasses
             {
                 return 0;
             }
+
+            //if the student doesn't have the classes pre-reqs satisfied, it shouldn't be suggested
+            if (!section.ParentCourse.prereqsFulfilled(Student.completedCourses))
+            {
+                return 0;
+            }
             
             if (Student.year < course.yearLvl) //1-Freshman, 2-Sophomore, 3-Junior, 4-Senior
             {
@@ -137,8 +143,47 @@ namespace SuggestedClasses
                 recValue++;
             }
 
-            //It is preferred that the sessions of the section fit into the current schedule
+            //it is preferred that the sessions of the section aren't at times that conflict with the student's current schedule
+            if (!Student.ScheduleOverlap(section))
+            {
+                recValue++;
+            }
 
+            //it is preferred that the student isn't already in another section of the course
+            found = false;
+            foreach (Section enrolledSection in Student.enrolledCourses)
+            {
+                if (enrolledSection.courseID.Equals(section.courseID))
+                {
+                    found = true;
+                    break;
+                }
+            }
+            if(found == false)
+            {
+                recValue++;
+            }
+
+            //if the student already took the class in the past, don't recommend it.
+            foreach (Course pastCourse in Student.completedCourses)
+            {
+                if (pastCourse.id.Equals(section.courseID))
+                {
+                    return 0;
+                }
+            }
+
+            //if the student is already enrolled in the exact section, don't recommend it
+            foreach (Section enrolledSection in Student.enrolledCourses)
+            {
+                if(enrolledSection == section)
+                {
+                    return 0;
+                }
+            }
+
+
+            //Return the recommendation value for the section
             return recValue;
         }
     }
