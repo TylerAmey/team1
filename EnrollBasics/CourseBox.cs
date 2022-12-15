@@ -333,31 +333,7 @@ namespace EnrollBasics
             enrollButton.Name = "enrollButton";
             enrollButton.Size = new System.Drawing.Size(p1.Width / 2, 30);
             enrollButton.TabIndex = 3;
-
-            Panel FindPanel(Control c)
-            {
-                if (c is Form) return null;
-                if (c.Tag != null && c.Tag is CourseBox) return (Panel)c;
-                return FindPanel(c.Parent);
-            }
-
-            EnrollClick += (sender, e) =>
-            {
-                Panel p = FindPanel((Control)sender);
-                if (p == null) return;
-
-                p.SuspendLayout();
-                p.Controls.Clear();
-
-                CourseBox box = (CourseBox)(p.Tag);
-                box = new CourseBox(box);
-                box.AddToPanel(ref p);
-
-                p.Tag = new CourseBox(box);
-
-                p.ResumeLayout();
-            };
-
+               
             string thisText = "";
             switch (status)
             {
@@ -537,11 +513,36 @@ namespace EnrollBasics
             graphics.DrawRectangle(Pens.Black, cellBounds);
         }
 
+        private void Reload(object sender, EventArgs e)
+        {
+            Panel FindPanel(Control c)
+            {
+                if (c is Form) return null;
+                if (c.Tag != null && c.Tag is CourseBox) return (Panel)c;
+                return FindPanel(c.Parent);
+            }
+
+            Panel p = FindPanel((Control)sender);
+            if (p == null) return;
+
+            p.SuspendLayout();
+            p.Controls.Clear();
+
+            CourseBox box = (CourseBox)(p.Tag);
+            box = new CourseBox(box);
+            box.AddToPanel(ref p);
+
+            p.Tag = new CourseBox(box);
+
+            p.ResumeLayout();
+        }
+
         private void EnrollButton__Click(object sender, EventArgs e)
         {
             try
             {
                 Student.Enroll(section);
+                Reload(sender, e);
             }
             catch (EnrollException error)
             {
