@@ -16,6 +16,7 @@ namespace SearchApp
         [STAThread]
         static void Main()
         {
+            Student.Init();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new SearchForm());

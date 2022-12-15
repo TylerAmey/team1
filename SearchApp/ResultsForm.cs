@@ -22,7 +22,6 @@ namespace SearchApp
         public ResultsForm(List<SearchResult> results)
         {
             InitializeComponent();
-            Student.Init();
 
             if (results.Count == 0)
             {
@@ -34,12 +33,19 @@ namespace SearchApp
             this.results = results;
             this.results.Sort((a, b) => a.relevance.CompareTo(b.relevance));
 
+            LoadResults();
+
+            ShowDialog();
+        }
+
+        private void LoadResults()
+        {
+            flowLayoutPanel1.Controls.Clear();
+
             for (int i = 0; i < 6; i++)
             {
                 if (!AddPanel()) break;
             }
-
-            ShowDialog();
         }
 
         private bool AddPanel()
@@ -51,20 +57,20 @@ namespace SearchApp
             panel.Width = flowLayoutPanel1.Width - 25;
             panel.Height = pHeight;
             panel.Location = new Point(flowLayoutPanel1.Width / 2, pHeight * index);
+            panel.AutoSize = false;
 
             if (index == results.Count) return false;
 
             CourseBox box = new CourseBox(results[index].section);
+            box.EnrollClick += (sender, e) =>
+            {
+                LoadResults();
+            };
             box.AddToPanel(ref panel);
 
             flowLayoutPanel1.Controls.Add(panel);
 
             return true;
-        }
-
-        private void DoFunny(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

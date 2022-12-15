@@ -161,6 +161,7 @@ namespace EnrollBasics
             this.professor = section.professor;
             this.sectionNumber = section.number;
             Status.TryParse(section.Status.ToString(), true, out status);
+            if (Student.enrolledCourses.Contains(section)) status = Status.ENROLLED;
 
             // add all the sessions into the special list to have their data extracted
             // special list also groups them so we can display them more succintly
@@ -182,6 +183,9 @@ namespace EnrollBasics
                     capacity = seats.capacity;
                     break;
             }
+
+            EnrollClick += new EventHandler(EnrollButton__Click);
+            SaveClick += new EventHandler(SaveButton__Click);
         }
         
         // copy styles and delegates from existing CourseBox
@@ -194,6 +198,9 @@ namespace EnrollBasics
             this.WaitListClick = box.WaitListClick;
             this.SaveClick = box.SaveClick;
         }
+
+        // copy styles and section
+        public CourseBox(CourseBox box) : this(box.section, box) { }
 
         public void AddToPanel(ref Panel p1)
         {
@@ -220,6 +227,7 @@ namespace EnrollBasics
             ((System.ComponentModel.ISupportInitialize)(mainSplitContainer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(headerSplitContainer)).BeginInit();
             p1.SuspendLayout();
+            p1.Controls.Clear();
 
 
             List<ListViewItem> listViewItems = new List<ListViewItem>();
@@ -263,15 +271,15 @@ namespace EnrollBasics
             // 
             // saveButton
             // 
+            saveButton.Dock = System.Windows.Forms.DockStyle.Fill;
             saveButton.FlatAppearance.BorderSize = 0;
             saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            saveButton.Location = new System.Drawing.Point(0, 0);
             saveButton.Name = "saveButton";
-            saveButton.Size = new System.Drawing.Size(42, 41);
             saveButton.TabIndex = 2;
             saveButton.Text = "★";
             saveButton.UseVisualStyleBackColor = false;
+            saveButton.Click += new EventHandler(SaveClick);
             // 
             // headerHorizontalSplitContainer
             // 
@@ -286,6 +294,7 @@ namespace EnrollBasics
             // headerHorizontalSplitContainer.Panel2
             // 
             headerHorizontalSplitContainer.Panel2.Controls.Add(saveButton);
+            headerHorizontalSplitContainer.FixedPanel = FixedPanel.Panel2;
             headerHorizontalSplitContainer.SplitterDistance = p1.Width;
             headerHorizontalSplitContainer.TabIndex = 0;
             // 
@@ -450,7 +459,6 @@ namespace EnrollBasics
             Graphics g = e.Graphics;
 
             int x = e.ClipRectangle.X;
-            int y = e.ClipRectangle.Y;
             int width = e.ClipRectangle.Width;
             int height = e.ClipRectangle.Height;
             
@@ -501,6 +509,23 @@ namespace EnrollBasics
             Graphics graphics = e.Graphics;
             Rectangle cellBounds = e.CellBounds;
             graphics.DrawRectangle(Pens.Black, cellBounds);
+        }
+
+        private void EnrollButton__Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Student.Enroll(section);
+            }
+            catch (EnrollException error)
+            {
+                MessageBox.Show(error.Message, "Enrollment Not Completed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SaveButton__Click(object sender, EventArgs e)
+        {
+            Student.savedCourses.Add(section);
         }
     }
 
