@@ -41,6 +41,7 @@ namespace SearchApp
 
             // course code should open a course code dialog
             // if validated, skip to search results
+            codeLinkLabel.Click += new EventHandler(CodeLinkLabel__Click);
 
             // ----------------
 
@@ -108,29 +109,31 @@ namespace SearchApp
             groupBox.Height = 23;
         }
 
-        // timeGroupBox__Leave
-        // close box
-
-        // daysGroupBox__Leave
-        // close box
-
-        // perspectivesGroupBox__Leave
-        // close box
-
-        // availabilityGroupBox__Leave
-        // close box
-
         // codeLinkLabel__Click
         // open new dialog
         // dialog__Closing
         // get code out, form will validate on its side before closing
         // if code is -1, ignore it (cancelled form)
+        private void CodeLinkLabel__Click(object sender, EventArgs e)
+        {
+            CodeForm codeForm = new CodeForm();
+            codeForm.FormClosed += new FormClosedEventHandler(Dialog__Closed);
+            
+            codeForm.ShowDialog();
+        }
+        
+        private void Dialog__Closed(object sender, FormClosedEventArgs e)
+        {
+            CodeForm codeForm = (CodeForm)sender;
+            if (codeForm.enteredCode == -1) return;
 
-        // keywordTextBox__TextChanged
-        // update filter
+            List<QueryCondition> filter = new List<QueryCondition>() { new QueryCode(codeForm.enteredCode)};
+            List<SearchResult> results = SearchManager.Search(filter);
 
-        // subjectTextBox__TextChanged
-        // update filter
+            ResultsForm resultsForm = new ResultsForm(results);
+        }
+
+        // subjectTextBox__KeyPress
         private void SubjectTextBox__KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = false;
