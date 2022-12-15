@@ -35,33 +35,35 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(587, 261);
+            this.panel1.Size = new System.Drawing.Size(587, 281);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(605, 12);
+            this.panel2.Location = new System.Drawing.Point(605, 13);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(587, 261);
+            this.panel2.Size = new System.Drawing.Size(587, 281);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(308, 279);
+            this.panel3.Location = new System.Drawing.Point(308, 300);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(587, 261);
+            this.panel3.Size = new System.Drawing.Size(587, 281);
             this.panel3.TabIndex = 0;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1198, 546);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(1198, 588);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form1";
             this.Text = "Suggested Classes";
             this.ResumeLayout(false);
