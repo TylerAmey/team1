@@ -280,6 +280,10 @@ namespace EnrollBasics
             saveButton.Name = "saveButton";
             saveButton.TabIndex = 2;
             saveButton.Text = "★";
+
+            saveButton.ForeColor = ((SolidBrush)fills[CourseType.ENROLLED]).Color;
+            if (Student.savedCourses.Contains(section)) saveButton.ForeColor = ((SolidBrush)fills[CourseType.VIEWING]).Color;
+
             saveButton.UseVisualStyleBackColor = false;
             saveButton.Click += new EventHandler(SaveClick);
             // 
@@ -559,7 +563,17 @@ namespace EnrollBasics
 
         private void SaveButton__Click(object sender, EventArgs e)
         {
-            Student.savedCourses.Add(section);
+            Button button = (Button)sender;
+            if (Student.savedCourses.Contains(section))
+            {
+                Student.savedCourses.Remove(section);
+                button.ForeColor = ((SolidBrush)fills[CourseType.ENROLLED]).Color;
+            }
+            else
+            {
+                Student.savedCourses.Add(section);
+                button.ForeColor = ((SolidBrush)fills[CourseType.VIEWING]).Color;
+            }
         }
     }
 
